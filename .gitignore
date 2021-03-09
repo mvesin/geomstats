@@ -134,3 +134,4 @@ dmypy.json
 # Miscellaneous
 out.mp4
 examples/out.mp4
+profiling/out/[!\.]*
