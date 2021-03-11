@@ -8,8 +8,11 @@ import os
 import sys
 import argparse
 from datetime import datetime
-
 import time
+import threading
+from concurrent.futures import ProcessPoolExecutor
+
+
 import cProfile
 import yappi
 import pstats
@@ -22,8 +25,8 @@ parser.add_argument("-s", "--suffix", type=str,
     default=str(datetime.now()).replace(' ','_'))
 parser.add_argument("--omp_num_threads", type=str,
     help="set OMP_NUM_THREADS environment variable (default: dont set)")
-parser.add_argument("-c", "--code", type=str, choices = ['geomstats', 'nilearn'],
-    help="choose code to run {geomstats, nilearn} (default: geomstats)", default='geomstats')
+parser.add_argument("-c", "--code", type=str, choices = ['geomstats', 'nilearn', 'dummy', 'dummy-pythreads'],
+    help="choose code to run {geomstats, nilearn, dummy, dummy-pythreads} (default: geomstats)", default='geomstats')
 parser.add_argument("-p", "--profiler", type=str, choices = ['cprofile', 'yappi', 'none'],
     help="choose profiler to use {cprofile, yappi, none} (default: cprofile)", default = 'cprofile')
 args = parser.parse_args()
@@ -32,6 +35,14 @@ outdir = './profiling/out/'
 resfile = outdir + 'stdouterr.' + args.suffix
 if args.omp_num_threads is not None:
     os.environ['OMP_NUM_THREADS'] = args.omp_num_threads
+
+def cpuburn(number):
+    print("cpuburn: in instance {} starting".format(number))
+    t_init = time.thread_time()
+    while (time.thread_time() < (t_init + 5)):
+        # dummy payload
+        a = 1
+    print("cpuburn: in instance {} finishing".format(number))
 
 # OMP_NUM_THREADS needs to be set before imports
 from nilearn.connectome.connectivity_matrices import _geometric_mean
@@ -77,6 +88,29 @@ with open(resfile, 'w') as f:
         mean_estimate = mean.estimate_
     elif (args.code == 'nilearn'):
         nilearn_mean = _geometric_mean(data, max_iter=1000, tol=1e-7)
+    elif (args.code == 'dummy'):
+        # dummy payload for testing profiling with system processes
+        # (cannot use system threads in python)
+        print('\n')
+        with ProcessPoolExecutor(max_workers=5) as executor:
+            for i in range(5):
+                executor.submit(cpuburn, i)
+                print("multiprocessing: started process {}".format(i))
+        print("multiprocessing: finished all processes")
+        print('\n')
+    elif (args.code == 'dummy-pythreads'):
+        # dummy payload for testing profiling with python threading
+        print('\n')
+        threads = []
+        for i in range(5):
+            th = threading.Thread(target=cpuburn, args=(i,), daemon=True)
+            threads.append(th)
+            th.start()
+            print("pythreading: started thread {}".format(i))
+        for i, th in enumerate(threads):
+            th.join()
+            print("pythreading: joined thread {}".format(i))
+        print('\n')
     else:
         print('ERROR: bad code {}'.format(args.code))
         sys.exit(1)
