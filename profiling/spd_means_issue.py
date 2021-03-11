@@ -5,6 +5,7 @@ from datetime import datetime
 
 import time
 import cProfile
+import yappi
 import pstats
 
 parser = argparse.ArgumentParser()
@@ -15,6 +16,10 @@ parser.add_argument("-s", "--suffix", type=str,
     default=str(datetime.now()).replace(' ','_'))
 parser.add_argument("--omp_num_threads", type=str,
     help="set OMP_NUM_THREADS environment variable (default: dont set)")
+parser.add_argument("-c", "--code", type=str, choices = ['geomstats', 'nilearn'],
+    help="choose code to run {geomstats, nilearn} (default: geomstats)", default='geomstats')
+parser.add_argument("-p", "--profiler", type=str, choices = ['cprofile', 'yappi', 'none'],
+    help="choose profiler to use {cprofile, yappi, none} (default: cprofile)", default = 'cprofile')
 args = parser.parse_args()
 
 outdir = './profiling/out/'
@@ -32,6 +37,8 @@ with open(resfile, 'w') as f:
     sys.stderr = sys.stdout
     sys.stdout = f
     print("INFO: command line {}".format(sys.argv))
+    print("INFO: running code {}".format(args.code))
+    print("INFO: user profiler {}".format(args.profiler))
     print("INFO: result file suffix {}\n".format(args.suffix))
     if 'OMP_NUM_THREADS' in os.environ:
         print("INFO: OMP_NUM_THREADS is {}".format(os.environ['OMP_NUM_THREADS']))
@@ -45,35 +52,44 @@ with open(resfile, 'w') as f:
     space = SPDMatrices(dim)
     data = space.random_uniform(n_samples=n_points)
 
-    pr1 = cProfile.Profile()
-    before1 = time.process_time()
-    pr1.enable()
+    t_cpu_before = time.process_time()
+    t_real_before = time.perf_counter()
+    if (args.profiler == 'cprofile'):
+        profile = cProfile.Profile()
+        profile.enable()
+    elif (args.profiler == 'yappi'):
+        yappi.set_clock_type("cpu")
+        yappi.start()
 
-    metric = SPDMetricAffine(dim)
-    mean = FrechetMean(metric=metric, method='default', point_type='matrix',
-                       max_iter=1000, verbose=True, epsilon=1e-10)
-    mean.fit(data)
-    mean_estimate = mean.estimate_
+    if (args.code == 'geomstats'):
+        metric = SPDMetricAffine(dim)
+        mean = FrechetMean(metric=metric, method='default', point_type='matrix',
+                           max_iter=1000, verbose=True, epsilon=1e-10)
+        mean.fit(data)
+        mean_estimate = mean.estimate_
+    elif (args.code == 'nilearn'):
+        nilearn_mean = _geometric_mean(data, max_iter=1000, tol=1e-7)
+    else:
+        print('ERROR: bad code {}'.format(args.code))
+        sys.exit(1)
 
     print('\n')
-    after1 = time.process_time()
-    pr1.disable()
-    pr1.dump_stats(outdir + 'geomstats.cprofile.' + args.suffix)
-    ps1 = pstats.Stats(pr1)
-    ps1.sort_stats('cumulative').print_stats(10)
-    ps1.sort_stats('tottime').print_stats(10)
+    t_real_after = time.perf_counter()
+    t_cpu_after = time.process_time()
 
-    pr2 = cProfile.Profile()
-    before2 = time.process_time()
-    pr2.enable()
+    if(args.profiler == 'cprofile'):
+        profile.disable()
+        profile.dump_stats(outdir + 'cprofile.' + args.suffix)
+        profile_stats = pstats.Stats(profile)
+        profile_stats.sort_stats('cumulative').print_stats(10)
+        profile_stats.sort_stats('tottime').print_stats(10)
+    elif (args.profiler == 'yappi'):
+        yappi.stop()
+        yappi.get_func_stats().sort('tsub').print_all(f)
+        yappi.get_thread_stats().print_all(f)
+        yappi.clear_stats()
 
-    nilearn_mean = _geometric_mean(data, max_iter=1000, tol=1e-7)
-
-    after2 = time.process_time()
-    pr2.disable()
-    pr2.dump_stats(outdir + 'nilearn.cprofile.' + args.suffix)
-
-    print('\n\n' + str(metric.dist(nilearn_mean, mean_estimate)))
-    print("geomstats time {} nilearn time {}".format(after1 - before1, after2 - before2))
-
+    print('\n')
+    print("RESULTS: {} cpu time {}".format(args.code, t_cpu_after - t_cpu_before))
+    print("RESULTS: {} real time {}".format(args.code, t_real_after - t_real_before))
 
