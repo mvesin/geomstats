@@ -1,3 +1,9 @@
+#
+# Wrapper around nguigs' SPD means computation with geomstats and nilearn
+# https://github.com/geomstats/geomstats/issues/913
+# to test params & measure/profile
+# 
+
 import os
 import sys
 import argparse
@@ -52,6 +58,7 @@ with open(resfile, 'w') as f:
     space = SPDMatrices(dim)
     data = space.random_uniform(n_samples=n_points)
 
+    # start profiling
     t_cpu_before = time.process_time()
     t_real_before = time.perf_counter()
     if (args.profiler == 'cprofile'):
@@ -61,6 +68,7 @@ with open(resfile, 'w') as f:
         yappi.set_clock_type("cpu")
         yappi.start()
 
+    # run payload
     if (args.code == 'geomstats'):
         metric = SPDMetricAffine(dim)
         mean = FrechetMean(metric=metric, method='default', point_type='matrix',
@@ -77,12 +85,16 @@ with open(resfile, 'w') as f:
     t_real_after = time.perf_counter()
     t_cpu_after = time.process_time()
 
+    # stop profiling
     if(args.profiler == 'cprofile'):
         profile.disable()
         profile.dump_stats(outdir + 'cprofile.' + args.suffix)
         profile_stats = pstats.Stats(profile)
         profile_stats.sort_stats('cumulative').print_stats(10)
         profile_stats.sort_stats('tottime').print_stats(10)
+        profile_stats.sort_stats('ncalls').print_stats(10)
+        profile_stats.sort_stats('tottime').print_callers(5)
+        profile_stats.sort_stats('cumulative').print_callees(5)
     elif (args.profiler == 'yappi'):
         yappi.stop()
         yappi.get_func_stats().sort('tsub').print_all(f)
