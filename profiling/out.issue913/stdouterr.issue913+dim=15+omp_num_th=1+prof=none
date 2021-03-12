@@ -1,0 +1,13 @@
+INFO: command line ['./profiling/spd_means_issue.py', '-d', '15', '--omp_num_threads', '1', '-p', 'none', '-s', 'issue913+dim=15+omp_num_th=1+prof=none']
+INFO: running code geomstats
+INFO: user profiler none
+INFO: result file suffix issue913+dim=15+omp_num_th=1+prof=none
+
+INFO: OMP_NUM_THREADS is 1
+matrix dimension 15
+
+
+
+
+RESULTS: geomstats cpu time 9.595464757999999
+RESULTS: geomstats real time 9.618449450936168

@@ -1,0 +1,127 @@
+INFO: command line ['./profiling/spd_means_issue.py', '-c', 'dummy', '-s', 'issue913+code=dummy']
+INFO: running code dummy
+INFO: user profiler cprofile
+INFO: result file suffix issue913+code=dummy
+
+INFO: OMP_NUM_THREADS is not set
+matrix dimension 10
+
+
+cpuburn: in instance 3 starting
+cpuburn: in instance 3 finishing
+cpuburn: in instance 2 starting
+cpuburn: in instance 2 finishing
+cpuburn: in instance 1 starting
+cpuburn: in instance 1 finishing
+cpuburn: in instance 4 starting
+cpuburn: in instance 4 finishing
+cpuburn: in instance 0 starting
+cpuburn: in instance 0 finishing
+multiprocessing: started process 0
+multiprocessing: started process 1
+multiprocessing: started process 2
+multiprocessing: started process 3
+multiprocessing: started process 4
+multiprocessing: finished all processes
+
+
+
+
+         1102 function calls in 5.032 seconds
+
+   Ordered by: cumulative time
+   List reduced from 215 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       11    5.020    0.456    5.020    0.456 {method 'acquire' of '_thread.lock' objects}
+        1    0.000    0.000    5.020    5.020 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/_base.py:622(__exit__)
+        1    0.000    0.000    5.020    5.020 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:674(shutdown)
+        2    0.000    0.000    5.020    2.510 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:1012(join)
+        2    0.000    0.000    5.020    2.510 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:1050(_wait_for_tstate_lock)
+        5    0.000    0.000    0.011    0.002 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:610(submit)
+        5    0.000    0.000    0.011    0.002 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:572(_start_queue_management_thread)
+        1    0.000    0.000    0.011    0.011 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:599(_adjust_process_count)
+        5    0.000    0.000    0.010    0.002 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/process.py:101(start)
+        5    0.000    0.000    0.010    0.002 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/context.py:274(_Popen)
+
+
+         1102 function calls in 5.032 seconds
+
+   Ordered by: internal time
+   List reduced from 215 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       11    5.020    0.456    5.020    0.456 {method 'acquire' of '_thread.lock' objects}
+        5    0.007    0.001    0.007    0.001 {built-in method posix.fork}
+       10    0.002    0.000    0.002    0.000 {method 'flush' of '_io.TextIOWrapper' objects}
+        5    0.000    0.000    0.007    0.001 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/popen_fork.py:67(_launch)
+        1    0.000    0.000    0.011    0.011 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:599(_adjust_process_count)
+        5    0.000    0.000    0.000    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/process.py:72(__init__)
+        5    0.000    0.000    0.000    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/synchronize.py:50(__init__)
+        5    0.000    0.000    0.010    0.002 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/context.py:274(_Popen)
+        5    0.000    0.000    0.010    0.002 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/process.py:101(start)
+        5    0.000    0.000    0.000    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/util.py:186(__init__)
+
+
+         1102 function calls in 5.032 seconds
+
+   Ordered by: call count
+   List reduced from 215 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       78    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+       67    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+       40    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
+       40    0.000    0.000    0.000    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/random.py:224(_randbelow)
+       40    0.000    0.000    0.000    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/random.py:256(choice)
+       32    0.000    0.000    0.000    0.000 {built-in method posix.getpid}
+       21    0.000    0.000    0.000    0.000 {built-in method builtins.next}
+       21    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+       18    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+       17    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+
+
+   Ordered by: internal time
+   List reduced from 215 to 5 due to restriction <5>
+
+Function                                                                                                        was called by...
+                                                                                                                    ncalls  tottime  cumtime
+{method 'acquire' of '_thread.lock' objects}                                                                    <-       1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:252(_acquire_restore)
+                                                                                                                         6    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:255(_is_owned)
+                                                                                                                         2    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:264(wait)
+                                                                                                                         2    5.020    5.020  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:1050(_wait_for_tstate_lock)
+{built-in method posix.fork}                                                                                    <-       5    0.007    0.007  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/popen_fork.py:67(_launch)
+{method 'flush' of '_io.TextIOWrapper' objects}                                                                 <-      10    0.002    0.002  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/util.py:433(_flush_std_streams)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/popen_fork.py:67(_launch)                 <-       5    0.000    0.007  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/popen_fork.py:16(__init__)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:599(_adjust_process_count)  <-       1    0.000    0.011  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:572(_start_queue_management_thread)
+
+
+   Ordered by: cumulative time
+   List reduced from 215 to 5 due to restriction <5>
+
+Function                                                                                           called...
+                                                                                                       ncalls  tottime  cumtime
+{method 'acquire' of '_thread.lock' objects}                                                       -> 
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/_base.py:622(__exit__)    ->       1    0.000    5.020  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:674(shutdown)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:674(shutdown)  ->       7    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/_weakrefset.py:38(_remove)
+                                                                                                            1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:85(close)
+                                                                                                            1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/concurrent/futures/process.py:89(wakeup)
+                                                                                                            6    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/connection.py:130(__del__)
+                                                                                                            1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/queues.py:131(close)
+                                                                                                            1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/queues.py:141(join_thread)
+                                                                                                            5    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/multiprocessing/util.py:205(__call__)
+                                                                                                            1    0.000    5.020  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:1012(join)
+                                                                                                            6    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/weakref.py:109(remove)
+                                                                                                            1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/weakref.py:358(remove)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:1012(join)                      ->       2    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:507(is_set)
+                                                                                                            2    0.000    5.020  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:1050(_wait_for_tstate_lock)
+                                                                                                            2    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:1225(current_thread)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:1050(_wait_for_tstate_lock)     ->       2    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/threading.py:977(_stop)
+                                                                                                            2    5.020    5.020  {method 'acquire' of '_thread.lock' objects}
+                                                                                                            2    0.000    0.000  {method 'release' of '_thread.lock' objects}
+
+
+
+
+RESULTS: dummy cpu time 0.062227410000000205
+RESULTS: dummy real time 5.031571513041854

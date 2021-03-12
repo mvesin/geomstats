@@ -1,0 +1,7 @@
+INFO: command line ['./profiling/spd_means_issue.py', '-d', '100', '-c', 'nilearn', '-s', 'issue913+dim=100+code=nilearn']
+INFO: running code nilearn
+INFO: user profiler cprofile
+INFO: result file suffix issue913+dim=100+code=nilearn
+
+INFO: OMP_NUM_THREADS is not set
+matrix dimension 100
