@@ -1,0 +1,82 @@
+Script started on 2021-03-12 10:00:29+01:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ env | grep PYTHONPATH
+]777;preexec\[01;31m[KPYTHONPATH[m[K=/user/mvesin/home/GIT/geomstats/mvesin_geomstats
+]777;notify;Command completed;env | grep PYTHONPATH\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ env | grep OMP_
+]777;preexec\]777;notify;Command completed;env | grep OMP_\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ time GEOMSTATS_BACKEND=tensorflow python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=tensorflow+dim=15
+]777;preexec\2021-03-12 10:01:10.634651: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-03-12 10:01:10.634667: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+INFO: Using tensorflow backend
+2021-03-12 10:01:11.283758: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-03-12 10:01:11.283891: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-03-12 10:01:11.283901: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-03-12 10:01:11.283914: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: apurimac
+2021-03-12 10:01:11.283918: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: apurimac
+2021-03-12 10:01:11.283961: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: Not found: was unable to find libcuda.so DSO loaded into this program
+2021-03-12 10:01:11.283990: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 460.32.3
+2021-03-12 10:01:11.284180: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-03-12 10:01:11.285014: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+WARNING: Negative eigenvalue encountered in log
+Traceback (most recent call last):
+  File "./profiling/spd_means_issue.py", line 87, in <module>
+    mean.fit(data)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py", line 407, in fit
+    verbose=self.verbose)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py", line 133, in _default_gradient_descent
+    estimate_next = metric.exp(tangent_vec=tangent_mean, base_point=mean)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py", line 579, in exp
+    tangent_vec, sqrt_base_point, inv_sqrt_base_point)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py", line 546, in _aux_exp
+    exp_from_id = SymmetricMatrices.expm(tangent_vec_at_id)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/vectorization.py", line 104, in wrapper
+    result = function(*vect_args, **vect_kwargs)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py", line 145, in expm
+    return cls.apply_func_to_eigvals(mat, gs.exp)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py", line 185, in apply_func_to_eigvals
+    eigvals, eigvecs = gs.linalg.eigh(mat)
+  File "/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py", line 460, in self_adjoint_eig
+    e, v = gen_linalg_ops.self_adjoint_eig_v2(tensor, compute_v=True, name=name)
+  File "/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/tensorflow/python/ops/gen_linalg_ops.py", line 2235, in self_adjoint_eig_v2
+    _ops.raise_from_not_ok_status(e, name)
+  File "/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 6862, in raise_from_not_ok_status
+    six.raise_from(core._status_to_exception(e.code, message), None)
+  File "<string>", line 3, in raise_from
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Self-adjoint eigen decomposition was not successful. The input might not be valid. [Op:SelfAdjointEigV2]
+
+real	0m1.475s
+user	0m2.006s
+sys	0m2.843s
+]777;notify;Command completed;time GEOMSTATS_BACKEND=tensorflow python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=tensorflow+dim=15\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ time GEOMSTATS_BACKEND=tensorflow python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=tensorflow+dim=15[1P+dim=15[1P+dim=15[1P+dim=15[1P+dim=15[1P+dim=15[1P+dim=15[1P+dim=15[C[C[C[C[C[1P+dim=15[C[C[C[C[1P+dim=15[C[C[C[1P+dim=15[C[Cp+dim=15[C[C[Cy+dim=15[C[C[C[Ct+dim=15[C[C[C[C[Co+dim=15r+dim=15c+dim=15h+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=[1Ppytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=p[1Pytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=py[1Ptorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pyt[1Porch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pyto[1Prch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytor[1Pch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorc[1Ph+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch[1P+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+[1Pdim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+d[1Pim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cy python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cc python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ch python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+dim=15[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]777;preexec\INFO: Using pytorch backend
+WARNING: Negative eigenvalue encountered in log
+Traceback (most recent call last):
+  File "./profiling/spd_means_issue.py", line 87, in <module>
+    mean.fit(data)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py", line 407, in fit
+    verbose=self.verbose)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py", line 133, in _default_gradient_descent
+    estimate_next = metric.exp(tangent_vec=tangent_mean, base_point=mean)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py", line 579, in exp
+    tangent_vec, sqrt_base_point, inv_sqrt_base_point)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py", line 546, in _aux_exp
+    exp_from_id = SymmetricMatrices.expm(tangent_vec_at_id)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/vectorization.py", line 104, in wrapper
+    result = function(*vect_args, **vect_kwargs)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py", line 145, in expm
+    return cls.apply_func_to_eigvals(mat, gs.exp)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py", line 185, in apply_func_to_eigvals
+    eigvals, eigvecs = gs.linalg.eigh(mat)
+  File "/user/mvesin/home/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/linalg.py", line 37, in eigh
+    eigvals, eigvecs = torch.symeig(*args, eigenvectors=True, **kwargs)
+RuntimeError: symeig_cpu: For batch 0: the algorithm failed to converge; 14 off-diagonal elements of an intermediate tridiagonal form did not converge to zero.
+
+real	0m0.975s
+user	0m1.618s
+sys	0m2.825s
+]777;notify;Command completed;time GEOMSTATS_BACKEND=pytorch python ./profiling/spd_means_issue.py -d 15 -s issue913+backend=pytorch+dim=15\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-03-12 10:01:32+01:00 [COMMAND_EXIT_CODE="1"]
