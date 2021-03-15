@@ -23,7 +23,7 @@ geomstat FrechetMean with OMP_NUM_THREADS=1, varying dimension, execution time (
 
 * looking to profiling detailed info : execution time still dominated by `c_einsum` (15.510/25.231 sec for dim 30) and `eigh` (7.961/25.231 sec for dim 30) functions
 
-* dimension 50 : test manually aborted after `WARNING: Negative eigenvalue encountered in log` error on console)
+* dimension 50 : test manually aborted after `WARNING: Negative eigenvalue encountered in log` error on console), if completing `INFO: n_iter: 1000, final variance: nan, final dist: nan`
 * looking to profiling detailed info : reported time is close to cpu time (gives us confidence in profiling info)
 
 * rule of the thumb : execution (real) time seems >= x4 for a ~ x2 dimension : advice ?
