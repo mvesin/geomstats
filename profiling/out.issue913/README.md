@@ -1,5 +1,7 @@
 # Geomstats issue 913 basic benchmarks summary
 
+Benches done with branch `feature/test_profiling` commit e1a1c5f1
+
 See results file and profiling output for details.
 
 Note : should have run each of these tests 10+ times. observe several %variation between tests.
