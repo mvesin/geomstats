@@ -1,0 +1,7 @@
+INFO: command line ['./profiling/spd_means_issue.py', '-d', '50', '--omp_num_threads', '1', '-s', 'issue913+dim=50+omp_num+th=1']
+INFO: running code geomstats
+INFO: user profiler cprofile
+INFO: result file suffix issue913+dim=50+omp_num+th=1
+
+INFO: OMP_NUM_THREADS is 1
+matrix dimension 50
