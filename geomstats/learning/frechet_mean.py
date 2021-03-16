@@ -144,6 +144,9 @@ def _default_gradient_descent(points, metric, weights,
         logging.warning(
             'Maximum number of iterations {} reached. '
             'The mean may be inaccurate'.format(max_iter))
+    else:
+        # tempo debug MV 2021-03
+        print("\nDEBUG: converged after {} iterations\n".format(iteration))
 
     if verbose:
         logging.info('n_iter: {}, final variance: {}, final dist: {}'.format(
