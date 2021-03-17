@@ -149,6 +149,9 @@ def _default_gradient_descent(points, metric, weights,
         elif norm > norm_old:
             step = step / 2.
 
+        # tempo debug MV 2021-03
+        print("DEBUG2: variance {} distance {} step {}".format(var, sq_dist, step))
+
     if iteration == max_iter:
         logging.warning(
             'Maximum number of iterations {} reached. '
