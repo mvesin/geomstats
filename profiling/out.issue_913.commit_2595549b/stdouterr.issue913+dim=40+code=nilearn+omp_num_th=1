@@ -1,0 +1,334 @@
+INFO: command line ['./profiling/spd_means_issue.py', '-d', '40', '-c', 'nilearn', '--omp_num_threads', '1', '-s', 'issue913+dim=40+code=nilearn+omp_num_th=1']
+INFO: running code nilearn
+INFO: user profiler cprofile
+INFO: result file suffix issue913+dim=40+code=nilearn+omp_num_th=1
+
+INFO: OMP_NUM_THREADS is 1
+matrix dimension 40
+DEBUG2: norm / gmean.size = 0.009657546981919438 step = 1.0
+DEBUG2: norm / gmean.size = 0.0009626458905620764 step = 1.0
+DEBUG2: norm / gmean.size = 0.0007745224019970534 step = 1.0
+DEBUG2: norm / gmean.size = 0.0006393497787953211 step = 1.0
+DEBUG2: norm / gmean.size = 0.0005398105433593863 step = 1.0
+DEBUG2: norm / gmean.size = 0.0004646551482890533 step = 1.0
+DEBUG2: norm / gmean.size = 0.00040640538019134307 step = 1.0
+DEBUG2: norm / gmean.size = 0.00036015960172910164 step = 1.0
+DEBUG2: norm / gmean.size = 0.0003225887825016899 step = 1.0
+DEBUG2: norm / gmean.size = 0.0002914623387334445 step = 1.0
+DEBUG2: norm / gmean.size = 0.0002652127075996039 step = 1.0
+DEBUG2: norm / gmean.size = 0.0002427509523079481 step = 1.0
+DEBUG2: norm / gmean.size = 0.0002232804032574461 step = 1.0
+DEBUG2: norm / gmean.size = 0.00020622329273463163 step = 1.0
+DEBUG2: norm / gmean.size = 0.0001911408099774925 step = 1.0
+DEBUG2: norm / gmean.size = 0.00017770050471225968 step = 1.0
+DEBUG2: norm / gmean.size = 0.0001656421400293322 step = 1.0
+DEBUG2: norm / gmean.size = 0.00015476036111766283 step = 1.0
+DEBUG2: norm / gmean.size = 0.00014489071405866295 step = 1.0
+DEBUG2: norm / gmean.size = 0.00013589865919902153 step = 1.0
+DEBUG2: norm / gmean.size = 0.00012767459791814123 step = 1.0
+DEBUG2: norm / gmean.size = 0.00012012606204208423 step = 1.0
+DEBUG2: norm / gmean.size = 0.00011317671499072998 step = 1.0
+DEBUG2: norm / gmean.size = 0.00010676048765096285 step = 1.0
+DEBUG2: norm / gmean.size = 0.00010082222802289895 step = 1.0
+DEBUG2: norm / gmean.size = 9.531321106546869e-05 step = 1.0
+DEBUG2: norm / gmean.size = 9.019235921053547e-05 step = 1.0
+DEBUG2: norm / gmean.size = 8.542279050153304e-05 step = 1.0
+DEBUG2: norm / gmean.size = 8.097312421732443e-05 step = 1.0
+DEBUG2: norm / gmean.size = 7.681483216477971e-05 step = 1.0
+DEBUG2: norm / gmean.size = 7.29234272201435e-05 step = 1.0
+DEBUG2: norm / gmean.size = 6.927643800131086e-05 step = 1.0
+DEBUG2: norm / gmean.size = 6.585441258404593e-05 step = 1.0
+DEBUG2: norm / gmean.size = 6.263937523794393e-05 step = 1.0
+DEBUG2: norm / gmean.size = 5.9615638870118725e-05 step = 1.0
+DEBUG2: norm / gmean.size = 5.676863255331761e-05 step = 1.0
+DEBUG2: norm / gmean.size = 5.4085541700088406e-05 step = 1.0
+DEBUG2: norm / gmean.size = 5.1554419369283035e-05 step = 1.0
+DEBUG2: norm / gmean.size = 4.916468139581868e-05 step = 1.0
+DEBUG2: norm / gmean.size = 4.6906434001731405e-05 step = 1.0
+DEBUG2: norm / gmean.size = 4.477085143128289e-05 step = 1.0
+DEBUG2: norm / gmean.size = 4.274966793563518e-05 step = 1.0
+DEBUG2: norm / gmean.size = 4.083546252636569e-05 step = 1.0
+DEBUG2: norm / gmean.size = 3.902127560433048e-05 step = 1.0
+DEBUG2: norm / gmean.size = 3.7300821492074505e-05 step = 1.0
+DEBUG2: norm / gmean.size = 3.566819944836526e-05 step = 1.0
+DEBUG2: norm / gmean.size = 3.411805070614053e-05 step = 1.0
+DEBUG2: norm / gmean.size = 3.264534090012027e-05 step = 1.0
+DEBUG2: norm / gmean.size = 3.124547484481557e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.9914132970833548e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.8647354154256762e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.744141299292623e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.6292878634808067e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.5198522935186847e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.4155361362516856e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.3160584505960246e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.2211585679583934e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.1305910084078472e-05 step = 1.0
+DEBUG2: norm / gmean.size = 2.044127260639709e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.9615520324117076e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.8826643136858025e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.8072746347427307e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.7352056105643364e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.666289959017732e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.6003706747824624e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.537299619731341e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.4769374370493407e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.4191525711234016e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.36382100408729e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.310825596801854e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.2600557086274602e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.2114067771005157e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.1647798655927501e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.1200814190760352e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.0772227722230834e-05 step = 1.0
+DEBUG2: norm / gmean.size = 1.0361200337039748e-05 step = 1.0
+DEBUG2: norm / gmean.size = 9.966935781888003e-06 step = 1.0
+DEBUG2: norm / gmean.size = 9.58868023128868e-06 step = 1.0
+DEBUG2: norm / gmean.size = 9.225717212988517e-06 step = 1.0
+DEBUG2: norm / gmean.size = 8.877368027931816e-06 step = 1.0
+DEBUG2: norm / gmean.size = 8.54298679678155e-06 step = 1.0
+DEBUG2: norm / gmean.size = 8.221961326285252e-06 step = 1.0
+DEBUG2: norm / gmean.size = 7.913708354810398e-06 step = 1.0
+DEBUG2: norm / gmean.size = 7.617674710886157e-06 step = 1.0
+DEBUG2: norm / gmean.size = 7.333332807398502e-06 step = 1.0
+DEBUG2: norm / gmean.size = 7.060181977462524e-06 step = 1.0
+DEBUG2: norm / gmean.size = 6.797744246496768e-06 step = 1.0
+DEBUG2: norm / gmean.size = 6.545565760465646e-06 step = 1.0
+DEBUG2: norm / gmean.size = 6.303212850083678e-06 step = 1.0
+DEBUG2: norm / gmean.size = 6.070273489601119e-06 step = 1.0
+DEBUG2: norm / gmean.size = 5.846353656400452e-06 step = 1.0
+DEBUG2: norm / gmean.size = 5.631078775970232e-06 step = 1.0
+DEBUG2: norm / gmean.size = 5.424090372641599e-06 step = 1.0
+DEBUG2: norm / gmean.size = 5.225047469863278e-06 step = 1.0
+DEBUG2: norm / gmean.size = 5.033623522403417e-06 step = 1.0
+DEBUG2: norm / gmean.size = 4.849507751084846e-06 step = 1.0
+DEBUG2: norm / gmean.size = 4.672402343355908e-06 step = 1.0
+DEBUG2: norm / gmean.size = 4.502023709221911e-06 step = 1.0
+DEBUG2: norm / gmean.size = 4.338099934991619e-06 step = 1.0
+DEBUG2: norm / gmean.size = 4.18037195286249e-06 step = 1.0
+DEBUG2: norm / gmean.size = 4.028591231316748e-06 step = 1.0
+DEBUG2: norm / gmean.size = 3.882520854970299e-06 step = 1.0
+DEBUG2: norm / gmean.size = 3.741933434726621e-06 step = 1.0
+DEBUG2: norm / gmean.size = 3.6066120977052084e-06 step = 1.0
+DEBUG2: norm / gmean.size = 3.4763486000581024e-06 step = 1.0
+DEBUG2: norm / gmean.size = 3.350944228843453e-06 step = 1.0
+DEBUG2: norm / gmean.size = 3.230208101164694e-06 step = 1.0
+DEBUG2: norm / gmean.size = 3.113957981288967e-06 step = 1.0
+DEBUG2: norm / gmean.size = 3.002018750135359e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.8942231421865464e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.790410370147624e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.6904267866698392e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.594124650032143e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.5013627159714683e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.412005131195148e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.3259219608111324e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.242988197293778e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.1630842289613126e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.0860949531868165e-06 step = 1.0
+DEBUG2: norm / gmean.size = 2.011910191098527e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.9404238946208664e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.871534512550342e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.8051442818711856e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.741159549955198e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.6794901415781916e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.6200496415806205e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.5627548298411933e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.50752592856128e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.454286097963238e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.4029616520776947e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.35348160877033e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.3057778774189471e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.2597848575933587e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.2154396017642808e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.1726814573784016e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.1314522075269716e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.0916957517218264e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.0533582270784998e-06 step = 1.0
+DEBUG2: norm / gmean.size = 1.0163877236673236e-06 step = 1.0
+DEBUG2: norm / gmean.size = 9.807343885243212e-07 step = 1.0
+DEBUG2: norm / gmean.size = 9.463501718102319e-07 step = 1.0
+DEBUG2: norm / gmean.size = 9.131889157643086e-07 step = 1.0
+DEBUG2: norm / gmean.size = 8.812061282251443e-07 step = 1.0
+DEBUG2: norm / gmean.size = 8.50359058426661e-07 step = 1.0
+DEBUG2: norm / gmean.size = 8.206064950205916e-07 step = 1.0
+DEBUG2: norm / gmean.size = 7.919088302791299e-07 step = 1.0
+DEBUG2: norm / gmean.size = 7.642278798482766e-07 step = 1.0
+DEBUG2: norm / gmean.size = 7.375269369038784e-07 step = 1.0
+DEBUG2: norm / gmean.size = 7.11770611305643e-07 step = 1.0
+DEBUG2: norm / gmean.size = 6.869248750012534e-07 step = 1.0
+DEBUG2: norm / gmean.size = 6.629569183748773e-07 step = 1.0
+DEBUG2: norm / gmean.size = 6.398351880803184e-07 step = 1.0
+DEBUG2: norm / gmean.size = 6.175292587988421e-07 step = 1.0
+DEBUG2: norm / gmean.size = 5.960098644244784e-07 step = 1.0
+DEBUG2: norm / gmean.size = 5.752487834619329e-07 step = 1.0
+DEBUG2: norm / gmean.size = 5.552188645871239e-07 step = 1.0
+DEBUG2: norm / gmean.size = 5.358939241993206e-07 step = 1.0
+DEBUG2: norm / gmean.size = 5.17248767111372e-07 step = 1.0
+DEBUG2: norm / gmean.size = 4.992590949220805e-07 step = 1.0
+DEBUG2: norm / gmean.size = 4.819015225044115e-07 step = 1.0
+DEBUG2: norm / gmean.size = 4.65153495941754e-07 step = 1.0
+DEBUG2: norm / gmean.size = 4.4899330555220304e-07 step = 1.0
+DEBUG2: norm / gmean.size = 4.3340001239193945e-07 step = 1.0
+DEBUG2: norm / gmean.size = 4.1835345813013045e-07 step = 1.0
+DEBUG2: norm / gmean.size = 4.0383419929417737e-07 step = 1.0
+DEBUG2: norm / gmean.size = 3.898235145494628e-07 step = 1.0
+DEBUG2: norm / gmean.size = 3.7630334564193087e-07 step = 1.0
+DEBUG2: norm / gmean.size = 3.6325630259584286e-07 step = 1.0
+DEBUG2: norm / gmean.size = 3.5066561077753497e-07 step = 1.0
+DEBUG2: norm / gmean.size = 3.3851511414306784e-07 step = 1.0
+DEBUG2: norm / gmean.size = 3.2678922771990953e-07 step = 1.0
+DEBUG2: norm / gmean.size = 3.1547293935608834e-07 step = 1.0
+DEBUG2: norm / gmean.size = 3.0455176701871637e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.94011759301615e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.838394569901698e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.7402189252321675e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.645465554008354e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.554013908253055e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.465747685228921e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.380554806781278e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.2983271385325693e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.2189604636549715e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.1423542293410024e-07 step = 1.0
+DEBUG2: norm / gmean.size = 2.068411516796915e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.997038811999624e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.9281459723772685e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.8616460198411526e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.7974551050078602e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.735492319573678e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.6756796593686777e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.617941854736973e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.5622063318323207e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.5084030591865812e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.4564645087262327e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.406325516347596e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.3579232430878675e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.3111970481474515e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.2660884505765852e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.222541014058654e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.1805003088420122e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.1399138070368725e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.100730845168102e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.062902529058633e-07 step = 1.0
+DEBUG2: norm / gmean.size = 1.0263816973354779e-07 step = 1.0
+DEBUG2: norm / gmean.size = 9.911228344197093e-08 step = 1.0
+
+DEBUG: converged after 204 iterations, norm / gmean.size = 9.911228344197093e-08 step = 1.0
+
+
+
+         832024 function calls (831319 primitive calls) in 4.610 seconds
+
+   Ordered by: cumulative time
+   List reduced from 96 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.011    0.011    4.610    4.610 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)
+      205    0.014    0.000    4.237    0.021 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:165(<listcomp>)
+    20500    0.034    0.000    4.223    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+    20910    3.451    0.000    3.957    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)
+    21115    0.168    0.000    0.330    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)
+    20910    0.063    0.000    0.265    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/_lib/_util.py:216(_asarray_validated)
+43546/42841    0.153    0.000    0.221    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+      205    0.012    0.000    0.206    0.001 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:163(<listcomp>)
+    41410    0.197    0.000    0.197    0.000 {method 'dot' of 'numpy.ndarray' objects}
+    20910    0.077    0.000    0.183    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/lib/function_base.py:422(asarray_chkfinite)
+
+
+         832024 function calls (831319 primitive calls) in 4.610 seconds
+
+   Ordered by: internal time
+   List reduced from 96 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    20910    3.451    0.000    3.957    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)
+    41410    0.197    0.000    0.197    0.000 {method 'dot' of 'numpy.ndarray' objects}
+    21115    0.168    0.000    0.330    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)
+43546/42841    0.153    0.000    0.221    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    21721    0.089    0.000    0.089    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    20910    0.083    0.000    0.152    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:982(_compute_lwork)
+    20910    0.077    0.000    0.183    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/lib/function_base.py:422(asarray_chkfinite)
+    20910    0.063    0.000    0.265    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/_lib/_util.py:216(_asarray_validated)
+    41820    0.036    0.000    0.036    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:1017(_check_work_float)
+    20500    0.034    0.000    4.223    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+
+
+         832024 function calls (831319 primitive calls) in 4.610 seconds
+
+   Ordered by: call count
+   List reduced from 96 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    63144    0.009    0.000    0.009    0.000 {built-in method builtins.isinstance}
+    62730    0.018    0.000    0.054    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:1013(<genexpr>)
+43546/42841    0.153    0.000    0.221    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    41924    0.013    0.000    0.013    0.000 {built-in method builtins.getattr}
+    41821    0.005    0.000    0.005    0.000 {built-in method builtins.len}
+    41820    0.036    0.000    0.036    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:1017(_check_work_float)
+    41410    0.197    0.000    0.197    0.000 {method 'dot' of 'numpy.ndarray' objects}
+    22032    0.004    0.000    0.004    0.000 {built-in method builtins.issubclass}
+    21722    0.031    0.000    0.031    0.000 {built-in method numpy.array}
+    21721    0.089    0.000    0.089    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+
+
+   Ordered by: internal time
+   List reduced from 96 to 5 due to restriction <5>
+
+Function                                                                                                                             was called by...
+                                                                                                                                         ncalls  tottime  cumtime
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)                                 <-   20500    3.373    3.868  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+                                                                                                                                            410    0.078    0.089  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)
+{method 'dot' of 'numpy.ndarray' objects}                                                                                            <-     410    0.002    0.002  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)
+                                                                                                                                          41000    0.195    0.195  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:163(<listcomp>)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)  <-   20500    0.164    0.321  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+                                                                                                                                            615    0.004    0.009  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)
+{built-in method numpy.core._multiarray_umath.implement_array_function}                                                              <-     300    0.000    0.001  <__array_function__ internals>:2(all)
+                                                                                                                                            100    0.000    0.005  <__array_function__ internals>:2(allclose)
+                                                                                                                                            205    0.000    0.002  <__array_function__ internals>:2(any)
+                                                                                                                                          21320    0.144    0.144  <__array_function__ internals>:2(dot)
+                                                                                                                                            100    0.000    0.006  <__array_function__ internals>:2(eigvalsh)
+                                                                                                                                            100    0.000    0.004  <__array_function__ internals>:2(isclose)
+                                                                                                                                          20910    0.008    0.025  <__array_function__ internals>:2(iscomplexobj)
+                                                                                                                                            206    0.000    0.037  <__array_function__ internals>:2(mean)
+                                                                                                                                            205    0.000    0.003  <__array_function__ internals>:2(norm)
+                                                                                                                                            100    0.000    0.000  <__array_function__ internals>:2(result_type)
+{method 'reduce' of 'numpy.ufunc' objects}                                                                                           <-     100    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/_methods.py:41(_amin)
+                                                                                                                                          20910    0.075    0.075  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/_methods.py:56(_all)
+                                                                                                                                            206    0.011    0.011  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/_methods.py:143(_mean)
+                                                                                                                                            505    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/fromnumeric.py:70(_wrapreduction)
+
+
+   Ordered by: cumulative time
+   List reduced from 96 to 5 due to restriction <5>
+
+Function                                                                                                                              called...
+                                                                                                                                          ncalls  tottime  cumtime
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)   ->     100    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:14(_check_square)
+                                                                                                                                             100    0.000    0.012  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:27(_check_spd)
+                                                                                                                                             615    0.004    0.009  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)
+                                                                                                                                             205    0.012    0.206  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:163(<listcomp>)
+                                                                                                                                             205    0.014    4.237  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:165(<listcomp>)
+                                                                                                                                             410    0.078    0.089  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)
+                                                                                                                                             205    0.000    0.002  <__array_function__ internals>:2(any)
+                                                                                                                                             206    0.000    0.037  <__array_function__ internals>:2(mean)
+                                                                                                                                             205    0.000    0.003  <__array_function__ internals>:2(norm)
+                                                                                                                                             206    0.000    0.000  {built-in method builtins.print}
+                                                                                                                                               1    0.000    0.000  {built-in method numpy.array}
+                                                                                                                                             410    0.002    0.002  {method 'dot' of 'numpy.ndarray' objects}
+                                                                                                                                             206    0.001    0.001  {method 'format' of 'str' objects}
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:165(<listcomp>)       ->   20500    0.034    4.223  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)  ->   20500    0.164    0.321  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)
+                                                                                                                                           20500    3.373    3.868  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)                                  ->   20910    0.063    0.265  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/_lib/_util.py:216(_asarray_validated)
+                                                                                                                                           20910    0.026    0.037  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/blas.py:382(getter)
+                                                                                                                                           20910    0.083    0.152  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:982(_compute_lwork)
+                                                                                                                                           20910    0.003    0.003  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/misc.py:182(_datacopied)
+                                                                                                                                           20910    0.011    0.038  <__array_function__ internals>:2(iscomplexobj)
+                                                                                                                                           20910    0.002    0.002  {built-in method builtins.isinstance}
+                                                                                                                                           20910    0.003    0.003  {built-in method builtins.len}
+                                                                                                                                           20910    0.007    0.007  {method 'update' of 'dict' objects}
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)   ->   21115    0.015    0.162  <__array_function__ internals>:2(dot)
+
+
+
+
+RESULTS: nilearn cpu time 4.599763622
+RESULTS: nilearn real time 4.610093125142157

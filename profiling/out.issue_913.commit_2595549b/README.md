@@ -1,0 +1,78 @@
+# Geomstats issue 913 basic benchmarks summary
+
+Benches done with branch `feature/test_profiling` commit 2595549b
+* after : use step size & adapt step size in case norm of the tangent mean increases (& others)
+
+See results file and profiling output for details.
+
+Note : should have run each of these tests 10+ times. observe several %variation between tests.
+
+## geomstat FrechetMean - OMP_NUM_THREADS=1
+
+geomstat FrechetMean with OMP_NUM_THREADS=1, varying dimension : execution time (seconds), number of iterations for convergence (max iter 1000), final variance, final distance (squared_norm) :
+
+| dim | profiling cpu time | iterations | final variance | final distance | final step |
+| --- | ------------------ | ---------- | -------------- | -------------- | ---------- |
+| 10  | 0.0319             | 9          | 18.607         | 9.354e-10      | 1.0        |
+| 15  | 0.0866             | 13         | 40.934         | 9.085e-10      | 1.0        |
+| 20  | 0.199              | 18         | 70.686         | 2.153e-9       | 1.0        | 
+| 30  | 0.982              | 37         | 155.98         | 9.578e-9       | 1.0        |
+| 40  | 14.291             | 268        | 272.20         | 2.617e-8       | 1.0        |
+| 50  | 1.258              | 14         | 422.20         | 4.707e-9       | 0.5        |
+| 60  | 2.738              | 20         | 608.61         | 3.249e-8       | 0.25       |
+| 70  | 3.744              | 18         | 821.90         | 3.069e-8       | 0.25       |
+| 80  | 4.997              | 17         | 1075.8         | 7.167e-8       | 0.25       |
+| 90  | 3.901              | 9          | 1360.8         | 1.347e-7       | 0.5        |
+| 100 | 6.281              | 11         | 1678.7         | 6.410e-8       | 0.5        |
+
+* reducing step when norm grows solves divergence problem. 
+* fluctuating number of iterations with dimensions for convergence is not identified as a bug, but slow convergence reveals a need for (later) improving algorithm (steps, epsilon, etc.)
+  => out of the scope of the current tests
+
+* current performance tests should focus on time per iteration, to cope with varying number of iterations
+
+## nilearn _geometric_mean - OMP_NUM_THREADS=1
+
+nilearn _geometric_mean with OMP_NUM_THREADS=1, varying dimension : execution time (seconds), number of iterations for convergence (max iter 1000), final (norm / gmean.size) , final step (squared_norm) :
+
+| dim | profiling cpu time | iterations | final (norm/gmean.size) | final step |
+| --- | ------------------ | ---------- | ----------------------- | ---------- |
+| 10  | 0.0645             | 8          | 5.835e-8                | 1.0        |
+| 15  | 0.107              | 12         | 5.690e-8                | 1.0        |
+| 20  | 0.166              | 15         | 6.928e-8                | 1.0        |
+| 30  | 0.487              | 31         | 9.595e-8                | 1.0        |
+| 40  | 4.600              | 204        | 9.911e-8                | 1.0        |
+| 50  | 0.559              | 16         | 8.805e-8                | 0.25       |
+| 60  | 0.614              | 13         | 8.686e-8                | 0.25       |
+| 70  | 0.825              | 13         | 8.124e-8                | 0.25       |
+| 80  | 1.028              | 13         | 7.954e-8                | 0.25       |
+| 90  | 1.339              | 13         | 6.345e-8                | 0.25       |
+| 100 | 1.641              | 13         | 4.542e-8                | 0.25       |
+
+* similar profile with current geomstats FrechetMean : iterations increases with dim, until step adaptation
+
+
+## geomstats FrechetMean and nilearn _geometric_mean - iterations for convergence
+
+geomstat FrechetMean, with OMP_NUM_THREADS=1, varying dimension, number of iterations for convergence (max iter 1000)) :
+* without step reduction (older commit eac607b8)
+* with step reduction (current commit 0b5b5709)
+* nilearn _geometric_mean (current commit 2595549b)
+* nilearn _geometric_mean (previous commit eac607b8)
+
+| dim | geomstats iter step | geomstats iter nostep | nilearn iter current | nilearn iter previous |
+| --- | ------------------- |---------------------- | -------------------- | --------------------- |
+| 10  | 9                   | 146                   | 8                    | 153                   |
+| 15  | 13                  | 1000                  | 12                   | 16                    |
+| 20  | 18                  | 1000                  | 15                   | 16                    |
+| 30  | 37                  | 1000                  | 31                   | 14                    |
+| 40  | 268                 | 1000                  | 204                  | 12                    |
+| 50  | 14                  | error                 | 16                   | 10                    |
+| 60  | 20                  | not measured          | 13                   | 9                     |
+| 70  | 18                  | not measured          | 13                   | not measured          |
+| 80  | 17                  | not measured          | 13                   | not measured          |
+| 90  | 9                   | not measured          | 13                   | not measured          |
+| 100 | 11                  | not measured          | 13                   | error                 |
+
+* nilearn convergence modified (versus previous commit eac607b8) : due to modified `random_uniform` for `SPDMatrices` in commit 545a329 ?
+* current version : more similarity in geomstats and nilearn convergence in terms of iterations for this problem

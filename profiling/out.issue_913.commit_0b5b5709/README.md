@@ -27,7 +27,7 @@ geomstat FrechetMean with OMP_NUM_THREADS=1, varying dimension, execution time (
 
 geomstat FrechetMean (previous commit eac607b8, current commit 0b5b5709) and nilearn _geometric_mean, with OMP_NUM_THREADS=1, varying dimension, number of iterations for convergence (max iter 1000)) :
 
-| dim | geomstats iterations previous | geomstats iterations previous | nilearn iterations previous|
+| dim | geomstats iterations current  | geomstats iterations previous | nilearn iterations previous|
 | --- | ----------------------------- |------------------------------ | -------------------------- |
 | 10  | 9                             | 146                           | 153                        |
 | 15  | 13                            | 1000                          | 16                         |
