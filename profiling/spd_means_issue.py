@@ -24,6 +24,8 @@ parser.add_argument("-i","--iterations", type=int,
     help="maximum number of iterations (default 1000)", default=1000)
 parser.add_argument("-f", "--factor", type=float,
     help="multiply factor for convergence epsilon/tol (default 1)", default=1.)
+parser.add_argument("-n","--n_points", type=int,
+    help="number of points (default 100", default=100)
 parser.add_argument("-s", "--suffix", type=str,
     help="suffix for result files (default current date and time)",
     default=str(datetime.now()).replace(' ','_'))
@@ -67,7 +69,8 @@ with open(resfile, 'w') as f:
         print("INFO: OMP_NUM_THREADS is not set")
 
     gs.random.seed(0)
-    n_points = 100
+    n_points = args.n_points
+    print("number of points {}".format(n_points))
     max_iter = args.iterations
     print("maximum number of iterations {}".format(max_iter))
     dim = args.dimension

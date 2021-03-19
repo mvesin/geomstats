@@ -1,0 +1,148 @@
+INFO: command line ['./profiling/spd_means_issue.py', '-c', 'nilearn', '-d', '60', '-n', '600', '--omp_num_threads', '1', '-s', 'issue913+points=600+dim=60+code=nilearn+omp_num_th=1']
+INFO: running code nilearn
+INFO: user profiler cprofile
+INFO: result file suffix issue913+points=600+dim=60+code=nilearn+omp_num_th=1
+
+INFO: OMP_NUM_THREADS is 1
+number of points 600
+maximum number of iterations 1000
+matrix dimension 60
+DEBUG2: norm / gmean.size = 0.007150918316744436 step = 1.0
+DEBUG2: norm / gmean.size = 0.0004157969533981518 step = 1.0
+DEBUG2: norm / gmean.size = 0.0004157969533981518 step = 0.5
+DEBUG2: norm / gmean.size = 0.0004157969533981518 step = 0.25
+DEBUG2: norm / gmean.size = 2.3894620752778263e-05 step = 0.25
+DEBUG2: norm / gmean.size = 1.1199890718806669e-05 step = 0.25
+DEBUG2: norm / gmean.size = 5.252508130579404e-06 step = 0.25
+DEBUG2: norm / gmean.size = 2.4647144562391714e-06 step = 0.25
+DEBUG2: norm / gmean.size = 1.1572297239418704e-06 step = 0.25
+DEBUG2: norm / gmean.size = 5.4366499512876e-07 step = 0.25
+DEBUG2: norm / gmean.size = 2.555686258561482e-07 step = 0.25
+DEBUG2: norm / gmean.size = 1.2021357226288438e-07 step = 0.25
+DEBUG2: norm / gmean.size = 5.6581513346205404e-08 step = 0.25
+
+DEBUG: converged after 12 iterations, norm / gmean.size = 5.6581513346205404e-08 step = 0.25
+
+
+
+         356760 function calls (353747 primitive calls) in 3.392 seconds
+
+   Ordered by: cumulative time
+   List reduced from 96 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.005    0.005    3.392    3.392 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)
+       13    0.006    0.000    3.009    0.231 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:165(<listcomp>)
+     7800    0.013    0.000    3.003    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+     7826    2.575    0.000    2.787    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)
+19918/16905    0.128    0.000    0.273    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+       13    0.004    0.000    0.216    0.017 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:163(<listcomp>)
+     7839    0.085    0.000    0.214    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)
+    15626    0.212    0.000    0.212    0.000 {method 'dot' of 'numpy.ndarray' objects}
+     7852    0.006    0.000    0.129    0.000 <__array_function__ internals>:2(dot)
+     7826    0.024    0.000    0.117    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/_lib/_util.py:216(_asarray_validated)
+
+
+         356760 function calls (353747 primitive calls) in 3.392 seconds
+
+   Ordered by: internal time
+   List reduced from 96 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     7826    2.575    0.000    2.787    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)
+    15626    0.212    0.000    0.212    0.000 {method 'dot' of 'numpy.ndarray' objects}
+19918/16905    0.128    0.000    0.273    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+     7839    0.085    0.000    0.214    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)
+      600    0.063    0.000    0.067    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/linalg/linalg.py:1085(eigvalsh)
+    10253    0.050    0.000    0.050    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     7826    0.042    0.000    0.086    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/lib/function_base.py:422(asarray_chkfinite)
+     7826    0.032    0.000    0.061    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:982(_compute_lwork)
+    10254    0.032    0.000    0.032    0.000 {built-in method numpy.array}
+     7826    0.024    0.000    0.117    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/_lib/_util.py:216(_asarray_validated)
+
+
+         356760 function calls (353747 primitive calls) in 3.392 seconds
+
+   Ordered by: call count
+   List reduced from 96 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    23508    0.004    0.000    0.004    0.000 {built-in method builtins.isinstance}
+    23478    0.007    0.000    0.023    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:1013(<genexpr>)
+19918/16905    0.128    0.000    0.273    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    16256    0.005    0.000    0.005    0.000 {built-in method builtins.getattr}
+    15653    0.002    0.000    0.002    0.000 {built-in method builtins.len}
+    15652    0.015    0.000    0.015    0.000 /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:1017(_check_work_float)
+    15626    0.212    0.000    0.212    0.000 {method 'dot' of 'numpy.ndarray' objects}
+    10254    0.032    0.000    0.032    0.000 {built-in method numpy.array}
+    10253    0.050    0.000    0.050    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+     9680    0.001    0.000    0.001    0.000 {built-in method builtins.issubclass}
+
+
+   Ordered by: internal time
+   List reduced from 96 to 5 due to restriction <5>
+
+Function                                                                                                                             was called by...
+                                                                                                                                         ncalls  tottime  cumtime
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)                                 <-    7800    2.566    2.777  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+                                                                                                                                             26    0.010    0.011  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)
+{method 'dot' of 'numpy.ndarray' objects}                                                                                            <-      26    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)
+                                                                                                                                          15600    0.211    0.211  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:163(<listcomp>)
+{built-in method numpy.core._multiarray_umath.implement_array_function}                                                              <-    1800    0.001    0.008  <__array_function__ internals>:2(all)
+                                                                                                                                            600    0.000    0.036  <__array_function__ internals>:2(allclose)
+                                                                                                                                             13    0.000    0.000  <__array_function__ internals>:2(any)
+                                                                                                                                           7852    0.122    0.122  <__array_function__ internals>:2(dot)
+                                                                                                                                            600    0.000    0.068  <__array_function__ internals>:2(eigvalsh)
+                                                                                                                                            600    0.001    0.031  <__array_function__ internals>:2(isclose)
+                                                                                                                                           7826    0.003    0.010  <__array_function__ internals>:2(iscomplexobj)
+                                                                                                                                             14    0.000    0.038  <__array_function__ internals>:2(mean)
+                                                                                                                                             13    0.000    0.000  <__array_function__ internals>:2(norm)
+                                                                                                                                            600    0.001    0.001  <__array_function__ internals>:2(result_type)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)  <-    7800    0.085    0.213  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+                                                                                                                                             39    0.000    0.001  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/linalg/linalg.py:1085(eigvalsh)                            <-     600    0.063    0.067  {built-in method numpy.core._multiarray_umath.implement_array_function}
+
+
+   Ordered by: cumulative time
+   List reduced from 96 to 5 due to restriction <5>
+
+Function                                                                                                                              called...
+                                                                                                                                          ncalls  tottime  cumtime
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:91(_geometric_mean)   ->     600    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:14(_check_square)
+                                                                                                                                             600    0.000    0.110  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:27(_check_spd)
+                                                                                                                                              39    0.000    0.001  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)
+                                                                                                                                              13    0.004    0.216  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:163(<listcomp>)
+                                                                                                                                              13    0.006    3.009  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:165(<listcomp>)
+                                                                                                                                              26    0.010    0.011  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)
+                                                                                                                                              13    0.000    0.000  <__array_function__ internals>:2(any)
+                                                                                                                                              14    0.000    0.038  <__array_function__ internals>:2(mean)
+                                                                                                                                              13    0.000    0.000  <__array_function__ internals>:2(norm)
+                                                                                                                                              14    0.000    0.000  {built-in method builtins.print}
+                                                                                                                                               1    0.001    0.001  {built-in method numpy.array}
+                                                                                                                                              26    0.000    0.000  {method 'dot' of 'numpy.ndarray' objects}
+                                                                                                                                              14    0.000    0.000  {method 'format' of 'str' objects}
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:165(<listcomp>)       ->    7800    0.013    3.003  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:64(_map_eigenvalues)  ->    7800    0.085    0.213  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/nilearn/connectome/connectivity_matrices.py:40(_form_symmetric)
+                                                                                                                                            7800    2.566    2.777  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)
+/user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/decomp.py:267(eigh)                                  ->    7826    0.024    0.117  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/_lib/_util.py:216(_asarray_validated)
+                                                                                                                                            7826    0.009    0.014  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/blas.py:382(getter)
+                                                                                                                                            7826    0.032    0.061  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/lapack.py:982(_compute_lwork)
+                                                                                                                                            7826    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/scipy/linalg/misc.py:182(_datacopied)
+                                                                                                                                            7826    0.004    0.014  <__array_function__ internals>:2(iscomplexobj)
+                                                                                                                                            7826    0.001    0.001  {built-in method builtins.isinstance}
+                                                                                                                                            7826    0.001    0.001  {built-in method builtins.len}
+                                                                                                                                            7826    0.003    0.003  {method 'update' of 'dict' objects}
+{built-in method numpy.core._multiarray_umath.implement_array_function}                                                               ->      13    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/fromnumeric.py:2249(any)
+                                                                                                                                            1800    0.001    0.008  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/fromnumeric.py:2337(all)
+                                                                                                                                              14    0.000    0.038  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/fromnumeric.py:3269(mean)
+                                                                                                                                             600    0.001    0.035  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/numeric.py:2121(allclose)
+                                                                                                                                             600    0.005    0.030  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/core/numeric.py:2197(isclose)
+                                                                                                                                            7826    0.005    0.006  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/lib/type_check.py:279(iscomplexobj)
+                                                                                                                                             600    0.063    0.067  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/linalg/linalg.py:1085(eigvalsh)
+                                                                                                                                              13    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats/lib/python3.7/site-packages/numpy/linalg/linalg.py:2363(norm)
+
+
+
+
+RESULTS: nilearn cpu time 3.3736078989999996
+RESULTS: nilearn real time 3.3937327237799764

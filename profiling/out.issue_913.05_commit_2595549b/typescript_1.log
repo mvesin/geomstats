@@ -1,0 +1,191 @@
+Script started on 2021-03-19 17:22:32+01:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ for dim in 30 60 100 ; do
+> for np in 100 200 300 400 500 600 700 800 900 1000 ; do
+> command="python ./profiling/spd_means_issue.py -c nilearn -d 30 -n $np --omp_num_threads 1 -s issue913+points=$np+dim=30+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+code=nilear[1Pn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C+code=nilearn[1P+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C$+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -n $np --omp_num_threads 1 -s issue913+points=$np+dim=$dim+code=nile[1Parn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -n $np --omp_num_threads 1 -s issue913+points=$np+dim=$dim+code=nilea[1Prn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C$ -n $np --omp_num_threads 1 -s issue913+points=$np+dim=$dim+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd -n $np --omp_num_threads 1 -s issue913+points=$np+dim=$dim+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci -n $np --omp_num_threads 1 -s issue913+points=$np+dim=$dim+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm -n $np --omp_num_threads 1 -s issue913+points=$np+dim=$dim+code=nilearn+omp_num_th=1"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; echo $command ; time $command
+> done
+> done
+]777;preexec\python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 100 --omp_num_threads 1 -s issue913+points=100+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m1.137s
+user	0m1.057s
+sys	0m0.077s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 200 --omp_num_threads 1 -s issue913+points=200+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m1.525s
+user	0m1.462s
+sys	0m0.058s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 300 --omp_num_threads 1 -s issue913+points=300+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m1.796s
+user	0m1.723s
+sys	0m0.068s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 400 --omp_num_threads 1 -s issue913+points=400+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m2.155s
+user	0m2.090s
+sys	0m0.060s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 500 --omp_num_threads 1 -s issue913+points=500+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m2.451s
+user	0m2.377s
+sys	0m0.069s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 600 --omp_num_threads 1 -s issue913+points=600+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m2.789s
+user	0m2.706s
+sys	0m0.071s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 700 --omp_num_threads 1 -s issue913+points=700+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m3.069s
+user	0m2.991s
+sys	0m0.071s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 800 --omp_num_threads 1 -s issue913+points=800+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m3.487s
+user	0m3.395s
+sys	0m0.069s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 900 --omp_num_threads 1 -s issue913+points=900+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m3.838s
+user	0m3.764s
+sys	0m0.063s
+python ./profiling/spd_means_issue.py -c nilearn -d 30 -n 1000 --omp_num_threads 1 -s issue913+points=1000+dim=30+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m4.078s
+user	0m4.007s
+sys	0m0.062s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 100 --omp_num_threads 1 -s issue913+points=100+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m1.355s
+user	0m1.235s
+sys	0m0.081s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 200 --omp_num_threads 1 -s issue913+points=200+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m1.960s
+user	0m1.885s
+sys	0m0.070s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 300 --omp_num_threads 1 -s issue913+points=300+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m2.503s
+user	0m2.416s
+sys	0m0.078s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 400 --omp_num_threads 1 -s issue913+points=400+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m3.111s
+user	0m3.037s
+sys	0m0.067s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 500 --omp_num_threads 1 -s issue913+points=500+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m3.837s
+user	0m3.736s
+sys	0m0.090s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 600 --omp_num_threads 1 -s issue913+points=600+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m4.378s
+user	0m4.249s
+sys	0m0.102s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 700 --omp_num_threads 1 -s issue913+points=700+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m5.094s
+user	0m4.952s
+sys	0m0.088s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 800 --omp_num_threads 1 -s issue913+points=800+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m5.480s
+user	0m5.389s
+sys	0m0.079s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 900 --omp_num_threads 1 -s issue913+points=900+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m5.795s
+user	0m5.699s
+sys	0m0.083s
+python ./profiling/spd_means_issue.py -c nilearn -d 60 -n 1000 --omp_num_threads 1 -s issue913+points=1000+dim=60+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m6.370s
+user	0m6.268s
+sys	0m0.084s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 100 --omp_num_threads 1 -s issue913+points=100+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m2.388s
+user	0m2.313s
+sys	0m0.070s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 200 --omp_num_threads 1 -s issue913+points=200+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m4.091s
+user	0m4.000s
+sys	0m0.082s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 300 --omp_num_threads 1 -s issue913+points=300+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m5.842s
+user	0m5.751s
+sys	0m0.076s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 400 --omp_num_threads 1 -s issue913+points=400+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m7.141s
+user	0m7.007s
+sys	0m0.092s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 500 --omp_num_threads 1 -s issue913+points=500+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m8.766s
+user	0m8.619s
+sys	0m0.128s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 600 --omp_num_threads 1 -s issue913+points=600+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m10.554s
+user	0m10.388s
+sys	0m0.134s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 700 --omp_num_threads 1 -s issue913+points=700+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m12.150s
+user	0m11.973s
+sys	0m0.144s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 800 --omp_num_threads 1 -s issue913+points=800+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m13.617s
+user	0m13.444s
+sys	0m0.138s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 900 --omp_num_threads 1 -s issue913+points=900+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m15.271s
+user	0m15.069s
+sys	0m0.169s
+python ./profiling/spd_means_issue.py -c nilearn -d 100 -n 1000 --omp_num_threads 1 -s issue913+points=1000+dim=100+code=nilearn+omp_num_th=1
+INFO: Using numpy backend
+
+real	0m16.693s
+user	0m16.490s
+sys	0m0.162s
+]777;notify;Command completed;for dim in 30 60 100   do for np in 100 200 300 400 500 600 700 800 900 1000   do command="python ./profiling/spd_means_issue.py -c nilearn -d $dim -n $np --omp_num_threads 1 -s issue913+points=$np+dim=$dim+code=nilearn+omp_num_th=1"   echo $command   time $command  done  done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-03-19 17:26:30+01:00 [COMMAND_EXIT_CODE="0"]
