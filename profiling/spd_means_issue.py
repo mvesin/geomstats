@@ -20,6 +20,10 @@ import pstats
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dimension", type=int,
     help="matrix dimension (default 10)", default=10)
+parser.add_argument("-i","--iterations", type=int,
+    help="maximum number of iterations (default 1000)", default=1000)
+parser.add_argument("-f", "--factor", type=float,
+    help="multiply factor for convergence epsilon/tol (default 1)", default=1.)
 parser.add_argument("-s", "--suffix", type=str,
     help="suffix for result files (default current date and time)",
     default=str(datetime.now()).replace(' ','_'))
@@ -64,6 +68,8 @@ with open(resfile, 'w') as f:
 
     gs.random.seed(0)
     n_points = 100
+    max_iter = args.iterations
+    print("maximum number of iterations {}".format(max_iter))
     dim = args.dimension
     print("matrix dimension {}".format(dim))
     space = SPDMatrices(dim)
@@ -83,11 +89,11 @@ with open(resfile, 'w') as f:
     if (args.code == 'geomstats'):
         metric = SPDMetricAffine(dim)
         mean = FrechetMean(metric=metric, method='default', point_type='matrix',
-                           max_iter=1000, verbose=True, epsilon=1e-10)
+                           max_iter=max_iter, verbose=True, epsilon=1e-10*args.factor)
         mean.fit(data)
         mean_estimate = mean.estimate_
     elif (args.code == 'nilearn'):
-        nilearn_mean = _geometric_mean(data, max_iter=1000, tol=1e-7)
+        nilearn_mean = _geometric_mean(data, max_iter=max_iter, tol=1e-7*args.factor)
     elif (args.code == 'dummy'):
         # dummy payload for testing profiling with system processes
         # (cannot use system threads in python)

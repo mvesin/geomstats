@@ -112,13 +112,33 @@ geomstat FrechetMean, with OMP_NUM_THREADS=1, varying dimension, number of itera
 * nilearn convergence modified (versus previous commit eac607b8) : due to modified `random_uniform` for `SPDMatrices` in commit 545a329 ?
 * current version : more similarity in geomstats and nilearn convergence in terms of iterations for this problem
 
-## geomstats FrechetMean and nilearn _geometric_mean - time per iteratino
+## geomstats FrechetMean and nilearn _geometric_mean - time per iteration
 
 geomstat FrechetMean, with OMP_NUM_THREADS=1, varying dimension, cpu time per iteration for convergence (max iter 1000)) :
 * geomstats with step reduction (current commit 0b5b5709), until convergence (max iter 1000, not reached)
 * nilearn _geometric_mean (current commit 2595549b), until convergence (max iter 1000, not reached)
+* geomstats with step reduction (current commit 0b5b5709), force 10 iterations (no convergence)
+* nilearn _geometric_mean (current commit 2595549b), force 10 iterations (no convergence)
 * geomstats without step reduction and previous `random_uniform` data (older commit eac607b8), until convergence (or max iter 1000 reached)
 * nilearn _geometric_mean with previous `random_uniform` data (older commit eac607b8), until convergence (max iter 1000, not reached)
+
+| dim | geomstats converge | nilearn converge | geomstats 10 iter | nilearn 10 iter |
+| --- | ------------------ | ---------------- | ----------------- | --------------- |
+| 10  | 3.544              | 8.063            | 3.274             | 6.897           |
+| 15  | 6.662              | 8.912            | 6.342             | 8.391           |
+| 20  | 11.06              | 11.07            | 10.39             | 10.20           |
+| 30  | 26.54              | 15.71            | 27.24             | 15.59           |
+| 40  | 53.32              | 22.55            | 51.37             | 23.69           |
+| 50  | 89.86              | 34.94            | 87.69             | 33.62           |
+| 60  | 136.9              | 47.23            | 127.3             | 45.44           |
+| 70  | 208.0              | 63.46            | 199.5             | 59.18           |
+| 80  | 293.9              | 79.08            | 279.4             | 75.46           |
+| 90  | 433.4              | 103.0            | 377.8             | 97.75           |
+| 100 | 571.0              | 126.2            | 505.1             | 118.1           |
+
+* for both geomstats and nilearn, time per iteration estimate when forcing to 10 iterations is reasonably close to the time per iteration until convergence.
+* ... but for dim > 80, seems to begin diverging (>10% lower for geomstats, >5% lower for nilearn). Higher cost for ultimate iterations with high (negative) exponent values ?
+
 
 | dim | geomstats converge | nilearn converge | geomstats previous | nilearn previous |
 | --- | ------------------ | ---------------- | ------------------ | ---------------- |
