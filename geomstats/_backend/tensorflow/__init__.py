@@ -59,7 +59,8 @@ from tensorflow import (  # NOQA
 )
 
 
-from . import autograd # NOQA
+# MV : removed autograd
+# from . import autograd # NOQA
 from . import linalg  # NOQA
 from . import random  # NOQA
 

@@ -1,10 +1,14 @@
 """Numpy based linear algebra backend."""
 
-import autograd.numpy as np
-import autograd.scipy.linalg as asp
+#import autograd.numpy as np
+import numpy as np
+#import autograd.scipy.linalg as asp
+import scipy.linalg as asp
+
 import scipy.linalg
-from autograd.extend import defvjp, primitive
-from autograd.numpy.linalg import (  # NOQA
+# MV : removed autograd
+#from autograd.extend import defvjp, primitive
+from numpy.linalg import (  # NOQA
     cholesky,
     det,
     eig,
@@ -25,7 +29,8 @@ def _is_symmetric(x, tol=_TOL):
     return (np.abs(new_x - np.transpose(new_x, axes=(0, 2, 1))) < tol).all()
 
 
-@primitive
+# MV : removed autograd
+#@primitive
 def expm(x):
     return np.vectorize(
         asp.expm, signature='(n,m)->(n,m)')(x)
@@ -46,7 +51,8 @@ def _expm_vjp(_ans, x):
     return vjp
 
 
-defvjp(expm, _expm_vjp)
+# MV : removed autograd
+#defvjp(expm, _expm_vjp)
 
 
 def logm(x):

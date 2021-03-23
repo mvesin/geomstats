@@ -1,6 +1,7 @@
 """Riemannian and pseudo-Riemannian metrics."""
 
-import autograd
+# MV removed autograd
+#import autograd
 import joblib
 
 import geomstats.backend as gs
