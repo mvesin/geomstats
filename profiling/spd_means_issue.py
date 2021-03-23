@@ -76,7 +76,7 @@ with open(resfile, 'w') as f:
     dim = args.dimension
     print("matrix dimension {}".format(dim))
     space = SPDMatrices(dim)
-    data = space.random_uniform(n_samples=n_points)
+    data = space.random_point(n_samples=n_points)
 
     # start profiling
     t_cpu_before = time.process_time()
