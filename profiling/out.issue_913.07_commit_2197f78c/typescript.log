@@ -1,0 +1,114 @@
+Script started on 2021-03-23 17:52:03+01:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ [14P(reverse-i-search)`':[Cf': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 200 250 300 ; do command="python ./profiling/spd_means_issue.py -d $dim -c nilearn --omp_num_threads 1 -s issue913+dim=$dim+code=nilearn+omp_num_th=1" ; echo $command ; time $command; done[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 200 250 300 ; do command="python ./profiling/spd_means_issue.py -d $dim -c nilearn --omp_num_threads 1 -s issue913+dim=$dim+code=nilearn+omp_num_th=1" ; echo $command ; time $comma[1@n[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 200 250 300 ; do command="python ./profiling/spd_means_issue.py -d $dim -c nilearn --omp_num_threads 1 -s issue913+dim=$dim+code=nilearn+omp_num_th=1" ; echo $command ; time $comm[1@a[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14P-omp_num_threads 1 -s issue913+dim=$dim+omp_num_th=1" ; echo $command ; time $command; done
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[mvesin@apurimac mvesin_geomstats]$ for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 200 250 300 ; do command="python ./p[11@rofiling/sp[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./pr[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./pro[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./prof[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C; do command="python ./profi[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./profil[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./profili[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./profilin[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C; do command="python ./profiling[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./profiling/[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./profiling/s[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ; do command="python ./profiling/sp[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C; do command="python ./profiling/spd[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@_[1@n[1@o[1@-[1@a[1@u[1@t[1@o[1@g[1@r[1@a[1@d
+]777;preexec\python ./profiling/spd_means_issue.py -d 10 --omp_num_threads 1 -s issue913_no-autograd+dim=10+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 18.60717828130072, final dist: 9.353725106142313e-10
+
+real	0m0.641s
+user	0m0.572s
+sys	0m0.067s
+python ./profiling/spd_means_issue.py -d 15 --omp_num_threads 1 -s issue913_no-autograd+dim=15+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 12, final variance: 40.933913353649366, final dist: 5.229841949326687e-09
+
+real	0m0.620s
+user	0m0.562s
+sys	0m0.057s
+python ./profiling/spd_means_issue.py -d 20 --omp_num_threads 1 -s issue913_no-autograd+dim=20+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 70.68558460188105, final dist: 7.518161074449478e-09
+
+real	0m0.700s
+user	0m0.644s
+sys	0m0.053s
+python ./profiling/spd_means_issue.py -d 30 --omp_num_threads 1 -s issue913_no-autograd+dim=30+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 35, final variance: 155.98331198737216, final dist: 2.8497593934824015e-08
+
+real	0m1.017s
+user	0m0.961s
+sys	0m0.053s
+python ./profiling/spd_means_issue.py -d 40 --omp_num_threads 1 -s issue913_no-autograd+dim=40+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 250, final variance: 272.2044676001977, final dist: 7.97134961177251e-08
+
+real	0m6.326s
+user	0m5.954s
+sys	0m0.355s
+python ./profiling/spd_means_issue.py -d 50 --omp_num_threads 1 -s issue913_no-autograd+dim=50+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 422.20237118600613, final dist: 4.707334628266607e-09
+
+real	0m1.182s
+user	0m1.097s
+sys	0m0.081s
+python ./profiling/spd_means_issue.py -d 60 --omp_num_threads 1 -s issue913_no-autograd+dim=60+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 608.6105964838138, final dist: 1.3039616210267967e-07
+
+real	0m1.568s
+user	0m1.439s
+sys	0m0.124s
+python ./profiling/spd_means_issue.py -d 70 --omp_num_threads 1 -s issue913_no-autograd+dim=70+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 821.8955523543736, final dist: 1.346880153434114e-07
+
+real	0m1.798s
+user	0m1.660s
+sys	0m0.130s
+python ./profiling/spd_means_issue.py -d 80 --omp_num_threads 1 -s issue913_no-autograd+dim=80+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 1075.8063913149758, final dist: 7.166979813326823e-08
+
+real	0m2.108s
+user	0m1.988s
+sys	0m0.105s
+python ./profiling/spd_means_issue.py -d 90 --omp_num_threads 1 -s issue913_no-autograd+dim=90+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 1360.7508589502334, final dist: 1.3469651647779606e-07
+
+real	0m1.762s
+user	0m1.660s
+sys	0m0.092s
+python ./profiling/spd_means_issue.py -d 100 --omp_num_threads 1 -s issue913_no-autograd+dim=100+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 10, final variance: 1678.7271328135614, final dist: 3.98587567164124e-07
+
+real	0m2.191s
+user	0m2.078s
+sys	0m0.097s
+python ./profiling/spd_means_issue.py -d 120 --omp_num_threads 1 -s issue913_no-autograd+dim=120+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 2416.8377378199452, final dist: 3.4615497688619595e-07
+
+real	0m3.355s
+user	0m3.215s
+sys	0m0.132s
+python ./profiling/spd_means_issue.py -d 140 --omp_num_threads 1 -s issue913_no-autograd+dim=140+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 3285.342319228325, final dist: 7.581637746905216e-07
+
+real	0m6.206s
+user	0m6.042s
+sys	0m0.150s
+python ./profiling/spd_means_issue.py -d 160 --omp_num_threads 1 -s issue913_no-autograd+dim=160+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 29, final variance: 4284.703296927518, final dist: 7.632886596667717e-07
+
+real	0m11.574s
+user	0m11.269s
+sys	0m0.240s
+python ./profiling/spd_means_issue.py -d 180 --omp_num_threads 1 -s issue913_no-autograd+dim=180+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 51, final variance: 5412.968497614154, final dist: 1.349609931727926e-06
+
+real	0m24.493s
+user	0m24.030s
+sys	0m0.414s
+]777;notify;Command completed;for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180   do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_no-autograd+dim=$dim+omp_num_th=1"   echo $command   time $command  done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-03-23 17:54:09+01:00 [COMMAND_EXIT_CODE="0"]
