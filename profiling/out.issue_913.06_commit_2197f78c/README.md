@@ -159,3 +159,31 @@ geomstat FrechetMean, with OMP_NUM_THREADS=1, varying dimension, cpu time per it
 * geomstats and nilearn performance is now very similar for high dimensions for this problem, and geomstats is more efficient for small dimensions. Detailed profiling & tracing confirms time in `spd_matrices'py` function `_aux_log` is now mainly for computing `logm` (as expected, and same as nilearn)
 
 * note: nilearn debug output for tests adds significant overhead for low dimensions, becomes < 1% around dim 100
+
+## geomstats FrechetMean and nilearn _geometric_mean - total time for convergence
+
+geomstat FrechetMean, with OMP_NUM_THREADS=1, varying dimension, cpu total time for convergence (max iter 1000)) :
+* geomstats FrechetMean (current commit 2197f78c)
+* nilearn _geometric_mean (current commit 2197f78c) with debugging overhead
+
+
+| dim | geomstats conv time | nilearn conv time |
+| --- | ------------------- | ----------------- |
+| 10  | 0.0214              | 0.0752            |
+| 15  | 0.0527              | 0.131             |
+| 20  | 0.109               | 0.183             |
+| 30  | 0.430               | 0.540             |
+| 40  | 5.584               | 4.975             |
+| 50  | 0.536               | 0.585             |
+| 60  | 0.960               | 0.640             |
+| 70  | 1.142               | 0.848             |
+| 80  | 1.395               | 1.064             |
+| 90  | 1.028               | 1.345             |
+| 100 | 1.420               | 1.653             |
+| 120 | 2.746               | 2.257             |
+| 140 | 5.224               | 3.041             |
+| 160 | 10.812              | 3.945             |
+| 180 | 24.771              | 4.955             |
+| 200 | error               | 5.711             |
+| 250 | not tested          | 9.044             |
+| 300 | not tested          | error             |
