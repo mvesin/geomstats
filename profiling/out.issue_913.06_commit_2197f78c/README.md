@@ -187,3 +187,5 @@ geomstat FrechetMean, with OMP_NUM_THREADS=1, varying dimension, cpu total time 
 | 200 | error               | 5.711             |
 | 250 | not tested          | 9.044             |
 | 300 | not tested          | error             |
+
+* differences now measure algorithmic efficiency of geomstats FrechetMean vs nilearn _geometric_mean
