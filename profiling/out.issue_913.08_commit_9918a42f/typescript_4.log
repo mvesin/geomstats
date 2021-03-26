@@ -1,0 +1,111 @@
+Script started on 2021-03-26 15:06:21+01:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exitfor dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue.py -d $dim  -s issue913_autograd-np-from-conda_dim=$dim" ; echo $command ; time $command; done[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C
+]777;preexec\python ./profiling/spd_means_issue.py -d 10 -s issue913_dim=10
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 18.60717828130069, final dist: 9.35372510953268e-10
+
+real	0m0.822s
+user	0m1.971s
+sys	0m4.674s
+python ./profiling/spd_means_issue.py -d 15 -s issue913_dim=15
+INFO: Using numpy backend
+INFO: n_iter: 12, final variance: 40.93391335364918, final dist: 5.229841948702115e-09
+
+real	0m0.917s
+user	0m2.220s
+sys	0m5.668s
+python ./profiling/spd_means_issue.py -d 20 -s issue913_dim=20
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 70.68558460188109, final dist: 7.518161074068948e-09
+
+real	0m1.039s
+user	0m2.739s
+sys	0m7.253s
+python ./profiling/spd_means_issue.py -d 30 -s issue913_dim=30
+INFO: Using numpy backend
+INFO: n_iter: 35, final variance: 155.98331198737256, final dist: 2.8497593937827554e-08
+
+real	0m1.972s
+user	0m5.955s
+sys	0m17.962s
+python ./profiling/spd_means_issue.py -d 40 -s issue913_dim=40
+INFO: Using numpy backend
+INFO: n_iter: 250, final variance: 272.20446760019865, final dist: 7.97134960952639e-08
+
+real	0m13.894s
+user	0m46.517s
+sys	2m41.502s
+python ./profiling/spd_means_issue.py -d 50 -s issue913_dim=50
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 422.2023711860059, final dist: 4.707334626389622e-09
+
+real	0m2.377s
+user	0m7.028s
+sys	0m22.088s
+python ./profiling/spd_means_issue.py -d 60 -s issue913_dim=60
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 608.6105964838222, final dist: 1.303961620671047e-07
+
+real	0m3.328s
+user	0m10.390s
+sys	0m33.478s
+python ./profiling/spd_means_issue.py -d 70 -s issue913_dim=70
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 821.8955523543528, final dist: 1.3468801530535148e-07
+
+real	0m8.861s
+user	0m30.914s
+sys	1m37.786s
+python ./profiling/spd_means_issue.py -d 80 -s issue913_dim=80
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 1075.8063913150015, final dist: 7.16697981922809e-08
+
+real	0m9.122s
+user	0m33.851s
+sys	1m39.956s
+python ./profiling/spd_means_issue.py -d 90 -s issue913_dim=90
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 1360.7508589501529, final dist: 1.3469651702546949e-07
+
+real	0m8.920s
+user	0m32.623s
+sys	1m36.220s
+python ./profiling/spd_means_issue.py -d 100 -s issue913_dim=100
+INFO: Using numpy backend
+INFO: n_iter: 10, final variance: 1678.7271328133097, final dist: 3.9858756722591405e-07
+
+real	0m8.701s
+user	0m33.027s
+sys	1m36.888s
+python ./profiling/spd_means_issue.py -d 120 -s issue913_dim=120
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 2416.8377378185924, final dist: 3.4615475491806296e-07
+
+real	0m11.387s
+user	0m44.523s
+sys	2m7.622s
+python ./profiling/spd_means_issue.py -d 140 -s issue913_dim=140
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 3285.342319228189, final dist: 7.581639456889721e-07
+
+real	0m13.832s
+user	0m58.902s
+sys	2m30.840s
+python ./profiling/spd_means_issue.py -d 160 -s issue913_dim=160
+INFO: Using numpy backend
+INFO: n_iter: 29, final variance: 4284.703296915619, final dist: 7.633485048647687e-07
+
+real	0m21.413s
+user	1m38.188s
+sys	3m48.753s
+python ./profiling/spd_means_issue.py -d 180 -s issue913_dim=180
+INFO: Using numpy backend
+INFO: n_iter: 51, final variance: 5412.968497466883, final dist: 1.3509447222660497e-06
+
+real	0m41.811s
+user	3m27.712s
+sys	7m18.359s
+]777;notify;Command completed;for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180   do command="python ./profiling/spd_means_issue.py -d $dim  -s issue913_dim=$dim"   echo $command   time $command  done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-03-26 15:10:21+01:00 [COMMAND_EXIT_CODE="0"]

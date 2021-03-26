@@ -1,0 +1,10 @@
+name: geomstats-condamkl2numpy
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - nilearn
+  - yappi
+  - snakeviz

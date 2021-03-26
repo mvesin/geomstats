@@ -1,0 +1,141 @@
+INFO: command line ['./profiling/spd_means_issue.py', '-d', '50', '-s', 'issue913_mkl-np-from-conda_dim=50']
+INFO: running code geomstats
+INFO: user profiler cprofile
+INFO: result file suffix issue913_mkl-np-from-conda_dim=50
+
+INFO: OMP_NUM_THREADS is not set
+number of points 100
+maximum number of iterations 1000
+matrix dimension 50
+DEBUG2: variance 1144.4851804062348 distance 955.2987175256494 step 1.0
+DEBUG2: variance 598.1913089693412 distance 291.78926182264354 step 1.0
+DEBUG2: variance 522.9576326037782 distance 178.1504579494389 step 1.0
+DEBUG2: variance 493.1255091006762 distance 130.18001763372894 step 1.0
+DEBUG2: variance 478.2899119512135 distance 105.06384334583076 step 1.0
+DEBUG2: variance 469.63685866082835 distance 90.25180497373636 step 1.0
+DEBUG2: variance 464.40595715270064 distance 81.13249966751425 step 1.0
+DEBUG2: variance 461.10365658176687 distance 75.36686649352205 step 1.0
+DEBUG2: variance 459.0420509491434 distance 71.80256022707938 step 1.0
+DEBUG2: variance 457.8341574611116 distance 69.71213645791074 step 0.5
+DEBUG2: variance 457.18106641003453 distance 68.68293701177348 step 0.5
+DEBUG2: variance 422.2277115936288 distance 0.05035428583620648 step 0.5
+DEBUG2: variance 422.2024381890262 distance 0.00013219705322217653 step 0.5
+DEBUG2: variance 422.20237153390065 distance 6.766263091838905e-07 step 0.5
+
+DEBUG: converged after 14 iterations
+
+
+
+         7794 function calls (7733 primitive calls) in 0.276 seconds
+
+   Ordered by: cumulative time
+   List reduced from 168 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.276    0.276 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:397(fit)
+        1    0.002    0.002    0.276    0.276 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)
+       15    0.002    0.000    0.241    0.016 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:582(log)
+       15    0.000    0.000    0.234    0.016 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:560(_aux_log)
+       58    0.001    0.000    0.218    0.004 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:196(apply_func_to_eigvals)
+       15    0.000    0.000    0.206    0.014 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:338(logm)
+  563/502    0.001    0.000    0.196    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+       58    0.000    0.000    0.179    0.003 <__array_function__ internals>:2(eigh)
+       58    0.178    0.003    0.179    0.003 /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:1337(eigh)
+      205    0.000    0.000    0.058    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:71(mul)
+
+
+         7794 function calls (7733 primitive calls) in 0.276 seconds
+
+   Ordered by: internal time
+   List reduced from 168 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       58    0.178    0.003    0.179    0.003 /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:1337(eigh)
+      205    0.058    0.000    0.058    0.000 {built-in method _functools.reduce}
+      132    0.012    0.000    0.012    0.000 {built-in method numpy.core._multiarray_umath.c_einsum}
+      237    0.009    0.000    0.009    0.000 {built-in method numpy.array}
+       29    0.005    0.000    0.007    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:188(to_symmetric)
+       15    0.002    0.000    0.241    0.016 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:582(log)
+        1    0.002    0.002    0.276    0.276 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)
+       30    0.002    0.000    0.002    0.000 /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:477(inv)
+       58    0.001    0.000    0.218    0.004 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:196(apply_func_to_eigvals)
+  563/502    0.001    0.000    0.196    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+
+
+         7794 function calls (7733 primitive calls) in 0.276 seconds
+
+   Ordered by: call count
+   List reduced from 168 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      660    0.000    0.000    0.000    0.000 /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:989(_einsum_dispatcher)
+  563/502    0.001    0.000    0.196    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+      296    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
+      277    0.001    0.000    0.001    0.000 {method 'astype' of 'numpy.ndarray' objects}
+      237    0.009    0.000    0.009    0.000 {built-in method numpy.array}
+      205    0.058    0.000    0.058    0.000 {built-in method _functools.reduce}
+      205    0.000    0.000    0.000    0.000 {built-in method builtins.getattr}
+      205    0.000    0.000    0.058    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:71(mul)
+      192    0.000    0.000    0.000    0.000 /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:112(isComplexType)
+      148    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+
+
+   Ordered by: internal time
+   List reduced from 168 to 5 due to restriction <5>
+
+Function                                                                                                             was called by...
+                                                                                                                         ncalls  tottime  cumtime
+/user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:1337(eigh)  <-      58    0.178    0.179  {built-in method numpy.core._multiarray_umath.implement_array_function}
+{built-in method _functools.reduce}                                                                                  <-     205    0.058    0.058  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:71(mul)
+{built-in method numpy.core._multiarray_umath.c_einsum}                                                              <-     132    0.012    0.012  /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:997(einsum)
+{built-in method numpy.array}                                                                                        <-       1    0.000    0.000  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/numpy/common.py:4(to_ndarray)
+                                                                                                                             87    0.008    0.008  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:110(transpose)
+                                                                                                                            104    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/core/_asarray.py:14(asarray)
+                                                                                                                             30    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/core/_asarray.py:86(asanyarray)
+                                                                                                                             15    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/core/numeric.py:2197(isclose)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:188(to_symmetric)                         <-      14    0.000    0.000  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:496(_aux_exp)
+                                                                                                                             15    0.005    0.007  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:560(_aux_log)
+
+
+   Ordered by: cumulative time
+   List reduced from 168 to 5 due to restriction <5>
+
+Function                                                                                                         called...
+                                                                                                                     ncalls  tottime  cumtime
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:397(fit)                          ->       1    0.000    0.000  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/errors.py:45(check_parameter_accepted_values)
+                                                                                                                          1    0.002    0.276  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)
+                                                                                                                          1    0.000    0.000  {built-in method builtins.isinstance}
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)     ->       1    0.000    0.000  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/numpy/common.py:4(to_ndarray)
+                                                                                                                         30    0.000    0.021  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:209(squared_norm)
+                                                                                                                         14    0.000    0.009  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:520(exp)
+                                                                                                                         15    0.002    0.241  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:582(log)
+                                                                                                                          1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/logging/__init__.py:1984(info)
+                                                                                                                          1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamklnumpy/lib/python3.7/site-packages/numpy/core/numeric.py:144(ones)
+                                                                                                                         15    0.000    0.001  <__array_function__ internals>:2(einsum)
+                                                                                                                         15    0.000    0.001  <__array_function__ internals>:2(isclose)
+                                                                                                                         16    0.000    0.000  <__array_function__ internals>:2(norm)
+                                                                                                                          1    0.000    0.000  <__array_function__ internals>:2(shape)
+                                                                                                                         31    0.000    0.000  <__array_function__ internals>:2(sum)
+                                                                                                                         15    0.000    0.000  {built-in method builtins.print}
+                                                                                                                         15    0.000    0.000  {method 'append' of 'list' objects}
+                                                                                                                         16    0.000    0.000  {method 'format' of 'str' objects}
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:582(log)                          ->      15    0.000    0.234  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:560(_aux_log)
+                                                                                                                         15    0.000    0.004  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:170(powerm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:560(_aux_log)                     ->      30    0.000    0.022  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:71(mul)
+                                                                                                                         15    0.005    0.007  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:188(to_symmetric)
+                                                                                                                         15    0.000    0.206  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:338(logm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:196(apply_func_to_eigvals)  ->      44    0.000    0.000  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/numpy/__init__.py:304(cast)
+                                                                                                                         87    0.000    0.008  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/algebra_utils.py:72(from_vector_to_diagonal_matrix)
+                                                                                                                         87    0.000    0.023  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:71(mul)
+                                                                                                                         58    0.000    0.007  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:110(transpose)
+                                                                                                                         58    0.000    0.000  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:189(<lambda>)
+                                                                                                                         44    0.000    0.000  <__array_function__ internals>:2(any)
+                                                                                                                         58    0.000    0.179  <__array_function__ internals>:2(eigh)
+                                                                                                                         58    0.000    0.000  {built-in method builtins.isinstance}
+                                                                                                                         87    0.000    0.000  {method 'append' of 'list' objects}
+
+
+
+
+RESULTS: geomstats cpu time 2.199148028
+RESULTS: geomstats real time 0.27639803383499384
