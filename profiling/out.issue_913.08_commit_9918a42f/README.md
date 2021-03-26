@@ -372,7 +372,7 @@ geomstat FrechetMean, varying dimension : cpu and real execution time (seconds) 
 Time per iteration computed as the profiling cpu time for our problem (ms) until convergence (max iter 1000, not reached), divided by the number of iteration :
 
 | dim | cpu time per iter  | real time per iter |
-| --- | ----    ---------- | ------------------ |
+| --- | ------------------ | ------------------ |
 | 10  | 9.867              | 1.989              |
 | 15  | 22.08              | 2.858              |
 | 20  | 31.24              | 3.929              |
@@ -469,7 +469,7 @@ geomstat FrechetMean with OMP_NUM_THREADS=1, varying dimension : cpu and real ex
 Time per iteration computed as the profiling cpu time for our problem (ms) until convergence (max iter 1000, not reached), divided by the number of iteration :
 
 | dim | cpu time per iter  | real time per iter |
-| --- | ----    ---------- | ------------------ |
+| --- | ------------------ | ------------------ |
 | 10  | 1.811              | 1.822              |
 | 15  | 2.808              | 2.817              |
 | 20  | 3.782              | 3.788              |
