@@ -1,0 +1,112 @@
+Script started on 2021-03-25 15:30:55+01:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;cat README_vscode-keyboard.txt \]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ [14P(reverse-i-search)`':[Cf': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_no-autograd+dim=$dim+omp_num_th=1" ; echo $command ; time $command; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue[1@.[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issu[1@e[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[mvesin@apurimac mvesin_geomstats]$ for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd[11@_means_issu[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P
+]777;preexec\python ./profiling/spd_means_issue.py -d 10 --omp_num_threads 1 -s issue913_dim=10+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 18.607178281300722, final dist: 9.353725106142313e-10
+
+real	0m0.678s
+user	0m0.621s
+sys	0m0.055s
+python ./profiling/spd_means_issue.py -d 15 --omp_num_threads 1 -s issue913_dim=15+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 12, final variance: 40.933913353649366, final dist: 5.229841949326687e-09
+
+real	0m0.690s
+user	0m0.624s
+sys	0m0.063s
+python ./profiling/spd_means_issue.py -d 20 --omp_num_threads 1 -s issue913_dim=20+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 70.68558460188105, final dist: 7.51816107444948e-09
+
+real	0m0.758s
+user	0m0.703s
+sys	0m0.050s
+python ./profiling/spd_means_issue.py -d 30 --omp_num_threads 1 -s issue913_dim=30+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 35, final variance: 155.98331198737216, final dist: 2.8497593934824022e-08
+
+real	0m1.098s
+user	0m1.019s
+sys	0m0.077s
+python ./profiling/spd_means_issue.py -d 40 --omp_num_threads 1 -s issue913_dim=40+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 250, final variance: 272.2044676001977, final dist: 7.971349611772507e-08
+
+real	0m6.134s
+user	0m5.839s
+sys	0m0.281s
+python ./profiling/spd_means_issue.py -d 50 --omp_num_threads 1 -s issue913_dim=50+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 422.20237118600613, final dist: 4.707334628266606e-09
+
+real	0m1.196s
+user	0m1.099s
+sys	0m0.094s
+python ./profiling/spd_means_issue.py -d 60 --omp_num_threads 1 -s issue913_dim=60+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 608.6105964838138, final dist: 1.303961621026797e-07
+
+real	0m1.617s
+user	0m1.499s
+sys	0m0.114s
+python ./profiling/spd_means_issue.py -d 70 --omp_num_threads 1 -s issue913_dim=70+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 821.8955523543736, final dist: 1.3468801534341143e-07
+
+real	0m1.819s
+user	0m1.707s
+sys	0m0.102s
+python ./profiling/spd_means_issue.py -d 80 --omp_num_threads 1 -s issue913_dim=80+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 1075.8063913149758, final dist: 7.166979813326823e-08
+
+real	0m2.213s
+user	0m2.039s
+sys	0m0.153s
+python ./profiling/spd_means_issue.py -d 90 --omp_num_threads 1 -s issue913_dim=90+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 1360.7508589502334, final dist: 1.346965164777961e-07
+
+real	0m1.973s
+user	0m1.705s
+sys	0m0.250s
+python ./profiling/spd_means_issue.py -d 100 --omp_num_threads 1 -s issue913_dim=100+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 10, final variance: 1678.7271328135614, final dist: 3.985875671641241e-07
+
+real	0m2.242s
+user	0m2.001s
+sys	0m0.227s
+python ./profiling/spd_means_issue.py -d 120 --omp_num_threads 1 -s issue913_dim=120+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 2416.8377378199452, final dist: 3.461549768861959e-07
+
+real	0m3.968s
+user	0m3.472s
+sys	0m0.424s
+python ./profiling/spd_means_issue.py -d 140 --omp_num_threads 1 -s issue913_dim=140+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 3285.342319228325, final dist: 7.58163774690521e-07
+
+real	0m7.058s
+user	0m6.034s
+sys	0m0.903s
+python ./profiling/spd_means_issue.py -d 160 --omp_num_threads 1 -s issue913_dim=160+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 29, final variance: 4284.703296927519, final dist: 7.632886596667716e-07
+
+real	0m13.280s
+user	0m11.372s
+sys	0m1.678s
+python ./profiling/spd_means_issue.py -d 180 --omp_num_threads 1 -s issue913_dim=180+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 51, final variance: 5412.968497614155, final dist: 1.3496099317279267e-06
+
+real	0m24.958s
+user	0m24.086s
+sys	0m0.751s
+]777;notify;Command completed;for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180   do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_dim=$dim+omp_num_th=1"   echo $command   time $command  done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-03-25 15:33:08+01:00 [COMMAND_EXIT_CODE="0"]

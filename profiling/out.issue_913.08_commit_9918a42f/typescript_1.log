@@ -1,0 +1,111 @@
+Script started on 2021-03-26 09:44:45+01:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exitfor dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $command; done
+]777;preexec\python ./profiling/spd_means_issue.py -d 10 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=10+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 18.607178281300673, final dist: 9.353725107415332e-10
+
+real	0m0.679s
+user	0m0.593s
+sys	0m0.074s
+python ./profiling/spd_means_issue.py -d 15 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=15+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 12, final variance: 40.93391335364928, final dist: 5.229841948271942e-09
+
+real	0m0.702s
+user	0m0.621s
+sys	0m0.078s
+python ./profiling/spd_means_issue.py -d 20 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=20+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 70.68558460188096, final dist: 7.518161073579112e-09
+
+real	0m0.766s
+user	0m0.701s
+sys	0m0.063s
+python ./profiling/spd_means_issue.py -d 30 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=30+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 35, final variance: 155.98331198737247, final dist: 2.849759393767432e-08
+
+real	0m1.075s
+user	0m0.998s
+sys	0m0.074s
+python ./profiling/spd_means_issue.py -d 40 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=40+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 250, final variance: 272.2044676001981, final dist: 7.97134961184123e-08
+
+real	0m5.837s
+user	0m5.542s
+sys	0m0.282s
+python ./profiling/spd_means_issue.py -d 50 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=50+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 422.202371186002, final dist: 4.7073346247643155e-09
+
+real	0m1.193s
+user	0m1.094s
+sys	0m0.093s
+python ./profiling/spd_means_issue.py -d 60 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=60+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 608.6105964838204, final dist: 1.303961621058207e-07
+
+real	0m1.541s
+user	0m1.443s
+sys	0m0.095s
+python ./profiling/spd_means_issue.py -d 70 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=70+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 821.8955523543657, final dist: 1.3468801529250927e-07
+
+real	0m1.811s
+user	0m1.705s
+sys	0m0.101s
+python ./profiling/spd_means_issue.py -d 80 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=80+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 1075.8063913149451, final dist: 7.166979819064427e-08
+
+real	0m2.083s
+user	0m1.954s
+sys	0m0.123s
+python ./profiling/spd_means_issue.py -d 90 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=90+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 1360.750858950099, final dist: 1.346965186396103e-07
+
+real	0m1.772s
+user	0m1.586s
+sys	0m0.172s
+python ./profiling/spd_means_issue.py -d 100 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=100+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 10, final variance: 1678.7271328140662, final dist: 3.9858752161954666e-07
+
+real	0m2.328s
+user	0m2.050s
+sys	0m0.255s
+python ./profiling/spd_means_issue.py -d 120 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=120+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 2416.837737816835, final dist: 3.461548662424003e-07
+
+real	0m3.771s
+user	0m3.291s
+sys	0m0.423s
+python ./profiling/spd_means_issue.py -d 140 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=140+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 3285.342319211923, final dist: 7.581633561593643e-07
+
+real	0m6.494s
+user	0m5.652s
+sys	0m0.748s
+python ./profiling/spd_means_issue.py -d 160 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=160+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 29, final variance: 4284.703296921954, final dist: 7.632790814294958e-07
+
+real	0m12.834s
+user	0m11.067s
+sys	0m1.578s
+python ./profiling/spd_means_issue.py -d 180 --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=180+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 51, final variance: 5412.968497525201, final dist: 1.3502386559074742e-06
+
+real	0m24.993s
+user	0m23.857s
+sys	0m1.017s
+]777;notify;Command completed;for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180   do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=$dim+omp_num_th=1"   echo $command   time $command  done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-03-26 09:46:05+01:00 [COMMAND_EXIT_CODE="0"]
