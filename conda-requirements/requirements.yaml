@@ -1,11 +1,14 @@
-name: geomstats-condanumpy
+name: geomstats-condamklnumpy
 
 channels:
-  - conda-forge
+  # not installing autograd, thus conda-forge not needed
+  #- conda-forge
+  # defaults channel for installing mkl numpy
+  - defaults
 
 dependencies:
   - python=3.7.*
-  - autograd=1.3
+  #- autograd=1.3
   - jupyter
   - joblib=0.14.1
   - matplotlib

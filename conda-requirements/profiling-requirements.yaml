@@ -1,6 +1,7 @@
-name: geomstats-condanumpy
+name: geomstats-condamklnumpy
 
 channels:
+  # not available from defaults
   - conda-forge
 
 dependencies:
