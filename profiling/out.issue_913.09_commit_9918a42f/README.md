@@ -231,8 +231,8 @@ Dimension 140 :
 | unspecified | 374.2                      | 112.5                      | 112.5                      |
 
 
-Main findings for pacaking and threading in our test case :
-* confirms interest of using mkl autograd.numpy from conda (vs openblas autograd.numpy) : 45-50% real time per iteration with best threading parameters
+Main findings for packaging and threading in our test case :
+* confirms interest of using mkl autograd.numpy from conda (vs openblas autograd.numpy) : 45-50% real time per iteration gain with best threading parameters
 * setting OMP_NUM_THREADS <= number of cores looks necessary for openblas (default number of threads is number of hardware threads & perf degraded if > number of cores)
 * auto setting of threading parameters looks ok for mkl blas
 * no measured impact for using OMP_NUM_THREADS vs MKL_NUM_THREADS for mkl blas
