@@ -1,0 +1,596 @@
+Script started on 2021-04-06 13:31:22+02:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exittime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_autograd-np-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C100 -s issue913_autograd-np-from-conda_dim=100[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C40[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 140 -s issue913_autograd-np-from-conda_dim=140[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C00[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C60 -s issue913_autograd-np-fro[2Pm-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfor th in 1 2 4 8 16 ; do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 60 -s issue913_autograd-np-from-conda_dim=60+omp_num_th=$th ; done[1P[1P[1P[1P[1P[1P[1P[1P[1@m[1@k[1@l[C[C[C[C[1@a[1@u[1@t[1@o[1@g[1@r[1@a[1@d[1@-
+]777;preexec\INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='1'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 608.6105964838122, final dist: 1.3039616208576865e-07
+
+real	0m1.415s
+user	0m1.261s
+sys	0m0.127s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='2'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 608.6105964838215, final dist: 1.303961621154395e-07
+
+real	0m1.253s
+user	0m1.727s
+sys	0m0.132s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='4'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 608.6105964838104, final dist: 1.30396162088431e-07
+
+real	0m1.208s
+user	0m2.773s
+sys	0m0.159s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='8'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 608.6105964838151, final dist: 1.3039616212037336e-07
+
+real	0m1.198s
+user	0m4.931s
+sys	0m0.221s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='16'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 608.6105964838151, final dist: 1.3039616212037336e-07
+
+real	0m1.200s
+user	0m4.849s
+sys	0m0.243s
+]777;notify;Command completed;for th in 1 2 4 8 16   do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 60 -s issue913_mkl-np-autograd-from-conda_dim=60+omp_num_th=$th   done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ for th in 1 2 4 8 16 ; do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 60 -s issue913_mkl-np-autograd-from-conda_dim=60+omp_num_th=$th ; done[1P[1@1[C[1@0[1P[1@1[C[1@0
+]777;preexec\INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='1'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 10, final variance: 1678.7271328127745, final dist: 3.985875344754991e-07
+
+real	0m1.756s
+user	0m1.636s
+sys	0m0.103s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='2'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 10, final variance: 1678.7271328132813, final dist: 3.985875361180207e-07
+
+real	0m1.561s
+user	0m2.316s
+sys	0m0.123s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='4'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 10, final variance: 1678.7271328130196, final dist: 3.9858753809288615e-07
+
+real	0m1.449s
+user	0m3.560s
+sys	0m0.192s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='8'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 10, final variance: 1678.7271328129125, final dist: 3.985875414127247e-07
+
+real	0m1.436s
+user	0m6.589s
+sys	0m0.242s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='16'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 10, final variance: 1678.7271328129125, final dist: 3.985875414127247e-07
+
+real	0m1.438s
+user	0m6.636s
+sys	0m0.296s
+]777;notify;Command completed;for th in 1 2 4 8 16   do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 100 -s issue913_mkl-np-autograd-from-conda_dim=100+omp_num_th=$th   done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ for th in 1 2 4 8 16 ; do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 100 -s issue913_mkl-np-autograd-from-conda_dim=100+omp_num_th=$th ; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfor th in 1 2 4 8 16 ; do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 100 -s issue913_mkl-np-autograd-from-conda_dim=100+omp_num_th=$th ; done[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P60 -s issue913_mkl-np-autograd-from-conda_dim=6[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@100 -s issue913_mkl-np-autograd-from-conda_dim=10[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@4[C[1P[1@4
+]777;preexec\INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='1'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 3285.3423192172854, final dist: 7.581653641448526e-07
+
+real	0m4.795s
+user	0m4.603s
+sys	0m0.159s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='2'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 3285.342319225502, final dist: 7.581641311422847e-07
+
+real	0m3.709s
+user	0m6.551s
+sys	0m0.179s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='4'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 3285.342319219729, final dist: 7.581641246415074e-07
+
+real	0m3.141s
+user	0m10.294s
+sys	0m0.229s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='8'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 3285.342319221223, final dist: 7.581644978508152e-07
+
+real	0m3.121s
+user	0m19.543s
+sys	0m0.551s
+INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS='16'
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 3285.342319221223, final dist: 7.581644978508152e-07
+
+real	0m3.108s
+user	0m19.566s
+sys	0m0.458s
+]777;notify;Command completed;for th in 1 2 4 8 16   do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 140 -s issue913_mkl-np-autograd-from-conda_dim=140+omp_num_th=$th   done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ for th in 1 2 4 8 16 ; do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 140 -s issue913_mkl-np-autograd-from-conda_dim=140+omp_num_th=$th ; done[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C00 -s issue913_mkl-np-autograd-from-conda_dim=10[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P60 -s issue913_mkl-np-autograd-from-conda_dim=6[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_autograd-np-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfor th in 1 2 4 8 16 ; do time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py --omp_num_threads $th -d 60 -s issue913_mkl-np-autograd-from-conda_dim=60+omp_num_th=$th ; done[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -d[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -d [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -d 6[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -d 60[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -d 60 [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-d 60 -[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s[1P issue913_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s [1Pissue913_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s i[1Pssue913_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s is[C[1Pue913_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s iss[1Pue913_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issu[1Pe913_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue[1P913_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue9[1P13_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue91[1P3_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913[1P_mkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_[1Pmkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_m[1Pkl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mk[1Pl-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl[1P-np-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-[1Pnp-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-n[1Pp-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np[1P-autograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-[1Pautograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-a[1Putograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-au[1Ptograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-aut[1Pograd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-auto[1Pgrad-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-autog[1Prad-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-autogr[1Pad-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-autogra[1Pd-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctime OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-autograd[1P-from-conda_dim=60[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]777;preexec\INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 608.6105964838151, final dist: 1.3039616212037336e-07
+
+real	0m1.179s
+user	0m4.879s
+sys	0m0.247s
+]777;notify;Command completed;time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-autograd-from-conda_dim=60\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 60 -s issue913_mkl-np-autograd-from-conda_dim=60[1P010[C0[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0 -s issue913_mkl-np-autograd-[1Pfrom-conda_dim=100[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C10 -s issue913_mkl-np-autograd-from-conda_dim=100[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0 -s issue913_mkl-np-autograd-from-conda_dim=100[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]777;preexec\INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 10, final variance: 1678.7271328129125, final dist: 3.985875414127247e-07
+
+real	0m1.416s
+user	0m6.456s
+sys	0m0.279s
+]777;notify;Command completed;time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 100 -s issue913_mkl-np-autograd-from-conda_dim=100\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 100 -s issue913_mkl-np-autograd-from-conda_dim=100[K40[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -s issue913_mkl-np-autograd[1P-from-conda_dim=140[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C40 -s issue913_mkl-np-autograd-from-conda_dim=140[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]777;preexec\INFO: Using numpy backend
+
+OPENMP DISPLAY ENVIRONMENT BEGIN
+   _OPENMP='201611'
+  [host] OMP_AFFINITY_FORMAT='OMP: pid %P tid %i thread %n bound to OS proc set {%A}'
+  [host] OMP_ALLOCATOR='omp_default_mem_alloc'
+  [host] OMP_CANCELLATION='FALSE'
+  [host] OMP_DEFAULT_DEVICE='0'
+  [host] OMP_DISPLAY_AFFINITY='FALSE'
+  [host] OMP_DISPLAY_ENV='TRUE'
+  [host] OMP_DYNAMIC='FALSE'
+  [host] OMP_MAX_ACTIVE_LEVELS='1'
+  [host] OMP_MAX_TASK_PRIORITY='0'
+  [host] OMP_NESTED: deprecated; max-active-levels-var=1
+  [host] OMP_NUM_THREADS: value is not defined
+  [host] OMP_PLACES: value is not defined
+  [host] OMP_PROC_BIND='false'
+  [host] OMP_SCHEDULE='static'
+  [host] OMP_STACKSIZE='8M'
+  [host] OMP_TARGET_OFFLOAD=DEFAULT
+  [host] OMP_THREAD_LIMIT='2147483647'
+  [host] OMP_TOOL='enabled'
+  [host] OMP_TOOL_LIBRARIES: value is not defined
+  [host] OMP_WAIT_POLICY='PASSIVE'
+OPENMP DISPLAY ENVIRONMENT END
+
+
+INFO: n_iter: 19, final variance: 3285.342319221223, final dist: 7.581644978508152e-07
+
+real	0m3.018s
+user	0m18.774s
+sys	0m0.548s
+]777;notify;Command completed;time OMP_DISPLAY_ENV=true python ./profiling/spd_means_issue.py -d 140 -s issue913_mkl-np-autograd-from-conda_dim=140\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exut[K[Kit
+]777;preexec\exit
+
+Script done on 2021-04-06 13:34:41+02:00 [COMMAND_EXIT_CODE="0"]
