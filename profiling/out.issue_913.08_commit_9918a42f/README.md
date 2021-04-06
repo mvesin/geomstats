@@ -573,3 +573,6 @@ See above for numbers, summary for testing FrechetMean problem on our 8 core / 1
 Conclusion at this point :
 * would be useful to propose conda requirements file for mkl autograd.numpy with geomstats, in addition to the pip requirements file. It permits easy performance gains for users in many scenario
 * need to investigate a bit more numpy packaging (begining of next sprint)
+
+Links :
+* numpy installation options and accelerated linalg : https://numpy.org/install
