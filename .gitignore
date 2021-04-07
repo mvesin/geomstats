@@ -135,3 +135,7 @@ dmypy.json
 out.mp4
 examples/out.mp4
 profiling/out/[!\.]*
+
+# Python virtual environment
+venv/
+
