@@ -1,0 +1,15 @@
+name: geomstats-test
+
+channels:
+  # pick numpy from defaults (mkl numpy)
+  - defaults
+  # dont need conda-forge, all remaining stuff will come from pip
+  #- conda-forge
+
+dependencies:
+  - python=3.7.*
+  - pip
+  - numpy>=1.18.1
+  - pip:
+    #- --upgrade-strategy only-if-needed
+    - -r ../requirements.txt
