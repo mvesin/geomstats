@@ -16,9 +16,6 @@ import cProfile
 import yappi
 import pstats
 
-from examples.empirical_frechet_mean_uncertainty_sn import empirical_frechet_var_bubble
-import geomstats.backend as gs
-
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--dimension", type=int,
@@ -32,12 +29,20 @@ parser.add_argument("-t","--theta-delta", type=float,
 parser.add_argument("-s", "--suffix", type=str,
     help="suffix for result files (default current date and time)",
     default=str(datetime.now()).replace(' ','_'))
+parser.add_argument("--omp_num_threads", type=str,
+    help="set OMP_NUM_THREADS environment variable (default: dont set)")
 parser.add_argument("-p", "--profiler", type=str, choices = ['cprofile', 'yappi', 'none'],
     help="choose profiler to use {cprofile, yappi, none} (default: cprofile)", default = 'cprofile')
 args = parser.parse_args()
 
 outdir = './profiling/out/'
 resfile = outdir + 'stdouterr.' + args.suffix
+if args.omp_num_threads is not None:
+    os.environ['OMP_NUM_THREADS'] = args.omp_num_threads
+
+# OMP_NUM_THREADS needs to be set before imports
+from examples.empirical_frechet_mean_uncertainty_sn import empirical_frechet_var_bubble
+import geomstats.backend as gs
 
 with open(resfile, 'w') as f:
     sys.stderr = sys.stdout
@@ -45,9 +50,13 @@ with open(resfile, 'w') as f:
     print("INFO: command line {}".format(sys.argv))
     print("INFO: user profiler {}".format(args.profiler))
     print("INFO: result file suffix {}\n".format(args.suffix))
+    if 'OMP_NUM_THREADS' in os.environ:
+        print("INFO: OMP_NUM_THREADS is {}".format(os.environ['OMP_NUM_THREADS']))
+    else:
+        print("INFO: OMP_NUM_THREADS is not set")
 
     # useful or not ?
-    gs.random.seed(0)
+    gs.random.seed()
 
     print("number of samples {}".format(args.n_sample))
     print("hypersphere dimension {}".format(args.dimension))
