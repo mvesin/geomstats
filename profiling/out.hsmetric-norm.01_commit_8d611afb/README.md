@@ -97,3 +97,75 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS def
 | cprofile  | 50.5%                                 | -3.0%                                    |
 
 Decorator on `riemannian_metric.py` inner_product accounts for ~50% of `metric.norm` execution time. This is ~independant from profiling overhead.
+
+### test - rewrite decorator
+
+*TODO* : test with rewriting `vectorize.py` decorator (all decorators affected, call the decorator but null payload)
+
+## investigating inner_product code
+
+`riemaniann_metric.py/inner_product` code includes `einsum` (that may be replaced by other numpy operation eg inner ?) and `to_ndarray` (are all necessary ?). We'd like to assess their impact in our test case.
+
+geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS default, 10k iteration, varying profiling : real execution time (ms) :
+* for nodec_inner_product : see above
+* test_inner_prod2 : modify nodec_inner_product by replacing :
+```
+        #inner_prod = gs.einsum('...k,...k->...', aux, tangent_vec_b)
+        inner_prod = autograd.numpy.inner(aux, tangent_vec_b)
+```
+(notice : this is not a viable replacement as it is less general than current code, but is more optimized in our case - for testing)
+* test_inner_prod :  modify nodec_inner_product by commenting out :
+```
+        #inner_prod = gs.to_ndarray(inner_prod, to_ndim=1)
+        #inner_prod = gs.to_ndarray(inner_prod, to_ndim=2, axis=1)
+```
+(notice : this is not a viable replacement as it is less general than current code, but is more optimized in our case - for testing)
+
+| test case           | profiling | metric.norm | gs.linalg.norm |
+| ------------------- | --------- | ----------- | -------------- |
+| nodec_inner_product | none      | 315.6       | 40.72          |
+| nodec_inner_product | cprofile  | 533.2       | 60.33          |
+| test_inner_product2 | none      | 280.6       | 38.99          |
+| test_inner_product2 | cprofile  | 483.1       | 60.74          |
+| test_inner_product  | none      | 229.7       | 38.90          |
+| test_inner_product  | cprofile  | 339.0       | 62.30          |
+
+* removing two final `to_ndarray` permits 25-35% gain on total test execution time
+* replacing `einsum` by `numpy.inner` permits ~10% gain on total test execution time
+
+
+## investigating autograd.numpy vs pure numpy
+
+Current test case execution profile is dominated by function calls and wrapping : autograd numpy wrapping impact may be significative.
+
+### test - pure numpy for inner_product only
+
+geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS default, 10k iteration, varying profiling : real execution time (ms) :
+* for nodec_inner_product : see above
+* test_inner_prod3 : modify nodec_inner_product by replacing :
+  * calls to `gs.einsum` by `numpy.einsum` in inner_product
+  * function `import autograd.numpy` by `import numpy` in to_ndarray
+(notice : this is not a viable replacement as it is less general than current code, but is more optimized in our case - for testing)
+* test_inner_prod4 :  modify nodec_inner_product3 by commenting out :
+```
+        #inner_prod = gs.to_ndarray(inner_prod, to_ndim=1)
+        #inner_prod = gs.to_ndarray(inner_prod, to_ndim=2, axis=1)
+```
+(same as test_inner_prod but in pure numpy)
+
+| test case           | profiling | metric.norm | gs.linalg.norm |
+| ------------------- | --------- | ----------- | -------------- |
+| nodec_inner_product | none      | 315.6       | 40.72          |
+| nodec_inner_product | cprofile  | 533.2       | 60.33          |
+| test_inner_product3 | none      | 201.4       | 39.87          |
+| test_inner_product3 | cprofile  | 319.9       | 62.27          |
+| test_inner_product4 | none      | 151.1       | 41.28          |
+| test_inner_product4 | cprofile  | 250.5       | 63.76          |
+
+* using pure numpy in function `inner_product` (test_inner_prod3) permits a 35-40% gain on total test execution time
+* ... and removing two final `to_ndarray` in function `inner_product` permits another 20-25% gain on total test execution time
+
+
+### test - pure numpy for all geomstats
+
+*TODO* test pure numpy replaces autograd.numpy for all geomstats
