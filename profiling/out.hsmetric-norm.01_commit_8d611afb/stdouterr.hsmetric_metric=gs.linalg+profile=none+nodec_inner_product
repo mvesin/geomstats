@@ -1,0 +1,11 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'gs.linalg', '-p', 'none', '-s', 'hsmetric_metric=gs.linalg+profile=none+nodec_inner_product']
+INFO: user profiler none
+INFO: result file suffix hsmetric_metric=gs.linalg+profile=none+nodec_inner_product
+
+INFO: OMP_NUM_THREADS is not set
+
+
+
+
+RESULTS: cpu time 0.04055222700000005
+RESULTS: real time 0.040717469062656164

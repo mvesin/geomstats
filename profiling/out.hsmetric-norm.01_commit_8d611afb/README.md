@@ -71,4 +71,29 @@ Execution time is ~ x10 when scaling x10 iterations : no unexpected effects, usi
 OMP_NUM_THREADS also has minimal impact on performance
 
 
+## investigating impact from vectorization decorators
 
+Profiling from previous tests suggest 40-50% time impact from vectorization.py/decorator when calling inner_product from riemannian_metric.py/squared_norm
+
+### test - remove decorator for inner_product
+
+Simple test : comment out `riemannian_metric.py:178` before calling inner_product (name this test: nodec_inner_product )
+```
+@geomstats.vectorization.decorator(['else', 'vector', 'vector', 'vector'])
+```
+
+geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS default, 10k iteration, varying profiling, normal vs nodec_inner_product : real execution time (ms) :
+
+| test case           | profiling | metric.norm | gs.linalg.norm |
+| ------------------- | --------- | ----------- | -------------- |
+| normal              | none      | 619.2       | 40.90          |
+| normal              | cprofile  | 1078        | 58.56          |
+| nodec_inner_product | none      | 315.6       | 40.72          |
+| nodec_inner_product | cprofile  | 533.2       | 60.33          |
+
+| profiling | metric.norm %gain vs normal test case | gs.linalg.norm %gain vs normal test case |
+| --------- | ------------------------------------- | ---------------------------------------- |
+| none      | 49.0%                                 | 0.4%                                     |
+| cprofile  | 50.5%                                 | -3.0%                                    |
+
+Decorator on `riemannian_metric.py` inner_product accounts for ~50% of `metric.norm` execution time. This is ~independant from profiling overhead.
