@@ -1,0 +1,11 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'hsmetric', '-p', 'none', '-i', '100000', '-s', 'hsmetric_metric=hsmetric+profile=none+iter=100000']
+INFO: user profiler none
+INFO: result file suffix hsmetric_metric=hsmetric+profile=none+iter=100000
+
+INFO: OMP_NUM_THREADS is not set
+
+
+
+
+RESULTS: cpu time 6.020344412
+RESULTS: real time 6.036112742964178
