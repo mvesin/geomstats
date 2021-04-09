@@ -26,6 +26,8 @@ parser.add_argument("-e","--n_expectation", type=int,
     help="number of computations for approaching the expectation (default 10)", default=10)
 parser.add_argument("-t","--theta-delta", type=float,
     help="negative delta of theta from pi/2 aka theta == (pi/2 - t) (default 1e-6)", default=1e-6)
+parser.add_argument("-i","--iterations", type=int,
+    help="maximum number of iterations (default 32)", default=32)
 parser.add_argument("-s", "--suffix", type=str,
     help="suffix for result files (default current date and time)",
     default=str(datetime.now()).replace(' ','_'))
@@ -33,6 +35,8 @@ parser.add_argument("--omp_num_threads", type=str,
     help="set OMP_NUM_THREADS environment variable (default: dont set)")
 parser.add_argument("-p", "--profiler", type=str, choices = ['cprofile', 'yappi', 'none'],
     help="choose profiler to use {cprofile, yappi, none} (default: cprofile)", default = 'cprofile')
+parser.add_argument("-v", "--verbose", type=int,
+    help="verbosity level >= 0 (default 1)", default=1)
 args = parser.parse_args()
 
 outdir = './profiling/out/'
@@ -75,7 +79,10 @@ with open(resfile, 'w') as f:
         yappi.start()
 
     # run payload
-    empirical_frechet_var_bubble(args.n_sample, theta, args.dimension, args.n_expectation)
+    empirical_frechet_var_bubble(args.n_sample, theta, args.dimension,
+        n_expectation = args.n_expectation,
+        debug = args.verbose,
+        max_iter = args.iterations)
 
     print('\n')
     t_real_after = time.perf_counter()
