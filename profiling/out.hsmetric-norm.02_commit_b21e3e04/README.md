@@ -84,7 +84,7 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), varying threading, 
 
 Current test case execution profile suggest autograd numpy wrapping impact may now be a major/dominant factor for performance.
 
-### test - pure numpy for inner_product only
+### test - pure numpy for inner_product only & all geomstats
 
 geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS default, 10k iteration, varying profiling : real execution time (ms) :
 * nodec_inner_product : remove decorator (in previous version, already removed in current version)
@@ -92,6 +92,7 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS def
   * 2 calls to `gs.einsum` by `numpy.einsum` in inner_product
   * function `import autograd.numpy` by `import numpy` in to_ndarray
 (notice : this is not meant to be a viable replacement as it is less general than current code, but is more optimized in our case - for testing)
+* test_no_autograd : fully replacing `autograd.numpy` by pure numpy
 
 
 | test case           | profiling | metric.norm | gsinalg.norm | metric.norm 8d611afb | gs.linalg.norm 8d611afb |
@@ -102,12 +103,23 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS def
 | nodec_inner_product | cprofile  | N/A         | N/A          | 533.2                | 60.33                   |
 | test_inner_product3 | none      | 98.54       | 39.23        | 201.4                | 39.87                   |
 | test_inner_product3 | cprofile  | 136.7       | 61.19        | 319.9                | 62.27                   |
+| test_no_autograd    | none      | 78.25       | 33.12        | N/A                  | N/A                    |
+| test_no_autograd    | cprofile  | 109.5       | 50.44        | N/A                  | N/A                    |
 
 
-* using pure numpy in function `inner_product` (test_inner_prod3) permits a 12-15% gain on total test execution time, while it represents only a part of autograd wrapping cost for this test (`tracer.py:35(f_wrapped)` reduced only by ~34%)
+geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS default, 100k iteration, varying profiling : real execution time (ms) 
+
+| test case           | profiling | metric.norm | gsinalg.norm |
+| ------------------- | --------- | ----------- | ------------ |
+| default             | none      | 1107        | 379.5        |
+| default             | cprofile  | 1673        | 594.4        |          
+| test_no_autograd    | none      | 825.4       | 337.5        |
+| test_no_autograd    | cprofile  | 1139        | 494.5        |
+
+
+* using pure numpy (test_no_autograd) with `HypersphereMetric.norm()` reduces execution time by ~25-30% versus current master branch (default)
+* using pure numpy (test_no_autograd) with `gs.linalg.norm()` also reduces execution time by ~11-16% versus current master branch (default) ...
+* ... so `HypersphereMetric.norm()` execution time is still x ~2.2-2.5 `gs.linalg.norm()` execution time for this test
 * note : `to_ndarray` is not called anymore in current version of `inner_product`
 
 
-### test - pure numpy for all geomstats
-
-*TODO* test pure numpy replaces autograd.numpy for all geomstats

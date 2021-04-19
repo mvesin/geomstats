@@ -1,0 +1,11 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'gs.linalg', '-p', 'none', '-i', '100000', '-s', 'test_no_autograd+metric=gs.linalg+p=none+iter=100000']
+INFO: user profiler none
+INFO: result file suffix test_no_autograd+metric=gs.linalg+p=none+iter=100000
+
+INFO: OMP_NUM_THREADS is not set
+
+
+
+
+RESULTS: cpu time 0.3353865119999999
+RESULTS: real time 0.3374747559428215
