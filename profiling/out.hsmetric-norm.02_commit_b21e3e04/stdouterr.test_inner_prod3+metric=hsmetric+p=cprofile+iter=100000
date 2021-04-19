@@ -1,0 +1,92 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'hsmetric', '-p', 'cprofile', '-i', '100000', '-s', 'test_inner_prod3+metric=hsmetric+p=cprofile+iter=100000']
+INFO: user profiler cprofile
+INFO: result file suffix test_inner_prod3+metric=hsmetric+p=cprofile+iter=100000
+
+INFO: OMP_NUM_THREADS is not set
+
+
+         3100006 function calls in 1.348 seconds
+
+   Ordered by: cumulative time
+   List reduced from 19 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   100000    0.059    0.000    1.348    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)
+   100000    0.029    0.000    1.062    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)
+   100000    0.027    0.000    1.032    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:204(squared_norm)
+   100000    0.092    0.000    1.005    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:179(inner_product)
+   200000    0.056    0.000    0.585    0.000 <__array_function__ internals>:2(einsum)
+   200000    0.168    0.000    0.528    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+   200000    0.206    0.000    0.517    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+   100000    0.039    0.000    0.329    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:124(metric_matrix)
+   200000    0.035    0.000    0.298    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:997(einsum)
+   200000    0.263    0.000    0.263    0.000 {built-in method numpy.core._multiarray_umath.c_einsum}
+
+
+         3100006 function calls in 1.348 seconds
+
+   Ordered by: internal time
+   List reduced from 19 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   200000    0.263    0.000    0.263    0.000 {built-in method numpy.core._multiarray_umath.c_einsum}
+   200000    0.206    0.000    0.517    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+   200000    0.168    0.000    0.528    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+   100000    0.132    0.000    0.196    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/lib/twodim_base.py:156(eye)
+   100000    0.092    0.000    1.005    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:179(inner_product)
+   200000    0.083    0.000    0.115    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)
+   100000    0.064    0.000    0.064    0.000 {built-in method numpy.zeros}
+  1000000    0.062    0.000    0.062    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:989(_einsum_dispatcher)
+   100000    0.059    0.000    1.348    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)
+   200000    0.056    0.000    0.585    0.000 <__array_function__ internals>:2(einsum)
+
+
+         3100006 function calls in 1.348 seconds
+
+   Ordered by: call count
+   List reduced from 19 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+  1000000    0.062    0.000    0.062    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:989(_einsum_dispatcher)
+   200000    0.035    0.000    0.298    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:997(einsum)
+   200000    0.056    0.000    0.585    0.000 <__array_function__ internals>:2(einsum)
+   200000    0.263    0.000    0.263    0.000 {built-in method numpy.core._multiarray_umath.c_einsum}
+   200000    0.168    0.000    0.528    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+   200000    0.083    0.000    0.115    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)
+   200000    0.032    0.000    0.032    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:123(<lambda>)
+   200000    0.206    0.000    0.517    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+   100000    0.029    0.000    1.062    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)
+   100000    0.092    0.000    1.005    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:179(inner_product)
+
+
+   Ordered by: internal time
+   List reduced from 19 to 5 due to restriction <5>
+
+Function                                                                                                          was called by...
+                                                                                                                      ncalls  tottime  cumtime
+{built-in method numpy.core._multiarray_umath.c_einsum}                                                           <-  200000    0.263    0.263  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:997(einsum)
+/user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)   <-  100000    0.040    0.290  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:124(metric_matrix)
+                                                                                                                      100000    0.166    0.227  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)
+{built-in method numpy.core._multiarray_umath.implement_array_function}                                           <-  200000    0.168    0.528  <__array_function__ internals>:2(einsum)
+/user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/lib/twodim_base.py:156(eye)  <-  100000    0.132    0.196  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:179(inner_product)            <-  100000    0.092    1.005  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:204(squared_norm)
+
+
+   Ordered by: cumulative time
+   List reduced from 19 to 5 due to restriction <5>
+
+Function                                                                                                called...
+                                                                                                            ncalls  tottime  cumtime
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)           ->  100000    0.029    1.062  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)
+                                                                                                            100000    0.166    0.227  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)         ->  100000    0.027    1.032  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:204(squared_norm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:204(squared_norm)   ->  100000    0.092    1.005  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:179(inner_product)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:179(inner_product)  ->  100000    0.039    0.329  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:124(metric_matrix)
+                                                                                                            200000    0.056    0.585  <__array_function__ internals>:2(einsum)
+<__array_function__ internals>:2(einsum)                                                                ->  200000    0.168    0.528  {built-in method numpy.core._multiarray_umath.implement_array_function}
+
+
+
+
+RESULTS: cpu time 1.38244502
+RESULTS: real time 1.3854612740688026

@@ -1,0 +1,383 @@
+INFO: command line ['./profiling/spd_means_issue.py', '-d', '40', '-s', 'issue913_mkl-np-autograd-from-conda_dim=40']
+INFO: running code geomstats
+INFO: user profiler cprofile
+INFO: result file suffix issue913_mkl-np-autograd-from-conda_dim=40
+
+INFO: OMP_NUM_THREADS is not set
+number of points 100
+maximum number of iterations 1000
+matrix dimension 40
+DEBUG2: variance 716.4770483667712 distance 581.2748717048956 step 1.0
+DEBUG2: variance 362.0769998099996 distance 145.36234182789082 step 1.0
+DEBUG2: variance 314.3062798688412 distance 72.1055127236555 step 1.0
+DEBUG2: variance 296.1458625986072 distance 42.460504809747945 step 1.0
+DEBUG2: variance 287.47148735910486 distance 27.525680732440165 step 1.0
+DEBUG2: variance 282.53950975936755 distance 18.93971818038495 step 1.0
+DEBUG2: variance 279.5924730643291 distance 13.647190936065009 step 1.0
+DEBUG2: variance 277.6540563829453 distance 10.166425691326468 step 1.0
+DEBUG2: variance 276.360513759611 distance 7.789510053932006 step 1.0
+DEBUG2: variance 275.43650285653143 distance 6.098075770934495 step 1.0
+DEBUG2: variance 274.77520829441323 distance 4.865088159909476 step 1.0
+DEBUG2: variance 274.27651590348427 distance 3.9400463696299504 step 1.0
+DEBUG2: variance 273.90179833776097 distance 3.2343043383126022 step 1.0
+DEBUG2: variance 273.6081675079286 distance 2.684366879189565 step 1.0
+DEBUG2: variance 273.3795120639956 distance 2.250517742576288 step 1.0
+DEBUG2: variance 273.19513725516293 distance 1.902683175588572 step 1.0
+DEBUG2: variance 273.04760636864955 distance 1.6211631780605986 step 1.0
+DEBUG2: variance 272.9259785057623 distance 1.390401602716948 step 1.0
+DEBUG2: variance 272.8265610703158 distance 1.1998364683265523 step 1.0
+DEBUG2: variance 272.7431384299659 distance 1.0408435103114466 step 1.0
+DEBUG2: variance 272.6737744951465 distance 0.9074019531552866 step 1.0
+DEBUG2: variance 272.61473034852673 distance 0.7944553414118897 step 1.0
+DEBUG2: variance 272.5649456706992 distance 0.6983962600513169 step 1.0
+DEBUG2: variance 272.5220666271616 distance 0.61612012526929 step 1.0
+DEBUG2: variance 272.4854897187174 distance 0.5453737085479364 step 1.0
+DEBUG2: variance 272.4536783400145 distance 0.48417573506537104 step 1.0
+DEBUG2: variance 272.4262757839278 distance 0.4310679732219055 step 1.0
+DEBUG2: variance 272.402249399873 distance 0.3847438739087347 step 1.0
+DEBUG2: variance 272.3813797935003 distance 0.3442302480204593 step 1.0
+DEBUG2: variance 272.36295655661445 distance 0.3086409501607247 step 1.0
+DEBUG2: variance 272.34683881901924 distance 0.2773088040395889 step 1.0
+DEBUG2: variance 272.33252843451925 distance 0.2496180473695248 step 1.0
+DEBUG2: variance 272.3199307272145 distance 0.22510036047788712 step 1.0
+DEBUG2: variance 272.3086908196445 distance 0.20331875969550522 step 1.0
+DEBUG2: variance 272.2987420793232 distance 0.18393760035980491 step 1.0
+DEBUG2: variance 272.289828297496 distance 0.166641018137845 step 1.0
+DEBUG2: variance 272.2819004900102 distance 0.15118400468132726 step 1.0
+DEBUG2: variance 272.2747715527799 distance 0.1373345325811422 step 1.0
+DEBUG2: variance 272.2684040691274 distance 0.12491084015743173 step 1.0
+DEBUG2: variance 272.2626600260644 distance 0.11374004530048577 step 1.0
+DEBUG2: variance 272.25750992913595 distance 0.10368537051223364 step 1.0
+DEBUG2: variance 272.2528510659787 distance 0.09461637136703874 step 1.0
+DEBUG2: variance 272.2486596140973 distance 0.08642881805020665 step 1.0
+DEBUG2: variance 272.2448585152394 distance 0.07902317861732708 step 1.0
+DEBUG2: variance 272.2414281801051 distance 0.07231913698720878 step 1.0
+DEBUG2: variance 272.2383103690002 distance 0.0662399842795433 step 1.0
+DEBUG2: variance 272.2354887679544 distance 0.06072321769630281 step 1.0
+DEBUG2: variance 272.2329190574443 distance 0.0557091839997995 step 1.0
+DEBUG2: variance 272.23058753257203 distance 0.05114881369178244 step 1.0
+DEBUG2: variance 272.2284602489685 distance 0.046995338701186364 step 1.0
+DEBUG2: variance 272.22652562658965 distance 0.043209931992130614 step 1.0
+DEBUG2: variance 272.22475750803466 distance 0.03975565612569506 step 1.0
+DEBUG2: variance 272.22314607165185 distance 0.03660157110833617 step 1.0
+DEBUG2: variance 272.22167104239725 distance 0.033718306841889534 step 1.0
+DEBUG2: variance 272.2203240699654 distance 0.03108105074707412 step 1.0
+DEBUG2: variance 272.219089349985 distance 0.028666305296760407 step 1.0
+DEBUG2: variance 272.2179597724429 distance 0.02645405650021936 step 1.0
+DEBUG2: variance 272.21692295035297 distance 0.02442539811260769 step 1.0
+DEBUG2: variance 272.2159728242391 distance 0.022564101371449354 step 1.0
+DEBUG2: variance 272.21509963378435 distance 0.020854874103621107 step 1.0
+DEBUG2: variance 272.2142982119491 distance 0.019284493107089264 step 1.0
+DEBUG2: variance 272.2135608280603 distance 0.017840528976881667 step 1.0
+DEBUG2: variance 272.2128830745536 distance 0.01651215935616122 step 1.0
+DEBUG2: variance 272.2122587971402 distance 0.015289235708370184 step 1.0
+DEBUG2: variance 272.2116842352165 distance 0.014162864050956066 step 1.0
+DEBUG2: variance 272.21115446498146 distance 0.013124722942248377 step 1.0
+DEBUG2: variance 272.21066627721495 distance 0.012167475147177234 step 1.0
+DEBUG2: variance 272.21021571333006 distance 0.011284270219912799 step 1.0
+DEBUG2: variance 272.2098000341317 distance 0.010469033565752938 step 1.0
+DEBUG2: variance 272.2094160418035 distance 0.009716104640963443 step 1.0
+DEBUG2: variance 272.2090613978496 distance 0.009020437413934877 step 1.0
+DEBUG2: variance 272.20873350693466 distance 0.008377338137355944 step 1.0
+DEBUG2: variance 272.2084303721542 distance 0.007782602066406782 step 1.0
+DEBUG2: variance 272.208149877526 distance 0.0072323242589980305 step 1.0
+DEBUG2: variance 272.20789031735234 distance 0.006722990695745081 step 1.0
+DEBUG2: variance 272.20764995879546 distance 0.006251342553949995 step 1.0
+DEBUG2: variance 272.2074273444144 distance 0.005814434946866904 step 1.0
+DEBUG2: variance 272.2072210490164 distance 0.005409540266599456 step 1.0
+DEBUG2: variance 272.20702982680143 distance 0.005034184144951128 step 1.0
+DEBUG2: variance 272.2068525007065 distance 0.004686077258008886 step 1.0
+DEBUG2: variance 272.20668800539124 distance 0.004363135460118206 step 1.0
+DEBUG2: variance 272.2065353648028 distance 0.004063432245618346 step 1.0
+DEBUG2: variance 272.2063936674859 distance 0.003785208065998028 step 1.0
+DEBUG2: variance 272.20626210093843 distance 0.003526837713649157 step 1.0
+DEBUG2: variance 272.20613988496837 distance 0.0032868324124582303 step 1.0
+DEBUG2: variance 272.2060263407038 distance 0.003063817916588854 step 1.0
+DEBUG2: variance 272.2059207999496 distance 0.0028565319286337288 step 1.0
+DEBUG2: variance 272.2058226934719 distance 0.0026638098347046336 step 1.0
+DEBUG2: variance 272.20573144867353 distance 0.0024845792501763174 step 1.0
+DEBUG2: variance 272.20564658664165 distance 0.0023178511449211403 step 1.0
+DEBUG2: variance 272.205567616397 distance 0.0021627127698012785 step 1.0
+DEBUG2: variance 272.205494133728 distance 0.002018322539631184 step 1.0
+DEBUG2: variance 272.20542571738173 distance 0.0018839021987423793 step 1.0
+DEBUG2: variance 272.2053620251629 distance 0.0017587342811059324 step 1.0
+DEBUG2: variance 272.2053026954069 distance 0.0016421540898430731 step 1.0
+DEBUG2: variance 272.2052474375931 distance 0.0015335488859181646 step 1.0
+DEBUG2: variance 272.20519594101347 distance 0.0014323500544807493 step 1.0
+DEBUG2: variance 272.2051479583564 distance 0.0013380334168721373 step 1.0
+DEBUG2: variance 272.20510322251357 distance 0.0012501118140502924 step 1.0
+DEBUG2: variance 272.2050615224215 distance 0.0011681361144298419 step 1.0
+DEBUG2: variance 272.20502262829854 distance 0.0010916883451495833 step 1.0
+DEBUG2: variance 272.2049863595951 distance 0.0010203830976400175 step 1.0
+DEBUG2: variance 272.20495251850576 distance 0.0009538612691948335 step 1.0
+DEBUG2: variance 272.20492095023985 distance 0.0008917916618231309 step 1.0
+DEBUG2: variance 272.2048914843994 distance 0.0008338653507208505 step 1.0
+DEBUG2: variance 272.2048639880089 distance 0.0007797973393762077 step 1.0
+DEBUG2: variance 272.2048383141762 distance 0.0007293215416857661 step 1.0
+DEBUG2: variance 272.2048143484535 distance 0.0006821924043866418 step 1.0
+DEBUG2: variance 272.2047919641246 distance 0.0006381804710532644 step 1.0
+DEBUG2: variance 272.2047710625072 distance 0.0005970739169399665 step 1.0
+DEBUG2: variance 272.204751534213 distance 0.0005586746524900966 step 1.0
+DEBUG2: variance 272.2047332940229 distance 0.0005227997394017111 step 1.0
+DEBUG2: variance 272.2047162474414 distance 0.0004892779861337083 step 1.0
+DEBUG2: variance 272.2047003207581 distance 0.0004579512302843511 step 1.0
+DEBUG2: variance 272.20468543228895 distance 0.0004286713770949119 step 1.0
+DEBUG2: variance 272.20467151818724 distance 0.00040130154414519517 step 1.0
+DEBUG2: variance 272.2046585077971 distance 0.00037571349476907197 step 1.0
+DEBUG2: variance 272.20464634574904 distance 0.00035178864814013885 step 1.0
+DEBUG2: variance 272.2046349708787 distance 0.00032941586192640005 step 1.0
+DEBUG2: variance 272.20462433510943 distance 0.0003084923152021471 step 1.0
+DEBUG2: variance 272.20461438546414 distance 0.0002889215979359826 step 1.0
+DEBUG2: variance 272.2046050801519 distance 0.0002706144766328688 step 1.0
+DEBUG2: variance 272.20459637325337 distance 0.0002534872519496555 step 1.0
+DEBUG2: variance 272.2045882284049 distance 0.000237462418131632 step 1.0
+DEBUG2: variance 272.2045806057838 distance 0.0002224672538798616 step 1.0
+DEBUG2: variance 272.20457347371286 distance 0.000208434386945019 step 1.0
+DEBUG2: variance 272.20456679763583 distance 0.0001953005871348372 step 1.0
+DEBUG2: variance 272.2045605499401 distance 0.00018300724715736421 step 1.0
+DEBUG2: variance 272.2045547006175 distance 0.00017149935024531138 step 1.0
+DEBUG2: variance 272.2045492255744 distance 0.00016072587771790993 step 1.0
+DEBUG2: variance 272.20454409874014 distance 0.00015063892703498882 step 1.0
+DEBUG2: variance 272.20453929907757 distance 0.00014119405573226126 step 1.0
+DEBUG2: variance 272.20453480392376 distance 0.00013234952876235403 step 1.0
+DEBUG2: variance 272.20453059489716 distance 0.0001240666075496533 step 1.0
+DEBUG2: variance 272.2045266522811 distance 0.00011630890822523995 step 1.0
+DEBUG2: variance 272.20452296001 distance 0.00010904264361528497 step 1.0
+DEBUG2: variance 272.2045195009175 distance 0.00010223607642903496 step 1.0
+DEBUG2: variance 272.204516260953 distance 9.585972108740317e-05 step 1.0
+DEBUG2: variance 272.2045132251696 distance 8.988587809366038e-05 step 1.0
+DEBUG2: variance 272.20451038126686 distance 8.428880175061166e-05 step 1.0
+DEBUG2: variance 272.20450771622234 distance 7.904430385340631e-05 step 1.0
+DEBUG2: variance 272.2045052192601 distance 7.412989255289167e-05 step 1.0
+DEBUG2: variance 272.2045028790315 distance 6.952443517873565e-05 step 1.0
+DEBUG2: variance 272.20450068609915 distance 6.520827278902712e-05 step 1.0
+DEBUG2: variance 272.2044986305626 distance 6.116293338351385e-05 step 1.0
+DEBUG2: variance 272.2044967041453 distance 5.737122604057689e-05 step 1.0
+DEBUG2: variance 272.204494898213 distance 5.381699703794198e-05 step 1.0
+DEBUG2: variance 272.20449320550784 distance 5.048520691070376e-05 step 1.0
+DEBUG2: variance 272.2044916184879 distance 4.736172308497904e-05 step 1.0
+DEBUG2: variance 272.20449013079224 distance 4.443338269265106e-05 step 1.0
+DEBUG2: variance 272.20448873583047 distance 4.1687816260868544e-05 step 1.0
+DEBUG2: variance 272.20448742802307 distance 3.911349868747379e-05 step 1.0
+DEBUG2: variance 272.2044862016095 distance 3.669959933211558e-05 step 1.0
+DEBUG2: variance 272.20448505169253 distance 3.443602318249737e-05 step 1.0
+DEBUG2: variance 272.2044839732357 distance 3.231328338319083e-05 step 1.0
+DEBUG2: variance 272.2044829619374 distance 3.032253430198081e-05 step 1.0
+DEBUG2: variance 272.2044820133991 distance 2.8455463122597968e-05 step 1.0
+DEBUG2: variance 272.20448112383883 distance 2.6704316244085207e-05 step 1.0
+DEBUG2: variance 272.20448028940604 distance 2.5061807068941323e-05 step 1.0
+DEBUG2: variance 272.2044795067823 distance 2.352113693423771e-05 step 1.0
+DEBUG2: variance 272.20447877259335 distance 2.207591665636116e-05 step 1.0
+DEBUG2: variance 272.2044780839253 distance 2.0720182992993213e-05 step 1.0
+DEBUG2: variance 272.2044774378266 distance 1.9448331873567318e-05 step 1.0
+DEBUG2: variance 272.2044768317312 distance 1.825513122308463e-05 step 1.0
+DEBUG2: variance 272.2044762630558 distance 1.713566411826833e-05 step 1.0
+DEBUG2: variance 272.20447572954356 distance 1.608533866297161e-05 step 1.0
+DEBUG2: variance 272.20447522893244 distance 1.5099839576077015e-05 step 1.0
+DEBUG2: variance 272.20447475923856 distance 1.4175135687426295e-05 step 1.0
+DEBUG2: variance 272.2044743184775 distance 1.3307438689971014e-05 step 1.0
+DEBUG2: variance 272.20447390490324 distance 1.2493208725906903e-05 step 1.0
+DEBUG2: variance 272.20447351677905 distance 1.172911922701791e-05 step 1.0
+DEBUG2: variance 272.2044731525694 distance 1.1012060976164605e-05 step 1.0
+DEBUG2: variance 272.20447281074684 distance 1.0339112122887081e-05 step 1.0
+DEBUG2: variance 272.2044724899628 distance 9.70754103630862e-06 step 1.0
+DEBUG2: variance 272.2044721888758 distance 9.114780720864288e-06 step 1.0
+DEBUG2: variance 272.2044719063004 distance 8.558430718251692e-06 step 1.0
+DEBUG2: variance 272.20447164106326 distance 8.036235265874291e-06 step 1.0
+DEBUG2: variance 272.2044713921153 distance 7.54608445753889e-06 step 1.0
+DEBUG2: variance 272.20447115842506 distance 7.085995586208848e-06 step 1.0
+DEBUG2: variance 272.20447093907524 distance 6.6541137331468816e-06 step 1.0
+DEBUG2: variance 272.2044707331581 distance 6.248695821400203e-06 step 1.0
+DEBUG2: variance 272.2044705398643 distance 5.86811077016514e-06 step 1.0
+DEBUG2: variance 272.20447035839726 distance 5.510825856721373e-06 step 1.0
+DEBUG2: variance 272.20447018804276 distance 5.1754065459142975e-06 step 1.0
+DEBUG2: variance 272.20447002810624 distance 4.860504818889491e-06 step 1.0
+DEBUG2: variance 272.2044698779537 distance 4.564858765195756e-06 step 1.0
+DEBUG2: variance 272.2044697369761 distance 4.2872825881597576e-06 step 1.0
+DEBUG2: variance 272.2044696046175 distance 4.0266660291738106e-06 step 1.0
+DEBUG2: variance 272.2044694803373 distance 3.7819658030032214e-06 step 1.0
+DEBUG2: variance 272.20446936365164 distance 3.552204908998616e-06 step 1.0
+DEBUG2: variance 272.20446925408197 distance 3.336465286684413e-06 step 1.0
+DEBUG2: variance 272.2044691512012 distance 3.133887056524005e-06 step 1.0
+DEBUG2: variance 272.20446905459175 distance 2.9436622175158184e-06 step 1.0
+DEBUG2: variance 272.2044689638739 distance 2.7650338503132264e-06 step 1.0
+DEBUG2: variance 272.2044688786835 distance 2.597290705316181e-06 step 1.0
+DEBUG2: variance 272.20446879868484 distance 2.4397663932704884e-06 step 1.0
+DEBUG2: variance 272.2044687235576 distance 2.291834734515223e-06 step 1.0
+DEBUG2: variance 272.2044686530049 distance 2.152908955907053e-06 step 1.0
+DEBUG2: variance 272.2044685867447 distance 2.0224376912921763e-06 step 1.0
+DEBUG2: variance 272.2044685245174 distance 1.8999041986413448e-06 step 1.0
+DEBUG2: variance 272.2044684660735 distance 1.7848229179416949e-06 step 1.0
+DEBUG2: variance 272.20446841118377 distance 1.6767387182617597e-06 step 1.0
+DEBUG2: variance 272.2044683596313 distance 1.5752239333024908e-06 step 1.0
+DEBUG2: variance 272.2044683112121 distance 1.479877645020144e-06 step 1.0
+DEBUG2: variance 272.2044682657327 distance 1.390323128571037e-06 step 1.0
+DEBUG2: variance 272.20446822301614 distance 1.3062071768721143e-06 step 1.0
+DEBUG2: variance 272.20446818289156 distance 1.2271978967437109e-06 step 1.0
+DEBUG2: variance 272.2044681452052 distance 1.1529840765701902e-06 step 1.0
+DEBUG2: variance 272.20446810980366 distance 1.0832732841750562e-06 step 1.0
+DEBUG2: variance 272.20446807655117 distance 1.0177912783614782e-06 step 1.0
+DEBUG2: variance 272.2044680453153 distance 9.562803659179841e-07 step 1.0
+DEBUG2: variance 272.2044680159732 distance 8.984988571153337e-07 step 1.0
+DEBUG2: variance 272.20446798840885 distance 8.442196453703741e-07 step 1.0
+DEBUG2: variance 272.2044679625152 distance 7.932297056551683e-07 step 1.0
+DEBUG2: variance 272.2044679381917 distance 7.453288658333695e-07 step 1.0
+DEBUG2: variance 272.2044679153398 distance 7.003293463643085e-07 step 1.0
+DEBUG2: variance 272.2044678938732 distance 6.580546967516927e-07 step 1.0
+DEBUG2: variance 272.2044678737049 distance 6.183393745309061e-07 step 1.0
+DEBUG2: variance 272.2044678547573 distance 5.810278239278075e-07 step 1.0
+DEBUG2: variance 272.2044678369578 distance 5.459740920945566e-07 step 1.0
+DEBUG2: variance 272.2044678202352 distance 5.130410304150751e-07 step 1.0
+DEBUG2: variance 272.204467804522 distance 4.820999454918237e-07 step 1.0
+DEBUG2: variance 272.2044677897614 distance 4.530299063510503e-07 step 1.0
+DEBUG2: variance 272.2044677758915 distance 4.257174279188994e-07 step 1.0
+DEBUG2: variance 272.2044677628603 distance 4.000558694944189e-07 step 1.0
+DEBUG2: variance 272.20446775061833 distance 3.759451483203819e-07 step 1.0
+DEBUG2: variance 272.2044677391146 distance 3.5329121712491574e-07 step 1.0
+DEBUG2: variance 272.2044677283048 distance 3.320058053103477e-07 step 1.0
+DEBUG2: variance 272.20446771815057 distance 3.120059648527448e-07 step 1.0
+DEBUG2: variance 272.2044677086074 distance 2.932138369242562e-07 step 1.0
+DEBUG2: variance 272.20446769964116 distance 2.7555625687595556e-07 step 1.0
+DEBUG2: variance 272.2044676912167 distance 2.589645441460113e-07 step 1.0
+DEBUG2: variance 272.2044676833006 distance 2.4337415851063607e-07 step 1.0
+DEBUG2: variance 272.20446767586117 distance 2.2872451117850997e-07 step 1.0
+DEBUG2: variance 272.204467668872 distance 2.149586653880237e-07 step 1.0
+DEBUG2: variance 272.2044676623034 distance 2.0202316684426834e-07 step 1.0
+DEBUG2: variance 272.2044676561307 distance 1.8986778280051167e-07 step 1.0
+DEBUG2: variance 272.20446765033097 distance 1.7844535002733913e-07 step 1.0
+DEBUG2: variance 272.20446764488014 distance 1.6771154731565655e-07 step 1.0
+DEBUG2: variance 272.20446763975934 distance 1.576247592522334e-07 step 1.0
+DEBUG2: variance 272.20446763494584 distance 1.481458778040283e-07 step 1.0
+DEBUG2: variance 272.20446763042264 distance 1.392381803774286e-07 step 1.0
+DEBUG2: variance 272.2044676261718 distance 1.3086715662027287e-07 step 1.0
+DEBUG2: variance 272.2044676221768 distance 1.230003994182903e-07 step 1.0
+DEBUG2: variance 272.2044676184245 distance 1.1560745365740529e-07 step 1.0
+DEBUG2: variance 272.20446761489546 distance 1.0865971880430779e-07 step 1.0
+DEBUG2: variance 272.20446761158166 distance 1.0213031677078116e-07 step 1.0
+DEBUG2: variance 272.2044676084653 distance 9.599400497770454e-08 step 1.0
+DEBUG2: variance 272.20446760553654 distance 9.022706082810873e-08 step 1.0
+DEBUG2: variance 272.204467602785 distance 8.480720414268198e-08 step 1.0
+
+DEBUG: converged after 250 iterations
+
+
+
+         213718 function calls (212713 primitive calls) in 3.851 seconds
+
+   Ordered by: cumulative time
+   List reduced from 175 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    3.851    3.851 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:397(fit)
+        1    0.026    0.026    3.851    3.851 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)
+    18048    0.883    0.000    3.685    0.000 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+      251    0.024    0.000    3.353    0.013 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:582(log)
+      251    0.001    0.000    3.261    0.013 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:560(_aux_log)
+     1002    0.011    0.000    3.014    0.003 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:196(apply_func_to_eigvals)
+      251    0.000    0.000    2.825    0.011 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:338(logm)
+9531/8526    0.011    0.000    2.647    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+     1002    0.001    0.000    2.481    0.002 <__array_function__ internals>:2(eigh)
+     1002    2.469    0.002    2.479    0.002 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:1337(eigh)
+
+
+         213718 function calls (212713 primitive calls) in 3.851 seconds
+
+   Ordered by: internal time
+   List reduced from 175 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     1002    2.469    0.002    2.479    0.002 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:1337(eigh)
+    18048    0.883    0.000    3.685    0.000 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+     4013    0.122    0.000    0.122    0.000 {built-in method numpy.array}
+     2256    0.098    0.000    0.098    0.000 {built-in method numpy.core._multiarray_umath.c_einsum}
+      501    0.057    0.000    0.086    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:188(to_symmetric)
+        1    0.026    0.026    3.851    3.851 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)
+      251    0.024    0.000    3.353    0.013 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:582(log)
+      502    0.021    0.000    0.026    0.000 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:477(inv)
+    18048    0.013    0.000    0.019    0.000 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)
+     1002    0.011    0.000    3.014    0.003 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:196(apply_func_to_eigvals)
+
+
+         213718 function calls (212713 primitive calls) in 3.851 seconds
+
+   Ordered by: call count
+   List reduced from 175 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    37848    0.006    0.000    0.006    0.000 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:123(<lambda>)
+    18048    0.883    0.000    3.685    0.000 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+    18048    0.013    0.000    0.019    0.000 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)
+    11280    0.001    0.000    0.001    0.000 /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:989(_einsum_dispatcher)
+9531/8526    0.011    0.000    2.647    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+     5016    0.001    0.000    0.001    0.000 {built-in method builtins.issubclass}
+     4761    0.008    0.000    0.008    0.000 {method 'astype' of 'numpy.ndarray' objects}
+     4013    0.122    0.000    0.122    0.000 {built-in method numpy.array}
+     3509    0.005    0.000    0.875    0.000 {built-in method _functools.reduce}
+     3509    0.001    0.000    0.001    0.000 {built-in method builtins.getattr}
+
+
+   Ordered by: internal time
+   List reduced from 175 to 5 due to restriction <5>
+
+Function                                                                                                              was called by...
+                                                                                                                          ncalls  tottime  cumtime
+/user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:1337(eigh)  <-    1002    2.469    2.479  {built-in method numpy.core._multiarray_umath.implement_array_function}
+/user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)   <-    3006    0.002    0.062  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/algebra_utils.py:72(from_vector_to_diagonal_matrix)
+                                                                                                                             502    0.001    0.028  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/general_linear.py:55(inverse)
+                                                                                                                            1503    0.001    0.008  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:110(transpose)
+                                                                                                                             502    0.000    0.045  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:311(trace_product)
+                                                                                                                            1002    0.003    0.004  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:189(<lambda>)
+                                                                                                                            2255    0.008    2.499  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:196(apply_func_to_eigvals)
+                                                                                                                            1760    0.003    0.043  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)
+                                                                                                                            1504    0.001    0.125  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/numpy/numpy_wrapper.py:55(array)
+                                                                                                                            6014    0.864    0.871  {built-in method _functools.reduce}
+{built-in method numpy.array}                                                                                         <-    1504    0.121    0.121  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/numpy/numpy_wrapper.py:71(_array_from_scalar_or_array)
+                                                                                                                            1756    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/core/_asarray.py:14(asarray)
+                                                                                                                             502    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/core/_asarray.py:86(asanyarray)
+                                                                                                                             251    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/core/numeric.py:2197(isclose)
+{built-in method numpy.core._multiarray_umath.c_einsum}                                                               <-    2256    0.098    0.098  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/core/einsumfunc.py:997(einsum)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:188(to_symmetric)                          <-     250    0.002    0.005  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:496(_aux_exp)
+                                                                                                                             251    0.055    0.081  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:560(_aux_log)
+
+
+   Ordered by: cumulative time
+   List reduced from 175 to 5 due to restriction <5>
+
+Function                                                                                                             called...
+                                                                                                                         ncalls  tottime  cumtime
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:397(fit)                              ->       1    0.000    0.000  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/errors.py:45(check_parameter_accepted_values)
+                                                                                                                              1    0.026    3.851  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)
+                                                                                                                              1    0.000    0.000  {built-in method builtins.isinstance}
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/learning/frechet_mean.py:96(_default_gradient_descent)         ->       1    0.000    0.000  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/numpy/common.py:4(to_ndarray)
+                                                                                                                            502    0.000    0.290  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:208(squared_norm)
+                                                                                                                            250    0.001    0.137  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:520(exp)
+                                                                                                                            251    0.024    3.353  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:582(log)
+                                                                                                                              1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/logging/__init__.py:1984(info)
+                                                                                                                           1760    0.003    0.043  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+                                                                                                                              1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:58(f_wrapped)
+                                                                                                                            251    0.001    0.001  {built-in method builtins.print}
+                                                                                                                            251    0.000    0.000  {method 'append' of 'list' objects}
+                                                                                                                            252    0.002    0.002  {method 'format' of 'str' objects}
+/user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)  ->    1504    0.001    0.122  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/numpy/numpy_wrapper.py:71(_array_from_scalar_or_array)
+                                                                                                                          18048    0.013    0.019  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)
+                                                                                                                              1    0.000    0.000  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/core/numeric.py:144(ones)
+                                                                                                                           1503    0.006    0.009  /user/mvesin/home/.conda/envs/geomstats-condamkl2numpy/lib/python3.7/site-packages/numpy/lib/twodim_base.py:152(eye)
+                                                                                                                            752    0.001    0.008  <__array_function__ internals>:2(any)
+                                                                                                                           1002    0.001    2.481  <__array_function__ internals>:2(eigh)
+                                                                                                                           2256    0.002    0.107  <__array_function__ internals>:2(einsum)
+                                                                                                                            502    0.000    0.027  <__array_function__ internals>:2(inv)
+                                                                                                                            251    0.000    0.016  <__array_function__ internals>:2(isclose)
+                                                                                                                            252    0.000    0.004  <__array_function__ internals>:2(norm)
+                                                                                                                            503    0.000    0.005  <__array_function__ internals>:2(sum)
+                                                                                                                           1503    0.001    0.005  <__array_function__ internals>:2(transpose)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:582(log)                              ->     251    0.001    3.261  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:560(_aux_log)
+                                                                                                                            251    0.000    0.067  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/symmetric_matrices.py:170(powerm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:560(_aux_log)                         ->     502    0.000    0.354  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:71(mul)
+                                                                                                                            251    0.055    0.081  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/matrices.py:188(to_symmetric)
+                                                                                                                            251    0.000    2.825  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/spd_matrices.py:338(logm)
+
+
+
+
+RESULTS: geomstats cpu time 30.763760326
+RESULTS: geomstats real time 3.850941783748567

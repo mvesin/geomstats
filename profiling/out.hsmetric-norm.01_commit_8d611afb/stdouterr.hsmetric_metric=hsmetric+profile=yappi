@@ -1,0 +1,59 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'hsmetric', '-p', 'yappi', '-s', 'hsmetric_metric=hsmetric+profile=yappi']
+INFO: user profiler yappi
+INFO: result file suffix hsmetric_metric=hsmetric+profile=yappi
+
+INFO: OMP_NUM_THREADS is not set
+
+
+
+Clock type: CPU
+Ordered by: tsub, desc
+
+name                                  ncall  tsub      ttot      tavg      
+..d/tracer.py:65 find_top_boxed_args  150..  0.175545  0.270348  0.000002
+..es/autograd/tracer.py:35 f_wrapped  150..  0.173560  1.336938  0.000009
+../lib/shape_base.py:512 expand_dims  40000  0.132733  0.464956  0.000012
+..es/autograd/tracer.py:123 <lambda>  360..  0.118761  0.118761  0.000000
+..meric.py:1341 normalize_axis_tuple  40000  0.101755  0.160654  0.000004
+..ckend/numpy/common.py:4 to_ndarray  50000  0.082779  1.130483  0.000023
+..ad/numpy/numpy_wrapper.py:55 array  50000  0.080827  0.413090  0.000008
+..es/autograd/tracer.py:58 f_wrapped  70000  0.063850  0.166633  0.000002
+..mstats/vectorization.py:90 wrapper  10000  0.050864  1.998215  0.000200
+..ectorization.py:247 vectorize_args  10000  0.049853  0.564645  0.000056
+..rization.py:214 get_initial_shapes  20000  0.044850  0.139626  0.000007
+...py:71 _array_from_scalar_or_array  50000  0.042923  0.081818  0.000002
+..unction__ internals>:2 expand_dims  40000  0.038938  0.541821  0.000014
+..:178 EuclideanMetric.inner_product  10000  0.034898  0.969846  0.000097
+..py/core/_asarray.py:110 asanyarray  40000  0.034871  0.058796  0.000001
+..es/autograd/tracer.py:124 <lambda>  70000  0.033941  0.057899  0.000001
+..y/lib/shape_base.py:600 <listcomp>  40000  0.032933  0.049897  0.000001
+..py/core/numeric.py:1391 <listcomp>  40000  0.030959  0.041932  0.000001
+..s/numpy/lib/twodim_base.py:156 eye  10000  0.029947  0.042886  0.000004
+..zation.py:361 squeeze_output_dim_0  10000  0.028906  0.039885  0.000004
+../vectorization.py:326 adapt_result  10000  0.027922  0.222379  0.000022
+..nsumfunc.py:989 _einsum_dispatcher  100..  0.026961  0.026961  0.000000
+..zation.py:403 squeeze_output_dim_1  10000  0.024941  0.039900  0.000004
+..ay_function__ internals>:2 squeeze  20000  0.023974  0.060849  0.000003
+..ats/vectorization.py:114 get_types  10000  0.018925  0.029897  0.000003
+..ray_function__ internals>:2 einsum  20000  0.016969  0.165656  0.000008
+..y:208 EuclideanMetric.squared_norm  10000  0.016961  2.015176  0.000202
+..rray_function__ internals>:2 shape  20000  0.013971  0.044884  0.000002
+..torization.py:286 vectorize_kwargs  10000  0.011987  0.013982  0.000001
+..ase.py:508 _expand_dims_dispatcher  40000  0.011977  0.011977  0.000000
+..tric.py:230 HypersphereMetric.norm  10000  0.011961  2.062043  0.000206
+..umpy/core/einsumfunc.py:997 einsum  20000  0.008981  0.068824  0.000003
+..y/core/fromnumeric.py:1439 squeeze  20000  0.008976  0.018963  0.000001
+..ats/vectorization.py:441 is_scalar  10000  0.008975  0.014959  0.000001
+..umeric.py:1435 _squeeze_dispatcher  20000  0.007976  0.007976  0.000000
+..mnumeric.py:1922 _shape_dispatcher  20000  0.007967  0.007967  0.000000
+..:124 EuclideanMetric.metric_matrix  10000  0.006989  0.070785  0.000007
+..463 HypersphereMetric.squared_norm  10000  0.004991  2.020167  0.000202
+..s/vectorization.py:156 adapt_types  10000  0.003983  0.003983  0.000000
+..mpy/core/fromnumeric.py:1926 shape  20000  0.001988  0.001988  0.000000
+
+name           id     tid              ttot      scnt        
+_MainThread    0      140328106981184  2.071024  1         
+
+
+RESULTS: cpu time 2.0700431
+RESULTS: real time 2.0750253600999713

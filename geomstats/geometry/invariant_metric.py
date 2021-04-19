@@ -45,7 +45,8 @@ class _InvariantMetricMatrix(RiemannianMetric):
     def __init__(self, group,
                  metric_mat_at_identity=None,
                  left_or_right='left', **kwargs):
-        super(_InvariantMetricMatrix, self).__init__(dim=group.dim, **kwargs)
+        super(_InvariantMetricMatrix, self).__init__(
+            dim=group.dim, default_point_type='matrix', **kwargs)
 
         self.group = group
         self.lie_algebra = group.lie_algebra
@@ -1025,7 +1026,8 @@ class BiInvariantMetric(_InvariantMetricVector):
                        Geonger International Publishing, 2020.
                        https://doi.org/10.1007/978-3-030-46040-2.
         """
-        return self.group.log(point, base_point)
+        log = self.group.log(point, base_point)
+        return self.group.to_tangent(log, base_point)
 
     def inner_product_at_identity(self, tangent_vec_a, tangent_vec_b):
         """Compute inner product at tangent space at identity.

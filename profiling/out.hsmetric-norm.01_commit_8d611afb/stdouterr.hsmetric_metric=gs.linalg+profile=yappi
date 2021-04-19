@@ -1,0 +1,29 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'gs.linalg', '-p', 'yappi', '-s', 'hsmetric_metric=gs.linalg+profile=yappi']
+INFO: user profiler yappi
+INFO: result file suffix hsmetric_metric=gs.linalg+profile=yappi
+
+INFO: OMP_NUM_THREADS is not set
+
+
+
+Clock type: CPU
+Ordered by: tsub, desc
+
+name                                  ncall  tsub      ttot      tavg      
+..s/numpy/linalg/linalg.py:2362 norm  10000  0.037957  0.076259  0.000008
+<__array_function__ internals>:2 dot  10000  0.008990  0.017332  0.000002
+..d/tracer.py:65 find_top_boxed_args  10000  0.008990  0.012985  0.000001
+..array_function__ internals>:2 norm  10000  0.008006  0.096233  0.000010
+..es/autograd/tracer.py:35 f_wrapped  10000  0.005994  0.115212  0.000012
+../numpy/core/_asarray.py:23 asarray  10000  0.004996  0.007991  0.000001
+..linalg/linalg.py:112 isComplexType  10000  0.004995  0.005995  0.000001
+..lg/linalg.py:2358 _norm_dispatcher  10000  0.003996  0.003996  0.000000
+..es/autograd/tracer.py:123 <lambda>  10000  0.003995  0.003995  0.000000
+..s/numpy/core/multiarray.py:716 dot  10000  0.001998  0.001998  0.000000
+
+name           id     tid              ttot      scnt        
+_MainThread    0      140210843940672  0.122341  1         
+
+
+RESULTS: cpu time 0.1216971400000002
+RESULTS: real time 0.12182141002267599

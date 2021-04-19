@@ -1,0 +1,14 @@
+name: geomstats-condamkl2numpy
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - codecov
+  - coverage
+  - nbsphinx
+  - nbsphinx-link
+  - pandoc
+  - sphinx
+  - sphinx_rtd_theme

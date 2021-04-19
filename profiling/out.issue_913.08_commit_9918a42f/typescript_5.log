@@ -1,0 +1,117 @@
+Script started on 2021-03-26 15:46:18+01:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ [14P(reverse-i-search)`':[Cf': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue.py -d $dim  -s issue913_dim=$dim" ; echo $command ; time $command; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue[1@.[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issu[1@e[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23@autograd-np-from-conda_[A
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P-s issue913_mkl[A
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[33@-omp_num_threads 1 -s issue913_mkl-np-from-conda_dim=$dim+omp_num_th=1[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[mvesin@apurimac mvesin_geomstats]$ for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_mkl-np-from-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $command; done[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cafrom-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $command; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cufrom-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $command; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctfrom-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $command; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cofrom-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $command; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgfrom-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $comman[1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crfrom-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $comma[1@n[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cafrom-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $comm[1@a[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdfrom-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $com[1@m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-from-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $co[C[1@m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]777;preexec\python ./profiling/spd_means_issue.py -d 10 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=10+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 18.607178281300676, final dist: 9.35372510555808e-10
+
+real	0m0.759s
+user	0m0.650s
+sys	0m0.082s
+python ./profiling/spd_means_issue.py -d 15 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=15+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 12, final variance: 40.93391335364937, final dist: 5.229841948836877e-09
+
+real	0m0.754s
+user	0m0.682s
+sys	0m0.067s
+python ./profiling/spd_means_issue.py -d 20 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=20+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 70.68558460188108, final dist: 7.518161074438546e-09
+
+real	0m0.777s
+user	0m0.701s
+sys	0m0.073s
+python ./profiling/spd_means_issue.py -d 30 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=30+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 35, final variance: 155.9833119873725, final dist: 2.8497593933970018e-08
+
+real	0m1.012s
+user	0m0.939s
+sys	0m0.069s
+python ./profiling/spd_means_issue.py -d 40 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=40+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 250, final variance: 272.20446760019973, final dist: 7.971349609891821e-08
+
+real	0m4.172s
+user	0m3.894s
+sys	0m0.254s
+python ./profiling/spd_means_issue.py -d 50 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=50+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 422.2023711860057, final dist: 4.70733462412481e-09
+
+real	0m1.064s
+user	0m0.960s
+sys	0m0.087s
+python ./profiling/spd_means_issue.py -d 60 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=60+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 608.6105964838122, final dist: 1.3039616208576865e-07
+
+real	0m1.411s
+user	0m1.258s
+sys	0m0.134s
+python ./profiling/spd_means_issue.py -d 70 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=70+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 821.8955523543685, final dist: 1.346880153224206e-07
+
+real	0m1.555s
+user	0m1.417s
+sys	0m0.118s
+python ./profiling/spd_means_issue.py -d 80 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=80+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 1075.8063913149253, final dist: 7.166979812392911e-08
+
+real	0m1.804s
+user	0m1.668s
+sys	0m0.111s
+python ./profiling/spd_means_issue.py -d 90 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=90+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 1360.7508589504266, final dist: 1.3469651676805684e-07
+
+real	0m1.556s
+user	0m1.457s
+sys	0m0.078s
+python ./profiling/spd_means_issue.py -d 100 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=100+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 10, final variance: 1678.7271328127745, final dist: 3.985875344754991e-07
+
+real	0m1.868s
+user	0m1.744s
+sys	0m0.105s
+python ./profiling/spd_means_issue.py -d 120 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=120+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 2416.8377378188725, final dist: 3.461548964538906e-07
+
+real	0m2.976s
+user	0m2.836s
+sys	0m0.119s
+python ./profiling/spd_means_issue.py -d 140 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=140+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 3285.3423192172854, final dist: 7.581653641448526e-07
+
+real	0m5.195s
+user	0m4.799s
+sys	0m0.349s
+python ./profiling/spd_means_issue.py -d 160 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=160+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 29, final variance: 4284.703296904624, final dist: 7.633085709915079e-07
+
+real	0m10.667s
+user	0m9.217s
+sys	0m1.261s
+python ./profiling/spd_means_issue.py -d 180 --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=180+omp_num_th=1
+INFO: Using numpy backend
+INFO: n_iter: 51, final variance: 5412.968497572761, final dist: 1.3504562589604648e-06
+
+real	0m22.925s
+user	0m19.698s
+sys	0m2.861s
+]777;notify;Command completed;for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180   do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=$dim+omp_num_th=1"   echo $command   time $command  done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ 
+]777;notify;Command completed;for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180   do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_mkl-np-autograd-from-conda_dim=$dim+omp_num_th=1"   echo $command   time $command  done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-03-26 15:50:37+01:00 [COMMAND_EXIT_CODE="0"]

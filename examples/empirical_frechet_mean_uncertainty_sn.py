@@ -18,7 +18,8 @@ from geomstats.learning.frechet_mean import _adaptive_gradient_descent
 
 
 def empirical_frechet_var_bubble(n_samples, theta, dim,
-                                 n_expectation=1000):
+                                 n_expectation=1000,
+                                 debug=0, max_iter=32):
     """Variance of the empirical Fréchet mean for a bubble distribution.
 
     Draw n_sampless from a bubble distribution, computes its empirical
@@ -45,6 +46,10 @@ def empirical_frechet_var_bubble(n_samples, theta, dim,
     -------
     tuple (variance, std-dev on the computed variance)
     """
+    verbose = False
+    if debug > 0:
+        verbose = True
+
     if dim <= 1:
         raise ValueError(
             'Dim > 1 needed to draw a uniform sample on sub-sphere.')
@@ -70,7 +75,7 @@ def empirical_frechet_var_bubble(n_samples, theta, dim,
         # TODO (nina): Use FrechetMean here
         current_mean = _adaptive_gradient_descent(
             data, metric=sphere.metric,
-            max_iter=32, init_point=north_pole)
+            max_iter=max_iter, init_point=north_pole, verbose=verbose)
         var.append(sphere.metric.squared_dist(north_pole, current_mean))
     return gs.mean(var), 2 * gs.std(var) / gs.sqrt(n_expectation)
 

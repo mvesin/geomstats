@@ -1,0 +1,114 @@
+Script started on 2021-03-26 14:54:33+01:00 [TERM="xterm-256color" TTY="/dev/pts/10" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exitfor dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue.py -d $dim -s issue913_mkl-np-from-conda_dim=$dim" ; echo $command ; time $command; done[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-omp_num_threads 1 -s issue913_mkl-np-from-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $command; done[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexit[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfor dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180 ; do command="python ./profiling/spd_means_issue.py -d $dim --omp_num_threads 1 -s issue913_autograd-np-from-conda_dim=$dim+omp_num_th=1" ; echo $command ; time $command; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" ; echo $command ; time $command[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" ; echo $command ; time $command;[1P done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" ; echo $command ; time $command; [1Pdone[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" ; echo $command ; time $command; d[1Pone[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" ; echo $command ; time $command; do[1Pne[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" ; echo $command ; time $command; don[1Pe[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" ; echo $command ; time $command; done[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C" ; echo $command ; time $command; done [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P
+]777;preexec\python ./profiling/spd_means_issue.py -d 10 -s issue913_autograd-np-from-conda_dim=10
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 18.607178281300765, final dist: 9.35372510575802e-10
+
+real	0m0.785s
+user	0m1.341s
+sys	0m3.207s
+python ./profiling/spd_means_issue.py -d 15 -s issue913_autograd-np-from-conda_dim=15
+INFO: Using numpy backend
+INFO: n_iter: 12, final variance: 40.93391335364925, final dist: 5.229841949688231e-09
+
+real	0m0.848s
+user	0m1.645s
+sys	0m4.366s
+python ./profiling/spd_means_issue.py -d 20 -s issue913_autograd-np-from-conda_dim=20
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 70.6855846018811, final dist: 7.518161074874635e-09
+
+real	0m0.963s
+user	0m2.085s
+sys	0m5.760s
+python ./profiling/spd_means_issue.py -d 30 -s issue913_autograd-np-from-conda_dim=30
+INFO: Using numpy backend
+INFO: n_iter: 35, final variance: 155.98331198737233, final dist: 2.8497593938938382e-08
+
+real	0m1.856s
+user	0m4.921s
+sys	0m16.759s
+python ./profiling/spd_means_issue.py -d 40 -s issue913_autograd-np-from-conda_dim=40
+INFO: Using numpy backend
+INFO: n_iter: 250, final variance: 272.20446760019985, final dist: 7.971349611113083e-08
+
+real	0m13.093s
+user	0m42.982s
+sys	2m32.744s
+python ./profiling/spd_means_issue.py -d 50 -s issue913_autograd-np-from-conda_dim=50
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 422.20237118600295, final dist: 4.707334626284871e-09
+
+real	0m1.882s
+user	0m5.086s
+sys	0m16.820s
+python ./profiling/spd_means_issue.py -d 60 -s issue913_autograd-np-from-conda_dim=60
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 608.6105964838204, final dist: 1.3039616213204233e-07
+
+real	0m2.996s
+user	0m8.846s
+sys	0m28.311s
+python ./profiling/spd_means_issue.py -d 70 -s issue913_autograd-np-from-conda_dim=70
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 821.8955523543519, final dist: 1.3468801534745868e-07
+
+real	0m3.361s
+user	0m11.427s
+sys	0m32.674s
+python ./profiling/spd_means_issue.py -d 80 -s issue913_autograd-np-from-conda_dim=80
+INFO: Using numpy backend
+INFO: n_iter: 17, final variance: 1075.806391314997, final dist: 7.16697981195706e-08
+
+real	0m6.474s
+user	0m30.954s
+sys	0m57.517s
+python ./profiling/spd_means_issue.py -d 90 -s issue913_autograd-np-from-conda_dim=90
+INFO: Using numpy backend
+INFO: n_iter: 9, final variance: 1360.7508589502002, final dist: 1.3469651727771346e-07
+
+real	0m2.913s
+user	0m10.547s
+sys	0m26.750s
+python ./profiling/spd_means_issue.py -d 100 -s issue913_autograd-np-from-conda_dim=100
+INFO: Using numpy backend
+INFO: n_iter: 10, final variance: 1678.7271328132433, final dist: 3.985875538905132e-07
+
+real	0m3.786s
+user	0m15.610s
+sys	0m35.285s
+python ./profiling/spd_means_issue.py -d 120 -s issue913_autograd-np-from-conda_dim=120
+INFO: Using numpy backend
+INFO: n_iter: 14, final variance: 2416.8377378187324, final dist: 3.4615500703707057e-07
+
+real	0m6.120s
+user	0m25.244s
+sys	1m2.200s
+python ./profiling/spd_means_issue.py -d 140 -s issue913_autograd-np-from-conda_dim=140
+INFO: Using numpy backend
+INFO: n_iter: 19, final variance: 3285.3423192201667, final dist: 7.581631231518124e-07
+
+real	0m9.341s
+user	0m42.617s
+sys	1m33.997s
+python ./profiling/spd_means_issue.py -d 160 -s issue913_autograd-np-from-conda_dim=160
+INFO: Using numpy backend
+INFO: n_iter: 29, final variance: 4284.7032969555885, final dist: 7.632697260237069e-07
+
+real	0m16.010s
+user	1m19.188s
+sys	2m41.307s
+python ./profiling/spd_means_issue.py -d 180 -s issue913_autograd-np-from-conda_dim=180
+INFO: Using numpy backend
+INFO: n_iter: 51, final variance: 5412.968497576486, final dist: 1.351134826429105e-06
+
+real	0m32.014s
+user	2m53.591s
+sys	5m18.791s
+]777;notify;Command completed;for dim in 10 15 20 30 40 50 60 70 80 90 100 120 140 160 180   do command="python ./profiling/spd_means_issue.py -d $dim  -s issue913_autograd-np-from-conda_dim=$dim"   echo $command   time $command  done\]777;precmd\]0;mvesin@apurimac:~/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/user/mvesin/home/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-03-26 14:57:33+01:00 [COMMAND_EXIT_CODE="0"]

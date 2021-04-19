@@ -1,0 +1,97 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'gs.linalg', '-p', 'cprofile', '-s', 'test_inner_prod+metric=gs.linalg+p=cprofile']
+INFO: user profiler cprofile
+INFO: result file suffix test_inner_prod+metric=gs.linalg+p=cprofile
+
+INFO: OMP_NUM_THREADS is not set
+
+
+         160006 function calls (150006 primitive calls) in 0.059 seconds
+
+   Ordered by: cumulative time
+   List reduced from 18 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.004    0.000    0.059    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+    10000    0.003    0.000    0.048    0.000 <__array_function__ internals>:2(norm)
+20000/10000    0.010    0.000    0.044    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    10000    0.021    0.000    0.041    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:2362(norm)
+    10000    0.003    0.000    0.010    0.000 <__array_function__ internals>:2(dot)
+    10000    0.004    0.000    0.006    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)
+    10000    0.002    0.000    0.004    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/_asarray.py:23(asarray)
+    10000    0.003    0.000    0.003    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+    10000    0.001    0.000    0.002    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:112(isComplexType)
+    10000    0.002    0.000    0.002    0.000 {built-in method numpy.array}
+
+
+         160006 function calls (150006 primitive calls) in 0.059 seconds
+
+   Ordered by: internal time
+   List reduced from 18 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.021    0.000    0.041    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:2362(norm)
+20000/10000    0.010    0.000    0.044    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    10000    0.004    0.000    0.059    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+    10000    0.004    0.000    0.006    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)
+    10000    0.003    0.000    0.048    0.000 <__array_function__ internals>:2(norm)
+    10000    0.003    0.000    0.010    0.000 <__array_function__ internals>:2(dot)
+    10000    0.003    0.000    0.003    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+    10000    0.002    0.000    0.002    0.000 {built-in method numpy.array}
+    10000    0.002    0.000    0.004    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/_asarray.py:23(asarray)
+    10000    0.001    0.000    0.001    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:123(<lambda>)
+
+
+         160006 function calls (150006 primitive calls) in 0.059 seconds
+
+   Ordered by: call count
+   List reduced from 18 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    20000    0.001    0.000    0.001    0.000 {built-in method builtins.issubclass}
+20000/10000    0.010    0.000    0.044    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    10000    0.001    0.000    0.002    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:112(isComplexType)
+    10000    0.001    0.000    0.001    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:2358(_norm_dispatcher)
+    10000    0.021    0.000    0.041    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:2362(norm)
+    10000    0.003    0.000    0.048    0.000 <__array_function__ internals>:2(norm)
+    10000    0.003    0.000    0.010    0.000 <__array_function__ internals>:2(dot)
+    10000    0.002    0.000    0.004    0.000 /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/_asarray.py:23(asarray)
+    10000    0.003    0.000    0.003    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+    10000    0.002    0.000    0.002    0.000 {built-in method numpy.array}
+
+
+   Ordered by: internal time
+   List reduced from 18 to 5 due to restriction <5>
+
+Function                                                                                                                   was called by...
+                                                                                                                               ncalls  tottime  cumtime
+/user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:2362(norm)           <-   10000    0.021    0.041  {built-in method numpy.core._multiarray_umath.implement_array_function}
+{built-in method numpy.core._multiarray_umath.implement_array_function}                                                    <-   10000    0.006    0.006  <__array_function__ internals>:2(dot)
+                                                                                                                                10000    0.004    0.044  <__array_function__ internals>:2(norm)
+/user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)            <- 
+/user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)  <-   10000    0.004    0.006  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+<__array_function__ internals>:2(norm)                                                                                     <-   10000    0.003    0.048  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)
+
+
+   Ordered by: cumulative time
+   List reduced from 18 to 5 due to restriction <5>
+
+Function                                                                                                          called...
+                                                                                                                      ncalls  tottime  cumtime
+/user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:35(f_wrapped)   ->   10000    0.004    0.006  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/autograd/tracer.py:65(find_top_boxed_args)
+                                                                                                                       10000    0.003    0.048  <__array_function__ internals>:2(norm)
+<__array_function__ internals>:2(norm)                                                                            ->   10000    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:2358(_norm_dispatcher)
+                                                                                                                       10000    0.004    0.044  {built-in method numpy.core._multiarray_umath.implement_array_function}
+{built-in method numpy.core._multiarray_umath.implement_array_function}                                           ->   10000    0.021    0.041  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:2362(norm)
+/user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:2362(norm)  ->   10000    0.002    0.004  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/_asarray.py:23(asarray)
+                                                                                                                       10000    0.001    0.002  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/linalg/linalg.py:112(isComplexType)
+                                                                                                                       10000    0.003    0.010  <__array_function__ internals>:2(dot)
+                                                                                                                       10000    0.001    0.001  {built-in method builtins.issubclass}
+                                                                                                                       10000    0.003    0.003  {method 'ravel' of 'numpy.ndarray' objects}
+<__array_function__ internals>:2(dot)                                                                             ->   10000    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats-condanumpy/lib/python3.7/site-packages/numpy/core/multiarray.py:716(dot)
+                                                                                                                       10000    0.006    0.006  {built-in method numpy.core._multiarray_umath.implement_array_function}
+
+
+
+
+RESULTS: cpu time 0.06211312800000002
+RESULTS: real time 0.062298639211803675
