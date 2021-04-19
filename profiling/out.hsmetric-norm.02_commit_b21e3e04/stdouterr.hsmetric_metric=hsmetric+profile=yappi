@@ -1,0 +1,31 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'hsmetric', '-p', 'yappi', '-s', 'hsmetric_metric=hsmetric+profile=yappi']
+INFO: user profiler yappi
+INFO: result file suffix hsmetric_metric=hsmetric+profile=yappi
+
+INFO: OMP_NUM_THREADS is not set
+
+
+
+Clock type: CPU
+Ordered by: tsub, desc
+
+name                                  ncall  tsub      ttot      tavg      
+..es/autograd/tracer.py:35 f_wrapped  40000  0.047335  0.274791  0.000007
+..d/tracer.py:65 find_top_boxed_args  40000  0.030937  0.053867  0.000001
+..nsumfunc.py:989 _einsum_dispatcher  100..  0.028940  0.028940  0.000000
+..:177 EuclideanMetric.inner_product  10000  0.024934  0.292738  0.000029
+..es/autograd/tracer.py:123 <lambda>  80000  0.022930  0.022930  0.000000
+..s/numpy/lib/twodim_base.py:156 eye  10000  0.020953  0.032923  0.000003
+..tric.py:222 HypersphereMetric.norm  10000  0.013971  0.339621  0.000034
+..ray_function__ internals>:2 einsum  20000  0.012984  0.140666  0.000007
+..:124 EuclideanMetric.metric_matrix  10000  0.011974  0.063284  0.000006
+..umpy/core/einsumfunc.py:997 einsum  20000  0.010979  0.056864  0.000003
+..482 HypersphereMetric.squared_norm  10000  0.008965  0.306689  0.000031
+..y:200 EuclideanMetric.squared_norm  10000  0.004986  0.297724  0.000030
+
+name           id     tid              ttot      scnt        
+_MainThread    0      139988374808384  0.348883  1         
+
+
+RESULTS: cpu time 0.3483244029999999
+RESULTS: real time 0.3491431586444378
