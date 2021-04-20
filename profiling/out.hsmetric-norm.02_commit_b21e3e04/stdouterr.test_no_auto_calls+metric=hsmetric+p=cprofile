@@ -1,0 +1,90 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'hsmetric', '-i', '10000', '-p', 'cprofile', '-s', 'test_no_auto_calls+metric=hsmetric+p=cprofile']
+INFO: user profiler cprofile
+INFO: result file suffix test_no_auto_calls+metric=hsmetric+p=cprofile
+
+INFO: OMP_NUM_THREADS is not set
+
+
+         170006 function calls in 0.091 seconds
+
+   Ordered by: cumulative time
+   List reduced from 16 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.018    0.000    0.091    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)
+    10000    0.003    0.000    0.073    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)
+    10000    0.003    0.000    0.070    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:203(squared_norm)
+    10000    0.006    0.000    0.068    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:178(inner_product)
+    10000    0.003    0.000    0.037    0.000 <__array_function__ internals>:2(einsum)
+    10000    0.010    0.000    0.034    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    10000    0.003    0.000    0.024    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:124(metric_matrix)
+    10000    0.014    0.000    0.021    0.000 /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/lib/twodim_base.py:152(eye)
+    10000    0.002    0.000    0.020    0.000 /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/core/einsumfunc.py:997(einsum)
+    10000    0.018    0.000    0.018    0.000 {built-in method numpy.core._multiarray_umath.c_einsum}
+
+
+         170006 function calls in 0.091 seconds
+
+   Ordered by: internal time
+   List reduced from 16 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.018    0.000    0.018    0.000 {built-in method numpy.core._multiarray_umath.c_einsum}
+    10000    0.018    0.000    0.091    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)
+    10000    0.014    0.000    0.021    0.000 /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/lib/twodim_base.py:152(eye)
+    10000    0.010    0.000    0.034    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    10000    0.007    0.000    0.007    0.000 {built-in method numpy.zeros}
+    10000    0.006    0.000    0.068    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:178(inner_product)
+    60000    0.004    0.000    0.004    0.000 /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/core/einsumfunc.py:989(_einsum_dispatcher)
+    10000    0.003    0.000    0.037    0.000 <__array_function__ internals>:2(einsum)
+    10000    0.003    0.000    0.024    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:124(metric_matrix)
+    10000    0.003    0.000    0.073    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)
+
+
+         170006 function calls in 0.091 seconds
+
+   Ordered by: call count
+   List reduced from 16 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    60000    0.004    0.000    0.004    0.000 /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/core/einsumfunc.py:989(_einsum_dispatcher)
+    10000    0.003    0.000    0.073    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)
+    10000    0.003    0.000    0.024    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:124(metric_matrix)
+    10000    0.006    0.000    0.068    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:178(inner_product)
+    10000    0.003    0.000    0.070    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:203(squared_norm)
+    10000    0.018    0.000    0.091    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)
+    10000    0.014    0.000    0.021    0.000 /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/lib/twodim_base.py:152(eye)
+    10000    0.002    0.000    0.020    0.000 /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/core/einsumfunc.py:997(einsum)
+    10000    0.007    0.000    0.007    0.000 {built-in method numpy.zeros}
+    10000    0.018    0.000    0.018    0.000 {built-in method numpy.core._multiarray_umath.c_einsum}
+
+
+   Ordered by: internal time
+   List reduced from 16 to 5 due to restriction <5>
+
+Function                                                                                                          was called by...
+                                                                                                                      ncalls  tottime  cumtime
+{built-in method numpy.core._multiarray_umath.c_einsum}                                                           <-   10000    0.018    0.018  /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/core/einsumfunc.py:997(einsum)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)                     <- 
+/user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/lib/twodim_base.py:152(eye)  <-   10000    0.014    0.021  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:124(metric_matrix)
+{built-in method numpy.core._multiarray_umath.implement_array_function}                                           <-   10000    0.010    0.034  <__array_function__ internals>:2(einsum)
+{built-in method numpy.zeros}                                                                                     <-   10000    0.007    0.007  /user/mvesin/home/.conda/envs/geomstats-noautograd/lib/python3.7/site-packages/numpy/lib/twodim_base.py:152(eye)
+
+
+   Ordered by: cumulative time
+   List reduced from 16 to 5 due to restriction <5>
+
+Function                                                                                                called...
+                                                                                                            ncalls  tottime  cumtime
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:226(norm)           ->   10000    0.003    0.073  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:482(squared_norm)         ->   10000    0.003    0.070  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:203(squared_norm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:203(squared_norm)   ->   10000    0.006    0.068  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:178(inner_product)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:178(inner_product)  ->   10000    0.003    0.024  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:124(metric_matrix)
+                                                                                                             10000    0.003    0.037  <__array_function__ internals>:2(einsum)
+<__array_function__ internals>:2(einsum)                                                                ->   10000    0.010    0.034  {built-in method numpy.core._multiarray_umath.implement_array_function}
+
+
+
+
+RESULTS: cpu time 0.09464157200000001
+RESULTS: real time 0.09480320801958442

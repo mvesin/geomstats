@@ -100,6 +100,19 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS def
         inner_prod = gs.einsum('...j,...jk,...k->...', tangent_vec_a, inner_prod_mat, tangent_vec_b)
 ```
 (note: 3 argument einsum is currently not supported by geomstats pytorch/tensorflow backends)
+* test_no_auto_calls : based on test_no_auto_3einsum, rewrite the function calls to minimize intermediate variables in
+  - `Riemannian_metric.norm()`
+  - `HypersphereMetric.squared_norm()`
+  - `Riemannian_metric.suqared_norm()`
+  - `Riemannian_metric.inner_product()`
+  - `EuclideanMetric.metric_matrix()`
+  eg
+```
+#sq_norm = self.squared_norm(vector, base_point)
+#norm = gs.sqrt(sq_norm)
+#return norm
+return gs.sqrt(self.squared_norm(vector, base_point))
+```
 
 | test case            | profiling | metric.norm | gsinalg.norm | metric.norm 8d611afb | gs.linalg.norm 8d611afb |
 | -------------------- | --------- | ----------- | ------------ | -------------------- | ----------------------- |
@@ -113,6 +126,8 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS def
 | test_no_autograd     | cprofile  | 109.5       | 50.44        | N/A                  | N/A                    |
 | test_no_auto_3einsum | none      | 72.40       | 31.67        | N/A                  | N/A                    |
 | test_no_auto_3einsum | cprofile  | 86.94       | 47.23        | N/A                  | N/A                    |
+| test_no_auto_calls   | none      | 73.70       | 32.60        | N/A                  | N/A                    |
+| test_no_auto_calls   | cprofile  | 94.80       | 50.99        | N/A                  | N/A                    |
 
 geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS default, 100k iteration, varying profiling : real execution time (ms) 
 
@@ -124,6 +139,8 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS def
 | test_no_autograd     | cprofile  | 1139        | 494.5        |
 | test_no_auto_3einsum | none      | 716.7       | 349.2        |
 | test_no_auto_3einsum | cprofile  | 866.7       | 520.3        |
+| test_no_auto_calls   | none      | 717.8       | 333.9        |
+| test_no_auto_calls   | cprofile  | 931.3       | 462.5        |
 
 
 * using pure numpy (test_no_autograd) with `HypersphereMetric.norm()` reduces execution time by ~25-30% versus current master branch (default)
@@ -131,6 +148,8 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS def
 * ... so `HypersphereMetric.norm()` execution time is still x ~2.2-2.5 `gs.linalg.norm()` execution time for this test
 * note : `to_ndarray` is not called anymore in current version of `inner_product`
 
-* rewriting `RiemannianMetric.inner_product()` for 1 3-param einsum (versus 2 2-param einsum) gives ~9-13% shorter execution time, lowering to x ~ x2.0-2.1 `gs.linalg.norm()` execution time for this test
+* rewriting `RiemannianMetric.inner_product()` (test_no_auto_3einsum) for 1 3-param einsum (versus 2 2-param einsum) gives ~9-13% shorter execution time, lowering to x ~ x2.0-2.1 `gs.linalg.norm()` execution time for this test
+* rewriting function calls (test_no_auto_calls) gives no measurable performance gain (repeating the test : probably in the 0-5% speedup)
+
 * ... which is probably the cost of a more general norm computation function (metric matrix generation, deeper function call stack, einsum vs dot)
   * marginal gain can be done by removing intermediate vars in functions ?
