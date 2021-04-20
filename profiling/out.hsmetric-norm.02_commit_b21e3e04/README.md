@@ -84,7 +84,7 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), varying threading, 
 
 Current test case execution profile suggest autograd numpy wrapping impact may now be a major/dominant factor for performance.
 
-### test - pure numpy for inner_product only
+### test - pure numpy for inner_product only & all geomstats + tentative rewrite
 
 geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS default, 10k iteration, varying profiling : real execution time (ms) :
 * nodec_inner_product : remove decorator (in previous version, already removed in current version)
@@ -92,22 +92,78 @@ geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS def
   * 2 calls to `gs.einsum` by `numpy.einsum` in inner_product
   * function `import autograd.numpy` by `import numpy` in to_ndarray
 (notice : this is not meant to be a viable replacement as it is less general than current code, but is more optimized in our case - for testing)
+* test_no_autograd : fully replacing `autograd.numpy` by pure numpy
+* test_no_auto_3einsum : based on test_no_autograd, try rewriting `RiemannianMetric.inner_product()` with :
+```
+        #aux = gs.einsum('...j,...jk->...k', tangent_vec_a, inner_prod_mat)
+        #inner_prod = gs.einsum('...k,...k->...', aux, tangent_vec_b)
+        inner_prod = gs.einsum('...j,...jk,...k->...', tangent_vec_a, inner_prod_mat, tangent_vec_b)
+```
+(note: 3 argument einsum is currently not supported by geomstats pytorch/tensorflow backends)
+* test_no_auto_calls : based on test_no_auto_3einsum, rewrite the function calls to minimize intermediate variables in
+  - `Riemannian_metric.norm()`
+  - `HypersphereMetric.squared_norm()`
+  - `Riemannian_metric.suqared_norm()`
+  - `Riemannian_metric.inner_product()`
+  - `EuclideanMetric.metric_matrix()`
+  eg
+```
+#sq_norm = self.squared_norm(vector, base_point)
+#norm = gs.sqrt(sq_norm)
+#return norm
+return gs.sqrt(self.squared_norm(vector, base_point))
+```
+* test_no_auto_matrix : based on test_no_auto_3einsum, rewrite `EuclideanMetric.metric_matrix()` to
+create metric matrix at object creation (doesn't depend on base_point for this metric)
+```
+#mat = gs.eye(self.dim)
+#return mat
+return self.mat
+```
 
 
-| test case           | profiling | metric.norm | gsinalg.norm | metric.norm 8d611afb | gs.linalg.norm 8d611afb |
-| ------------------- | --------- | ----------- | ------------ | -------------------- | ----------------------- |
-| default             | none      | 116.2       | 38.94        | 619.2                | 40.90                   |
-| default             | cprofile  |  155.8       | 58.52       | 1078                 | 58.56                   |
-| nodec_inner_product | none      | N/A         | N/A          | 315.6                | 40.72                   |
-| nodec_inner_product | cprofile  | N/A         | N/A          | 533.2                | 60.33                   |
-| test_inner_product3 | none      | 98.54       | 39.23        | 201.4                | 39.87                   |
-| test_inner_product3 | cprofile  | 136.7       | 61.19        | 319.9                | 62.27                   |
+| test case            | profiling | metric.norm | gsinalg.norm | metric.norm 8d611afb | gs.linalg.norm 8d611afb |
+| -------------------- | --------- | ----------- | ------------ | -------------------- | ----------------------- |
+| default              | none      | 116.2       | 38.94        | 619.2                | 40.90                   |
+| default              | cprofile  |  155.8       | 58.52       | 1078                 | 58.56                   |
+| nodec_inner_product  | none      | N/A         | N/A          | 315.6                | 40.72                   |
+| nodec_inner_product  | cprofile  | N/A         | N/A          | 533.2                | 60.33                   |
+| test_inner_product3  | none      | 98.54       | 39.23        | 201.4                | 39.87                   |
+| test_inner_product3  | cprofile  | 136.7       | 61.19        | 319.9                | 62.27                   |
+| test_no_autograd     | none      | 78.25       | 33.12        | N/A                  | N/A                    |
+| test_no_autograd     | cprofile  | 109.5       | 50.44        | N/A                  | N/A                    |
+| test_no_auto_3einsum | none      | 72.40       | 31.67        | N/A                  | N/A                    |
+| test_no_auto_3einsum | cprofile  | 86.94       | 47.23        | N/A                  | N/A                    |
+| test_no_auto_calls   | none      | 73.70       | 32.60        | N/A                  | N/A                    |
+| test_no_auto_calls   | cprofile  | 94.80       | 50.99        | N/A                  | N/A                    |
+| test_no_auto_matrix  | none      | 44.36       | 31.45        | N/A                  | N/A                    |
+| test_no_auto_matrix  | cprofile  | 61.67       | 50.36        | N/A                  | N/A                    |
 
 
-* using pure numpy in function `inner_product` (test_inner_prod3) permits a 12-15% gain on total test execution time, while it represents only a part of autograd wrapping cost for this test (`tracer.py:35(f_wrapped)` reduced only by ~34%)
+geomstat test script (hypersphere_metric_norm_perfissue.py), OMP_NUM_THREADS default, 100k iteration, varying profiling : real execution time (ms) 
+
+| test case            | profiling | metric.norm | gsinalg.norm |
+| -------------------- | --------- | ----------- | ------------ |
+| default              | none      | 1107        | 379.5        |
+| default              | cprofile  | 1673        | 594.4        |          
+| test_no_autograd     | none      | 825.4       | 337.5        |
+| test_no_autograd     | cprofile  | 1139        | 494.5        |
+| test_no_auto_3einsum | none      | 716.7       | 349.2        |
+| test_no_auto_3einsum | cprofile  | 866.7       | 520.3        |
+| test_no_auto_calls   | none      | 717.8       | 333.9        |
+| test_no_auto_calls   | cprofile  | 931.3       | 462.5        |
+| test_no_auto_matrix  | none      | 457.4       | 346.5        |
+| test_no_auto_matrix  | cprofile  | 629.4       | 475.6        |
+
+
+* using pure numpy (test_no_autograd) with `HypersphereMetric.norm()` reduces execution time by ~25-30% versus current master branch (default)
+* using pure numpy (test_no_autograd) with `gs.linalg.norm()` also reduces execution time by ~11-16% versus current master branch (default) ...
+* ... so `HypersphereMetric.norm()` execution time is still x ~2.2-2.5 `gs.linalg.norm()` execution time for this test
 * note : `to_ndarray` is not called anymore in current version of `inner_product`
 
+Rewriting code attempts :
+* rewriting `RiemannianMetric.inner_product()` (test_no_auto_3einsum) for 1 3-param einsum (versus 2 2-param einsum) gives ~9-13% shorter execution time, lowering to ~ x2.0-2.1 `gs.linalg.norm()` execution time for this test
+* rewriting function calls (test_no_auto_calls) gives no measurable performance gain (repeating the test : probably in the 0-5% speedup)
+* rewriting `EuclideanMetric.metric_matrix()` to create metric matrix at object creation gives ~ 30-35% shorter execution time, lowering to ~ x1.3-1.4 `gs.linalg.norm()` execution time for this test
+* ... which is probably the cost of a more general norm computation function (deeper function call stack, einsum vs dot)
 
-### test - pure numpy for all geomstats
-
-*TODO* test pure numpy replaces autograd.numpy for all geomstats
