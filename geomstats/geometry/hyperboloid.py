@@ -63,7 +63,7 @@ class Hyperboloid(Hyperbolic, EmbeddedManifold):
         atol : float, optional
             Tolerance at which to evaluate how close the squared norm
             is to the reference value.
-            Optional, default: 1e-6.
+            Optional, default: backend atol.
 
         Returns
         -------
@@ -147,7 +147,7 @@ class Hyperboloid(Hyperbolic, EmbeddedManifold):
         tangent_vec = vector - gs.einsum('...,...j->...j', coef, base_point)
         return tangent_vec
 
-    def is_tangent(self, vector, base_point=None, atol=gs.atol):
+    def is_tangent(self, vector, base_point, atol=gs.atol):
         """Check whether the vector is tangent at base_point.
 
         Parameters
@@ -156,10 +156,9 @@ class Hyperboloid(Hyperbolic, EmbeddedManifold):
             Vector.
         base_point : array-like, shape=[..., dim + 1]
             Point on the manifold.
-            Optional, default: none.
         atol : float
             Absolute tolerance.
-            Optional, default: 1e-6.
+            Optional, default: backend atol.
 
         Returns
         -------

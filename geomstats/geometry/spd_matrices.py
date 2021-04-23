@@ -364,7 +364,7 @@ class SPDMatrices(SymmetricMatrices, EmbeddedManifold):
             Optional, default: None.
         atol : float
             Absolute tolerance.
-            Optional, default: 1e-6.
+            Optional, default: backend atol.
 
         Returns
         -------
@@ -419,7 +419,7 @@ class SPDMetricAffine(RiemannianMetric):
         dim = int(n * (n + 1) / 2)
         super(SPDMetricAffine, self).__init__(
             dim=dim,
-            signature=(dim, 0, 0),
+            signature=(dim, 0),
             default_point_type='matrix')
         self.n = n
         self.space = SPDMatrices(n)
@@ -667,7 +667,7 @@ class SPDMetricBuresWasserstein(RiemannianMetric):
         dim = int(n * (n + 1) / 2)
         super(SPDMetricBuresWasserstein, self).__init__(
             dim=dim,
-            signature=(dim, 0, 0),
+            signature=(dim, 0),
             default_point_type='matrix')
         self.n = n
         self.space = SPDMatrices(n)
@@ -795,7 +795,7 @@ class SPDMetricEuclidean(RiemannianMetric):
         dim = int(n * (n + 1) / 2)
         super(SPDMetricEuclidean, self).__init__(
             dim=dim,
-            signature=(dim, 0, 0),
+            signature=(dim, 0),
             default_point_type='matrix')
         self.n = n
         self.space = SPDMatrices(n)
@@ -889,7 +889,7 @@ class SPDMetricLogEuclidean(RiemannianMetric):
         dim = int(n * (n + 1) / 2)
         super(SPDMetricLogEuclidean, self).__init__(
             dim=dim,
-            signature=(dim, 0, 0),
+            signature=(dim, 0),
             default_point_type='matrix')
         self.n = n
         self.space = SPDMatrices(n)

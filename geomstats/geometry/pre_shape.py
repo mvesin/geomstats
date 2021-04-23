@@ -64,7 +64,7 @@ class PreShapeSpace(EmbeddedManifold, FiberBundle):
             Point in Matrices space.
         atol : float
             Tolerance at which to evaluate norm == 1 and mean == 0.
-            Optional, default: 1e-6.
+            Optional, default: backend atol.
 
         Returns
         -------
@@ -147,7 +147,7 @@ class PreShapeSpace(EmbeddedManifold, FiberBundle):
             Point in Matrices space.
         atol :  float
             Tolerance at which to evaluate mean == 0.
-            Optional, default: 1e-6.
+            Optional, default: backend atol.
 
         Returns
         -------
@@ -174,7 +174,7 @@ class PreShapeSpace(EmbeddedManifold, FiberBundle):
         mean = gs.mean(point, axis=-2)
         return point - mean[..., None, :]
 
-    def to_tangent(self, vector, base_point=None):
+    def to_tangent(self, vector, base_point):
         """Project a vector to the tangent space.
 
         Project a vector in the embedding matrix space
@@ -205,7 +205,7 @@ class PreShapeSpace(EmbeddedManifold, FiberBundle):
 
         return tangent_vec
 
-    def is_tangent(self, vector, base_point=None, atol=gs.atol):
+    def is_tangent(self, vector, base_point, atol=gs.atol):
         """Check whether the vector is tangent at base_point.
 
         Parameters
@@ -217,7 +217,7 @@ class PreShapeSpace(EmbeddedManifold, FiberBundle):
             Optional, default: none.
         atol : float
             Absolute tolerance.
-            Optional, default: 1e-6.
+            Optional, default: backend atol.
 
         Returns
         -------
@@ -278,7 +278,7 @@ class PreShapeSpace(EmbeddedManifold, FiberBundle):
             Optional, default: none.
         atol : float
             Absolute tolerance.
-            Optional, default: 1e-6.
+            Optional, default: backend atol.
 
         Returns
         -------
@@ -528,5 +528,7 @@ class KendallShapeMetric(QuotientMetric):
     """
 
     def __init__(self, k_landmarks, m_ambient):
+        bundle = PreShapeSpace(k_landmarks, m_ambient)
         super(KendallShapeMetric, self).__init__(
-            fiber_bundle=PreShapeSpace(k_landmarks, m_ambient))
+            fiber_bundle=bundle,
+            dim=bundle.dim - int(m_ambient * (m_ambient - 1) / 2))
