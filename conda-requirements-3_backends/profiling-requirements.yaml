@@ -1,0 +1,9 @@
+name: geomstats-conda3backends
+
+channels:
+  - conda-forge
+
+dependencies:
+  - nilearn
+  - yappi
+  - snakeviz
