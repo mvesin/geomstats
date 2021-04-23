@@ -1,0 +1,100 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'hsmetric', '-p', 'cprofile', '-s', 'hsmetric_metric=hsmetric+profile=cprofile+backend=pytorch']
+INFO: user profiler cprofile
+INFO: result file suffix hsmetric_metric=hsmetric+profile=cprofile+backend=pytorch
+
+INFO: OMP_NUM_THREADS is not set
+
+
+         740006 function calls in 0.765 seconds
+
+   Ordered by: cumulative time
+   List reduced from 47 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.009    0.000    0.765    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:222(norm)
+    10000    0.004    0.000    0.696    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:570(squared_norm)
+    10000    0.004    0.000    0.693    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:200(squared_norm)
+    10000    0.013    0.000    0.689    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:185(inner_product)
+    10000    0.083    0.000    0.676    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:379(einsum)
+    10000    0.024    0.000    0.246    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/torch/functional.py:261(einsum)
+    10000    0.204    0.000    0.204    0.000 {built-in method einsum}
+    10000    0.006    0.000    0.111    0.000 <__array_function__ internals>:2(prod)
+    10000    0.006    0.000    0.103    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+    20000    0.016    0.000    0.097    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:348(to_ndarray)
+
+
+         740006 function calls in 0.765 seconds
+
+   Ordered by: internal time
+   List reduced from 47 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.204    0.000    0.204    0.000 {built-in method einsum}
+    10000    0.083    0.000    0.676    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:379(einsum)
+    10000    0.059    0.000    0.059    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    10000    0.052    0.000    0.052    0.000 {built-in method sqrt}
+    20000    0.049    0.000    0.049    0.000 {built-in method unsqueeze}
+    20000    0.034    0.000    0.034    0.000 {built-in method squeeze}
+    10000    0.024    0.000    0.246    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/torch/functional.py:261(einsum)
+    20000    0.022    0.000    0.029    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:217(array)
+    10000    0.019    0.000    0.088    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/numpy/core/fromnumeric.py:70(_wrapreduction)
+    10000    0.018    0.000    0.067    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:116(convert_to_wider_dtype)
+
+
+         740006 function calls in 0.765 seconds
+
+   Ordered by: call count
+   List reduced from 47 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   110000    0.010    0.000    0.010    0.000 {built-in method builtins.isinstance}
+    70000    0.005    0.000    0.005    0.000 {built-in method builtins.len}
+    30000    0.007    0.000    0.007    0.000 {method 'replace' of 'str' objects}
+    30000    0.005    0.000    0.005    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/torch/functional.py:335(<genexpr>)
+    20000    0.008    0.000    0.008    0.000 {built-in method builtins.getattr}
+    20000    0.005    0.000    0.005    0.000 {method 'split' of 'str' objects}
+    20000    0.004    0.000    0.004    0.000 {method 'dim' of 'torch._C._TensorBase' objects}
+    20000    0.015    0.000    0.015    0.000 {method 'to' of 'torch._C._TensorBase' objects}
+    20000    0.034    0.000    0.034    0.000 {built-in method squeeze}
+    20000    0.049    0.000    0.049    0.000 {built-in method unsqueeze}
+
+
+   Ordered by: internal time
+   List reduced from 47 to 5 due to restriction <5>
+
+Function                                                                                        was called by...
+                                                                                                    ncalls  tottime  cumtime
+{built-in method einsum}                                                                        <-   10000    0.204    0.204  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/torch/functional.py:261(einsum)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:379(einsum)  <-   10000    0.083    0.676  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:185(inner_product)
+{method 'reduce' of 'numpy.ufunc' objects}                                                      <-   10000    0.059    0.059  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/numpy/core/fromnumeric.py:70(_wrapreduction)
+{built-in method sqrt}                                                                          <-   10000    0.052    0.052  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:355(sqrt)
+{built-in method unsqueeze}                                                                     <-   20000    0.049    0.049  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:348(to_ndarray)
+
+
+   Ordered by: cumulative time
+   List reduced from 47 to 5 due to restriction <5>
+
+Function                                                                                               called...
+                                                                                                           ncalls  tottime  cumtime
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:222(norm)          ->   10000    0.006    0.060  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:355(sqrt)
+                                                                                                            10000    0.004    0.696  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:570(squared_norm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:570(squared_norm)        ->   10000    0.004    0.693  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:200(squared_norm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:200(squared_norm)  ->   10000    0.013    0.689  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:185(inner_product)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:185(inner_product)         ->   10000    0.083    0.676  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:379(einsum)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:379(einsum)         ->   10000    0.018    0.067  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:116(convert_to_wider_dtype)
+                                                                                                            20000    0.016    0.097  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:348(to_ndarray)
+                                                                                                            10000    0.005    0.005  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:395(<listcomp>)
+                                                                                                            10000    0.006    0.008  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:399(<listcomp>)
+                                                                                                            10000    0.006    0.011  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:441(<listcomp>)
+                                                                                                            20000    0.005    0.039  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/__init__.py:470(squeeze)
+                                                                                                            10000    0.024    0.246  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/torch/functional.py:261(einsum)
+                                                                                                            10000    0.006    0.111  <__array_function__ internals>:2(prod)
+                                                                                                            40000    0.003    0.003  {built-in method builtins.len}
+                                                                                                            10000    0.001    0.001  {method 'replace' of 'str' objects}
+                                                                                                            20000    0.005    0.005  {method 'split' of 'str' objects}
+
+
+
+
+RESULTS: cpu time 0.7759895910000001
+RESULTS: real time 0.7778229819959961

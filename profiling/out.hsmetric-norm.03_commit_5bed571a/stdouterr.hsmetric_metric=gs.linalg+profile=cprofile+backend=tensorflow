@@ -1,0 +1,111 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'gs.linalg', '-p', 'cprofile', '-s', 'hsmetric_metric=gs.linalg+profile=cprofile+backend=tensorflow']
+INFO: user profiler cprofile
+INFO: result file suffix hsmetric_metric=gs.linalg+profile=cprofile+backend=tensorflow
+
+INFO: OMP_NUM_THREADS is not set
+
+
+         1190020 function calls (1110010 primitive calls) in 1.108 seconds
+
+   Ordered by: cumulative time
+   List reduced from 73 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.010    0.000    1.108    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/linalg.py:15(norm)
+80000/20000    0.035    0.000    1.098    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+    10000    0.006    0.000    1.037    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:560(norm_v2)
+20000/10000    0.018    0.000    1.025    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py:504(new_func)
+    10000    0.077    0.000    1.000    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:632(norm)
+    40000    0.351    0.000    0.351    0.000 {built-in method tensorflow.python._pywrap_tfe.TFE_Py_FastPathExecute}
+    10000    0.016    0.000    0.298    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:1981(reduce_sum)
+    10000    0.015    0.000    0.203    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:1161(binary_op_wrapper)
+    10000    0.008    0.000    0.171    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:1489(_mul_dispatch)
+    10000    0.017    0.000    0.167    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:1891(_ReductionDims)
+
+
+         1190020 function calls (1110010 primitive calls) in 1.108 seconds
+
+   Ordered by: internal time
+   List reduced from 73 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    40000    0.351    0.000    0.351    0.000 {built-in method tensorflow.python._pywrap_tfe.TFE_Py_FastPathExecute}
+    10000    0.077    0.000    1.000    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:632(norm)
+    10000    0.065    0.000    0.115    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/numpy/lib/type_check.py:247(isreal)
+    10000    0.050    0.000    0.060    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py:70(convert_to_eager_tensor)
+80000/20000    0.035    0.000    1.098    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+    60000    0.030    0.000    0.030    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/eager/context.py:815(executing_eagerly)
+   160000    0.023    0.000    0.038    0.000 {built-in method builtins.isinstance}
+    10000    0.021    0.000    0.021    0.000 {built-in method numpy.array}
+    10000    0.020    0.000    0.020    0.000 {built-in method numpy.arange}
+    10000    0.018    0.000    0.042    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/numpy/lib/type_check.py:167(imag)
+
+
+         1190020 function calls (1110010 primitive calls) in 1.108 seconds
+
+   Ordered by: call count
+   List reduced from 73 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   160000    0.023    0.000    0.038    0.000 {built-in method builtins.isinstance}
+80000/20000    0.035    0.000    1.098    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+    80000    0.006    0.000    0.006    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/eager/context.py:1849(context_safe)
+    60000    0.030    0.000    0.030    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/eager/context.py:815(executing_eagerly)
+    40000    0.351    0.000    0.351    0.000 {built-in method tensorflow.python._pywrap_tfe.TFE_Py_FastPathExecute}
+    40000    0.016    0.000    0.039    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/eager/context.py:1874(executing_eagerly)
+    20000    0.011    0.000    0.011    0.000 {built-in method _abc._abc_instancecheck}
+    20000    0.014    0.000    0.035    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:6402(name_scope)
+    20000    0.002    0.000    0.002    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:169(__init__)
+    20000    0.002    0.000    0.002    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:172(__enter__)
+
+
+   Ordered by: internal time
+   List reduced from 73 to 5 due to restriction <5>
+
+Function                                                                                                                                                   was called by...
+                                                                                                                                                               ncalls  tottime  cumtime
+{built-in method tensorflow.python._pywrap_tfe.TFE_Py_FastPathExecute}                                                                                     <-   10000    0.076    0.076  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/gen_array_ops.py:10115(squeeze)
+                                                                                                                                                                10000    0.132    0.132  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/gen_math_ops.py:6046(mul)
+                                                                                                                                                                10000    0.054    0.054  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/gen_math_ops.py:10017(sqrt)
+                                                                                                                                                                10000    0.090    0.090  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/gen_math_ops.py:10344(_sum)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:632(norm)                           <-   10000    0.077    1.000  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py:504(new_func)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/numpy/lib/type_check.py:247(isreal)                                     <-   10000    0.065    0.115  {built-in method numpy.core._multiarray_umath.implement_array_function}
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py:70(convert_to_eager_tensor)  <-   10000    0.050    0.060  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py:299(_constant_eager_impl)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)                         <-   20000    0.007    1.098  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/linalg.py:15(norm)
+                                                                                                                                                                10000    0.006    1.031  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:560(norm_v2)
+                                                                                                                                                                40000    0.018    0.547  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:632(norm)
+                                                                                                                                                                10000    0.004    0.150  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:1489(_mul_dispatch)
+
+
+   Ordered by: cumulative time
+   List reduced from 73 to 5 due to restriction <5>
+
+Function                                                                                                                                called...
+                                                                                                                                            ncalls  tottime  cumtime
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/linalg.py:15(norm)                                            ->   20000    0.007    1.098  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)      ->   10000    0.006    1.037  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:560(norm_v2)
+                                                                                                                                             10000    0.005    0.145  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:472(multiply)
+                                                                                                                                             10000    0.015    0.054  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:907(cast)
+                                                                                                                                             10000    0.016    0.298  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:1981(reduce_sum)
+                                                                                                                                             10000    0.013    0.018  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3932(conj)
+                                                                                                                                             10000    0.005    0.068  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:4869(sqrt)
+                                                                                                                                         20000/10000    0.018    1.025  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py:504(new_func)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:560(norm_v2)     ->   10000    0.006    1.031  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py:504(new_func)  ->   20000    0.009    0.031  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/eager/context.py:2401(_tmp_in_graph_mode)
+                                                                                                                                             10000    0.012    0.122  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:4327(squeeze)
+                                                                                                                                             10000    0.077    1.000  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:632(norm)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/linalg_ops.py:632(norm)        ->   10000    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:172(__enter__)
+                                                                                                                                             10000    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:175(__exit__)
+                                                                                                                                             10000    0.008    0.020  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:6402(name_scope)
+                                                                                                                                             10000    0.015    0.203  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:1161(binary_op_wrapper)
+                                                                                                                                             10000    0.004    0.020  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/profiler/trace.py:158(wrapped)
+                                                                                                                                             10000    0.001    0.001  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/deprecation.py:614(deprecated_argument_lookup)
+                                                                                                                                             40000    0.018    0.547  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+                                                                                                                                             10000    0.005    0.127  <__array_function__ internals>:2(isreal)
+                                                                                                                                             30000    0.003    0.003  {built-in method builtins.isinstance}
+
+
+
+
+RESULTS: cpu time 1.082113691
+RESULTS: real time 1.119045878003817

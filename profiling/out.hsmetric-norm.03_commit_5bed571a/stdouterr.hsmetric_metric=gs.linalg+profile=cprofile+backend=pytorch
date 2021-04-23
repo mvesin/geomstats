@@ -1,0 +1,74 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'gs.linalg', '-p', 'cprofile', '-s', 'hsmetric_metric=gs.linalg+profile=cprofile+backend=pytorch']
+INFO: user profiler cprofile
+INFO: result file suffix hsmetric_metric=gs.linalg+profile=cprofile+backend=pytorch
+
+INFO: OMP_NUM_THREADS is not set
+
+
+         20006 function calls in 0.050 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.002    0.000    0.050    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/linalg.py:51(norm)
+    10000    0.048    0.000    0.048    0.000 {built-in method torch._C._linalg.linalg_norm}
+        2    0.000    0.000    0.000    0.000 {built-in method time.process_time}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        2    0.000    0.000    0.000    0.000 {built-in method time.perf_counter}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+         20006 function calls in 0.050 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.048    0.000    0.048    0.000 {built-in method torch._C._linalg.linalg_norm}
+    10000    0.002    0.000    0.050    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/linalg.py:51(norm)
+        2    0.000    0.000    0.000    0.000 {built-in method time.process_time}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        2    0.000    0.000    0.000    0.000 {built-in method time.perf_counter}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+         20006 function calls in 0.050 seconds
+
+   Ordered by: call count
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.048    0.000    0.048    0.000 {built-in method torch._C._linalg.linalg_norm}
+    10000    0.002    0.000    0.050    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/linalg.py:51(norm)
+        2    0.000    0.000    0.000    0.000 {built-in method time.process_time}
+        2    0.000    0.000    0.000    0.000 {built-in method time.perf_counter}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
+   Ordered by: internal time
+   List reduced from 6 to 5 due to restriction <5>
+
+Function                                                                                   was called by...
+                                                                                               ncalls  tottime  cumtime
+{built-in method torch._C._linalg.linalg_norm}                                             <-   10000    0.048    0.048  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/linalg.py:51(norm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/linalg.py:51(norm)  <- 
+{built-in method time.process_time}                                                        <- 
+{built-in method builtins.print}                                                           <- 
+{built-in method time.perf_counter}                                                        <- 
+
+
+   Ordered by: cumulative time
+   List reduced from 6 to 5 due to restriction <5>
+
+Function                                                                                   called...
+                                                                                               ncalls  tottime  cumtime
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/pytorch/linalg.py:51(norm)  ->   10000    0.048    0.048  {built-in method torch._C._linalg.linalg_norm}
+{built-in method torch._C._linalg.linalg_norm}                                             -> 
+{built-in method time.process_time}                                                        -> 
+{built-in method builtins.print}                                                           -> 
+{built-in method time.perf_counter}                                                        -> 
+
+
+
+
+RESULTS: cpu time 0.05539491900000004
+RESULTS: real time 0.055462479998823255

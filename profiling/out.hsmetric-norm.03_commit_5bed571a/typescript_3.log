@@ -1,0 +1,30 @@
+Script started on 2021-04-23 18:13:33+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="132" LINES="24"]
+]777;notify;Command completed;exit\]777;precmd\]0;mvesin@apurimac:/home/mvesin/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/home/mvesin/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exitGEOMSTATS_BACKEND=tensorflow CUDA_VISIBLE_DEVICES='' python ./profiling/hypersphere_metric_norm_perfissue.py -m hsmetric -p none -s hsmetric_metric=hsmetric+profile=none+backend=tensorflow[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktest.py 
+]777;preexec\2021-04-23 18:13:59.075641: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.1
+INFO: Using tensorflow backend
+2021-04-23 18:13:59.928018: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-04-23 18:13:59.928468: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-04-23 18:13:59.947580: E tensorflow/stream_executor/cuda/cuda_driver.cc:328] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2021-04-23 18:13:59.947619: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: apurimac
+2021-04-23 18:13:59.947628: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: apurimac
+2021-04-23 18:13:59.947695: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 465.24.2
+2021-04-23 18:13:59.947722: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 465.24.2
+2021-04-23 18:13:59.947730: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 465.24.2
+2021-04-23 18:13:59.948000: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-04-23 18:13:59.949180: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+1.028672579996055
+0.7638154940214008
+1.0267420450109057
+0.7645078580244444
+]777;notify;Command completed;GEOMSTATS_BACKEND=tensorflow CUDA_VISIBLE_DEVICES='' python ./profiling/test.py \]777;precmd\]0;mvesin@apurimac:/home/mvesin/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/home/mvesin/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ GEOMSTATS_BACKEND=tensorflow CUDA_VISIBLE_DEVICES='' python ./profiling/test.py [1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@p[1@y[1@t[1@o[1@r[1@c[1@h
+]777;preexec\INFO: Using pytorch backend
+0.6227922549878713
+0.054000600008293986
+0.6122483409999404
+0.052664935996290296
+]777;notify;Command completed;GEOMSTATS_BACKEND=pytorch CUDA_VISIBLE_DEVICES='' python ./profiling/test.py \]777;precmd\]0;mvesin@apurimac:/home/mvesin/GIT/geomstats/mvesin_geomstats\]7;file://apurimac/home/mvesin/GIT/geomstats/mvesin_geomstats\[mvesin@apurimac mvesin_geomstats]$ exit
+]777;preexec\exit
+
+Script done on 2021-04-23 18:14:15+02:00 [COMMAND_EXIT_CODE="0"]

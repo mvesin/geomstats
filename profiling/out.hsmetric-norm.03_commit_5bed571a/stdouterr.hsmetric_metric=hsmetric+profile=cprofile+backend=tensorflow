@@ -1,0 +1,110 @@
+INFO: command line ['./profiling/hypersphere_metric_norm_perfissue.py', '-m', 'hsmetric', '-p', 'cprofile', '-s', 'hsmetric_metric=hsmetric+profile=cprofile+backend=tensorflow']
+INFO: user profiler cprofile
+INFO: result file suffix hsmetric_metric=hsmetric+profile=cprofile+backend=tensorflow
+
+INFO: OMP_NUM_THREADS is not set
+
+
+         2130425 function calls (2120405 primitive calls) in 1.608 seconds
+
+   Ordered by: cumulative time
+   List reduced from 131 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.012    0.000    1.608    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:222(norm)
+    10000    0.004    0.000    1.515    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:570(squared_norm)
+    10000    0.004    0.000    1.510    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:200(squared_norm)
+    10000    0.016    0.000    1.506    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:185(inner_product)
+    10000    0.103    0.000    1.490    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:653(einsum)
+100000/90000    0.043    0.000    1.026    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+    50000    0.474    0.000    0.474    0.000 {built-in method tensorflow.python._pywrap_tfe.TFE_Py_FastPathExecute}
+    10000    0.010    0.000    0.397    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/special_math_ops.py:606(einsum)
+    10000    0.069    0.000    0.387    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/special_math_ops.py:1152(_einsum_v2)
+    20000    0.016    0.000    0.336    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:144(to_ndarray)
+
+
+         2130425 function calls (2120405 primitive calls) in 1.608 seconds
+
+   Ordered by: internal time
+   List reduced from 131 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    50000    0.474    0.000    0.474    0.000 {built-in method tensorflow.python._pywrap_tfe.TFE_Py_FastPathExecute}
+    10000    0.103    0.000    1.490    0.000 /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:653(einsum)
+    10000    0.071    0.000    0.071    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    10000    0.069    0.000    0.387    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/special_math_ops.py:1152(_einsum_v2)
+100000/90000    0.043    0.000    1.026    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+    10000    0.041    0.000    0.097    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/special_math_ops.py:1226(_einsum_v2_parse_and_resolve_equation)
+   140000    0.036    0.000    0.085    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:1168(shape)
+    40000    0.030    0.000    0.030    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/eager/context.py:815(executing_eagerly)
+    60000    0.028    0.000    0.071    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:1189(ndim)
+    20000    0.027    0.000    0.077    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:907(cast)
+
+
+         2130425 function calls (2120405 primitive calls) in 1.608 seconds
+
+   Ordered by: call count
+   List reduced from 131 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   200044    0.021    0.000    0.021    0.000 {built-in method builtins.isinstance}
+150059/150053    0.010    0.000    0.010    0.000 {built-in method builtins.len}
+   140000    0.036    0.000    0.085    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:1168(shape)
+100000/90000    0.043    0.000    1.026    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+    60000    0.005    0.000    0.005    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/tensor_shape.py:249(value)
+    60000    0.016    0.000    0.019    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/tensor_shape.py:821(rank)
+    60000    0.013    0.000    0.033    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/tensor_shape.py:840(ndims)
+    60000    0.028    0.000    0.071    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:1189(ndim)
+    50000    0.474    0.000    0.474    0.000 {built-in method tensorflow.python._pywrap_tfe.TFE_Py_FastPathExecute}
+    50000    0.004    0.000    0.004    0.000 /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/eager/context.py:1849(context_safe)
+
+
+   Ordered by: internal time
+   List reduced from 131 to 5 due to restriction <5>
+
+Function                                                                                                                                       was called by...
+                                                                                                                                                   ncalls  tottime  cumtime
+{built-in method tensorflow.python._pywrap_tfe.TFE_Py_FastPathExecute}                                                                         <-   20000    0.169    0.169  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/gen_array_ops.py:2216(expand_dims)
+                                                                                                                                                    10000    0.098    0.098  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/gen_array_ops.py:10115(squeeze)
+                                                                                                                                                    10000    0.147    0.147  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/gen_linalg_ops.py:979(einsum)
+                                                                                                                                                    10000    0.060    0.060  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/gen_math_ops.py:10017(sqrt)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:653(einsum)                                              <-   10000    0.103    1.490  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:185(inner_product)
+{method 'reduce' of 'numpy.ufunc' objects}                                                                                                     <-   10000    0.071    0.071  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/numpy/core/fromnumeric.py:70(_wrapreduction)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/special_math_ops.py:1152(_einsum_v2)  <-   10000    0.069    0.387  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/special_math_ops.py:606(einsum)
+/user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)             <-   20000    0.007    0.078  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:140(ndim)
+                                                                                                                                                    20000    0.008    0.203  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:144(to_ndarray)
+                                                                                                                                                    20000    0.007    0.084  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:580(cast)
+                                                                                                                                                    20000    0.010    0.579  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:653(einsum)
+                                                                                                                                                    10000    0.005    0.082  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:222(norm)
+                                                                                                                                                    10000    0.005    0.167  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:4382(squeeze_v2)
+
+
+   Ordered by: cumulative time
+   List reduced from 131 to 5 due to restriction <5>
+
+Function                                                                                               called...
+                                                                                                           ncalls  tottime  cumtime
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:222(norm)          ->   10000    0.004    1.515  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:570(squared_norm)
+                                                                                                            10000    0.005    0.082  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/hypersphere.py:570(squared_norm)        ->   10000    0.004    1.510  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:200(squared_norm)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/riemannian_metric.py:200(squared_norm)  ->   10000    0.016    1.506  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:185(inner_product)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/geometry/euclidean.py:185(inner_product)         ->   10000    0.103    1.490  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:653(einsum)
+/home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:653(einsum)      ->   10000    0.022    0.167  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:103(convert_to_wider_dtype)
+                                                                                                            20000    0.016    0.336  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:144(to_ndarray)
+                                                                                                            10000    0.006    0.006  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:665(<listcomp>)
+                                                                                                            10000    0.006    0.008  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:672(<listcomp>)
+                                                                                                            10000    0.006    0.012  /home/mvesin/GIT/geomstats/mvesin_geomstats/geomstats/_backend/tensorflow/__init__.py:700(<listcomp>)
+                                                                                                            20000    0.019    0.068  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:1168(shape)
+                                                                                                            40000    0.018    0.048  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:1189(ndim)
+                                                                                                            20000    0.014    0.021  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/framework/tensor_shape.py:868(__getitem__)
+                                                                                                            20000    0.010    0.579  /user/mvesin/home/.conda/envs/geomstats-conda3backends/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:198(wrapper)
+                                                                                                            10000    0.007    0.134  <__array_function__ internals>:2(prod)
+                                                                                                            10000    0.001    0.001  {built-in method builtins.len}
+                                                                                                            10000    0.001    0.001  {method 'replace' of 'str' objects}
+                                                                                                            20000    0.005    0.005  {method 'split' of 'str' objects}
+
+
+
+
+RESULTS: cpu time 1.616614042
+RESULTS: real time 1.6256472670065705
